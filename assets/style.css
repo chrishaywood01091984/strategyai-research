@@ -242,3 +242,8 @@ html,body{overflow-x:hidden;max-width:100%}
 html.embed .nav, html.embed .foot{display:none!important}
 html.embed .hero .wrap{padding-top:38px}
 html.embed body{background:var(--bg)}
+
+/* ---------- real photo slots (hero + card thumbs); fall back to node art ---------- */
+.a-hero{position:relative;padding:0}
+.a-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+.card .thumb img,.featured .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
