@@ -107,7 +107,20 @@ async function loadCommunity(){
   }catch(e){}
 }
 
+/* ---------- mobile nav toggle (injected on every page) ---------- */
+function navToggle(){
+  const wrap=document.querySelector('.nav .wrap');
+  const links=wrap&&wrap.querySelector('.navlinks');
+  if(!wrap||!links||wrap.querySelector('.nav-toggle')) return;
+  const b=document.createElement('button');
+  b.className='nav-toggle'; b.setAttribute('aria-label','Menu'); b.setAttribute('aria-expanded','false');
+  b.innerHTML='&#9776;';
+  b.addEventListener('click',()=>{const o=links.classList.toggle('open');b.setAttribute('aria-expanded',o);b.innerHTML=o?'&#10005;':'&#9776;';});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');b.innerHTML='&#9776;';}));
+  wrap.appendChild(b);
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
   nodeField(document.getElementById('nodefield'));
-  initFilters(); initLikes(); initShare(); loadCommunity();
+  navToggle(); initFilters(); initLikes(); initShare(); loadCommunity();
 });
