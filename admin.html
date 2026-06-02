@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research — Moderation</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="https://strategyai.co.uk">STRATEGYAI</a>
+  <div class="navlinks"><a href="/" class="active">Research</a><a href="#" id="signout" style="display:none">Sign out</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap" style="padding:54px 28px 40px">
+  <div class="kicker">MODERATION</div>
+  <h1 class="title" style="font-size:clamp(30px,4vw,46px)">Review <em>queue</em>.</h1>
+  <p class="lead">Approve or reject contributor submissions. Only StrategyAI admins can see this.</p>
+</div></header>
+
+<main class="wrap" style="padding:30px 28px 90px">
+  <div id="signin" class="panel" style="max-width:520px;margin:0 auto">
+    <div class="field"><label>Admin email</label><input id="email" type="email" placeholder="chris@strategyai.co.uk"></div>
+    <button class="btn btn-solid" id="send">Email me a sign-in link</button>
+    <div id="msg" class="hint" style="margin-top:12px"></div>
+  </div>
+  <div id="queue" style="display:none"></div>
+</main>
+
+<script src="/assets/config.js"></script>
+<script src="/assets/app.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const REDIRECT="https://research.strategyai.co.uk/admin.html";
+function token(){return localStorage.getItem('sa_admin_tok')||''}
+// capture magic-link token from URL hash
+(function(){const h=new URLSearchParams(location.hash.slice(1));const t=h.get('access_token');
+  if(t){localStorage.setItem('sa_admin_tok',t);history.replaceState(null,'','/admin.html');}})();
+
+$('send').addEventListener('click',async()=>{
+  const email=$('email').value.trim();
+  if(!/.+@.+\..+/.test(email)){$('msg').textContent='Enter a valid email.';return;}
+  if(!SUPA.url){$('msg').textContent='Backend not configured.';return;}
+  const r=await fetch(`${SUPA.url}/auth/v1/otp`,{method:'POST',
+    headers:{'apikey':SUPA.anonKey,'Content-Type':'application/json'},
+    body:JSON.stringify({email,create_user:true,options:{email_redirect_to:REDIRECT}})});
+  $('msg').textContent = r.ok ? '✓ Check your inbox for the sign-in link.' : 'Could not send link.';
+});
+$('signout').addEventListener('click',e=>{e.preventDefault();localStorage.removeItem('sa_admin_tok');location.reload();});
+
+async function authedFetch(path,opts={}){
+  opts.headers=Object.assign({'apikey':SUPA.anonKey,'Authorization':'Bearer '+token()},opts.headers||{});
+  return fetch(`${SUPA.url}/rest/v1/${path}`,opts);
+}
+async function setStatus(id,status){
+  const r=await authedFetch(`research_posts?id=eq.${id}`,{method:'PATCH',
+    headers:{'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({status})});
+  if(r.ok) loadQueue(); else alert('Update failed — are you signed in as an admin?');
+}
+window.setStatus=setStatus;
+
+async function loadQueue(){
+  if(!token()){$('signin').style.display='';$('queue').style.display='none';return;}
+  $('signin').style.display='none';$('queue').style.display='';$('signout').style.display='';
+  const r=await authedFetch('research_posts?status=eq.pending&order=created_at.desc&select=*');
+  if(!r.ok){$('queue').innerHTML='<p class="lead">Not authorised. Sign in with an admin email.</p>';localStorage.removeItem('sa_admin_tok');return;}
+  const posts=await r.json();
+  if(!posts.length){$('queue').innerHTML='<div class="panel" style="text-align:center">Nothing pending. You\'re all caught up.</div>';return;}
+  $('queue').innerHTML=posts.map(p=>`
+    <div class="panel" style="margin-bottom:18px;max-width:none">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ice);text-transform:uppercase">${esc(p.category)} · ${esc(p.author_name||'')} · ${esc(p.author_email||'')} · ${(p.created_at||'').slice(0,10)}</div>
+      <h2 style="font-family:var(--serif);color:#fff;margin:8px 0 10px">${esc(p.title)}</h2>
+      <div style="color:var(--ice);white-space:pre-wrap;max-height:240px;overflow:auto;font-size:14px;line-height:1.7;border-left:2px solid var(--border);padding-left:14px">${esc(p.body_md)}</div>
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <button class="btn btn-solid" onclick="setStatus('${p.id}','approved')">Approve &amp; publish</button>
+        <button class="btn btn-ghost" onclick="setStatus('${p.id}','rejected')">Reject</button>
+      </div>
+    </div>`).join('');
+}
+loadQueue();
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@500&display=swap');
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:630px;overflow:hidden}
+.og{width:1200px;height:630px;position:relative;overflow:hidden;padding:66px 74px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  background:
+    radial-gradient(70% 110% at 90% 6%, rgba(201,168,76,.22), transparent 50%),
+    radial-gradient(80% 120% at 4% 96%, rgba(110,190,210,.12), transparent 52%),
+    repeating-linear-gradient(0deg, rgba(143,163,189,.05) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(143,163,189,.05) 0 1px, transparent 1px 26px),
+    linear-gradient(135deg,#13243a,#0b1726);}
+.og::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:
+    radial-gradient(rgba(201,168,76,.7) 2px, transparent 2.6px),
+    radial-gradient(rgba(110,190,210,.6) 2px, transparent 2.6px);
+  background-size:96px 96px,140px 140px;background-position:30px 40px,80px 90px;}
+.top,.foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.2em;color:#F5F5F5;font-size:30px}
+.tag{font-family:'DM Mono',monospace;color:#C9A84C;letter-spacing:.24em;font-size:17px;text-transform:uppercase}
+.mid{position:relative;z-index:2}
+.chip{font-family:'DM Mono',monospace;font-size:16px;color:#0D1B2A;background:#C9A84C;padding:8px 16px;border-radius:8px;letter-spacing:.1em;text-transform:uppercase;display:inline-block;margin-bottom:26px}
+.headline{font-family:'Playfair Display',serif;font-weight:700;color:#F5F5F5;font-size:62px;line-height:1.04;max-width:1010px}
+.headline em{color:#C9A84C;font-style:italic}
+.foot{color:#8FA3BD;font-family:'DM Mono',monospace;font-size:19px;letter-spacing:.06em}
+.rule{height:3px;width:64px;background:#C9A84C;border:none}
+</style></head>
+<body>
+<div class="og">
+  <div class="top"><div class="brand">STRATEGYAI</div><div class="tag" id="tag">RESEARCH</div></div>
+  <div class="mid">
+    <span class="chip" id="chip">MARKET INSIGHT</span>
+    <hr class="rule" style="margin-bottom:22px">
+    <div class="headline" id="headline">Headline goes here</div>
+  </div>
+  <div class="foot"><span id="foot">strategyai.co.uk/research</span><span id="read"></span></div>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+const set=(id,v)=>{if(v!=null)document.getElementById(id).innerHTML=v};
+set('chip',q.get('cat')); set('headline',q.get('title')); set('read',q.get('read')?q.get('read'):'');
+set('foot',q.get('foot')||'strategyai.co.uk/research');
+if(q.get('cat')==null) document.getElementById('chip').style.display='none';
+</script>
+</body></html>

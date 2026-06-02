@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StrategyAI Research</title>
+<meta name="description" content="Community insight published to the StrategyAI Research network.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="StrategyAI">
+<meta property="og:image" content="https://research.strategyai.co.uk/assets/og/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="https://strategyai.co.uk">STRATEGYAI</a>
+  <div class="navlinks">
+    <a href="https://strategyai.co.uk/product">Product</a>
+    <a href="https://strategyai.co.uk/architecture">Architecture</a>
+    <a href="https://strategyai.co.uk/deal-insights">Deal Insights</a>
+    <a href="/" class="active">Research</a>
+    <a href="https://strategyai.co.uk/pricing">Pricing</a>
+    <a class="btn" href="/write.html">Write for us</a>
+  </div>
+</div></nav>
+
+<article class="article" id="post">
+  <p class="a-dek" id="loading">Loading…</p>
+</article>
+
+<footer class="foot"><div class="wrap">
+  <span>strategyai.co.uk · Research</span>
+  <span class="badge">Community · reviewed before publishing</span>
+  <span>© 2026 StrategyAI</span>
+</div></footer>
+
+<script src="/assets/config.js"></script>
+<script src="/assets/app.js"></script>
+<script>
+// minimal, safe markdown -> html (headings, bold, italics, links, paragraphs)
+function md(src){
+  const e=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  return e(src).split(/\n{2,}/).map(block=>{
+    block=block.trim(); if(!block) return '';
+    if(/^###\s/.test(block)) return '<h2>'+inline(block.replace(/^###\s/,''))+'</h2>';
+    if(/^##\s/.test(block))  return '<h2>'+inline(block.replace(/^##\s/,''))+'</h2>';
+    if(/^#\s/.test(block))   return '<h2>'+inline(block.replace(/^#\s/,''))+'</h2>';
+    if(/^[-*]\s/.test(block)) return '<ul>'+block.split(/\n/).map(li=>'<li>'+inline(li.replace(/^[-*]\s/,''))+'</li>').join('')+'</ul>';
+    return '<p>'+inline(block).replace(/\n/g,'<br>')+'</p>';
+  }).join('');
+  function inline(t){return t
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener" style="color:var(--gold-ink);text-decoration:underline">$1</a>');}
+}
+(async function(){
+  const slug=new URLSearchParams(location.search).get('slug');
+  const wrap=document.getElementById('post');
+  if(!slug||!SUPA.url){wrap.innerHTML='<p class="a-dek">Post not found.</p>';return;}
+  try{
+    const r=await fetch(`${SUPA.url}/rest/v1/research_posts?slug=eq.${encodeURIComponent(slug)}&status=eq.approved&select=*`,{headers:{apikey:SUPA.anonKey}});
+    const [p]=await r.json();
+    if(!p){wrap.innerHTML='<p class="a-dek">Post not found.</p>';return;}
+    document.title=p.title+' | StrategyAI Research';
+    const cat={article:'Article',insight:'Market Insight',report:'Report',community:'Community'}[p.category]||'Community';
+    wrap.innerHTML=`
+      <div class="a-cat">${esc(cat).toUpperCase()}</div>
+      <h1>${esc(p.title)}</h1>
+      ${p.excerpt?`<p class="a-dek">${esc(p.excerpt)}</p>`:''}
+      <div class="a-meta"><span>By ${esc(p.author_name||'Contributor')}</span><span>${(p.published_at||'').slice(0,10)}</span></div>
+      <div class="a-hero" style="min-height:220px"></div>
+      <div class="a-body">${md(p.body_md||'')}</div>
+      <div class="engage">
+        <button class="like-btn" data-slug="${esc(p.slug)}"><span>&#9829;</span> <span class="count">${p.likes||0}</span> Like this</button>
+        <div class="share">
+          <a data-share="linkedin" title="Share on LinkedIn">in</a>
+          <a data-share="x" title="Share on X">X</a>
+          <a data-share="copy" title="Copy link">↗</a>
+        </div>
+      </div>`;
+    initLikes(); initShare();
+  }catch(e){wrap.innerHTML='<p class="a-dek">Could not load this post.</p>';}
+})();
+</script>
+</body>
+</html>
