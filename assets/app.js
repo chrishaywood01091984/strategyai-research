@@ -99,7 +99,7 @@ async function loadCommunity(){
     const posts=await r.json();
     if(!Array.isArray(posts)||!posts.length) return;
     grid.innerHTML = posts.map(p=>`
-      <a class="card" data-cat="community" target="_top" href="https://research.strategyai.co.uk/post?slug=${encodeURIComponent(p.slug)}">
+      <a class="card" data-cat="community" href="/post?slug=${encodeURIComponent(p.slug)}">
         <div class="thumb"><span class="cat">Community</span></div>
         <div class="body"><h3>${esc(p.title)}</h3><p>${esc(p.excerpt||'')}</p>
           <div class="meta"><span>${esc(p.author_name||'Contributor')}</span><span class="like">&#9829; ${p.likes||0}</span></div></div>

@@ -6,4 +6,7 @@
   <url><loc>https://research.strategyai.co.uk/fig</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://research.strategyai.co.uk/business-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://research.strategyai.co.uk/energy-infrastructure</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/consumer-retail</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/industrials</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/materials-chemicals</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
