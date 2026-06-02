@@ -237,3 +237,8 @@ html,body{overflow-x:hidden;max-width:100%}
   .chartcard{padding:16px 14px 12px}
   .chartcard .ch-h{font-size:17px}
 }
+
+/* ---------- embed mode (inside Base44 /research iframe) ---------- */
+html.embed .nav, html.embed .foot{display:none!important}
+html.embed .hero .wrap{padding-top:38px}
+html.embed body{background:var(--bg)}
