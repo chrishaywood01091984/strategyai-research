@@ -275,3 +275,7 @@ html.embed .article{padding-bottom:34px}
 @media(max-width:760px){ .sf-grid{grid-template-columns:1fr 1fr;gap:26px;padding:40px 28px 30px} .sf-bar .wrap{flex-direction:column;gap:6px} }
 @media(max-width:430px){ .sf-grid{grid-template-columns:1fr} }
 html.embed .site-foot{display:none!important}
+
+/* Base44 chrome replicas: hide when embedded inside Base44 (real chrome shows) */
+html.embed .sai-header,html.embed .sai-footer{display:none!important}
+@media(max-width:760px){ .sai-hnav a:not(:last-child){display:none} .sai-header{padding:14px 18px!important} }

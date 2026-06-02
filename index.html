@@ -21,20 +21,23 @@
 <meta name="twitter:image" content="https://research.strategyai.co.uk/assets/og/og-home.png">
 <script>if(new URLSearchParams(location.search).has('embed')||window.self!==window.top){document.documentElement.classList.add('embed')}</script>
 <link rel="stylesheet" href="/assets/style.css?v=8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="https://strategyai.co.uk">STRATEGYAI</a>
-  <div class="navlinks">
-    <a href="https://strategyai.co.uk/product">Product</a>
-    <a href="https://strategyai.co.uk/architecture">Architecture</a>
-    <a href="https://strategyai.co.uk/deal-insights">Deal Insights</a>
-    <a href="/" class="active">Research</a>
-    <a href="https://strategyai.co.uk/pricing">Pricing</a>
-    <a class="btn" target="_top" href="https://research.strategyai.co.uk/write.html">Write for us</a>
+<header class="sai-header" style="background:rgb(10,19,32);border-bottom:1px solid rgba(201,165,91,.12);padding:16px 40px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;">
+    <a href="https://strategyai.co.uk" style="text-decoration:none;font-family:Fraunces,Georgia,serif;font-size:22px;color:rgb(245,241,234);">Strategy<em style="font-style:italic;color:rgb(201,165,91);">AI</em></a>
+    <nav class="sai-hnav" style="display:flex;align-items:center;gap:22px;font-family:'JetBrains Mono','Courier New',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;">
+      <a href="https://strategyai.co.uk/product" style="color:rgb(137,149,166);text-decoration:none;">Product</a>
+      <a href="https://strategyai.co.uk/architecture" style="color:rgb(137,149,166);text-decoration:none;">Architecture</a>
+      <a href="https://strategyai.co.uk/deal-insights" style="color:rgb(137,149,166);text-decoration:none;">Deal Insights</a>
+      <a href="https://research.strategyai.co.uk/" style="color:rgb(201,165,91);text-decoration:none;">Research</a>
+      <a href="https://strategyai.co.uk/pricing" style="color:rgb(137,149,166);text-decoration:none;">Pricing</a>
+      <a href="https://strategyai.co.uk/onboarding" style="color:rgb(10,19,32);background:rgb(201,165,91);padding:8px 14px;border-radius:4px;text-decoration:none;font-weight:500;letter-spacing:.08em;">Get Access</a>
+    </nav>
   </div>
-</div></nav>
+</header>
 
 <header class="hero">
   <canvas id="nodefield" class="nodefield"></canvas>
@@ -58,7 +61,7 @@
   <section class="grid">
 
     <!-- FEATURED / sample article -->
-    <a class="card featured" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/healthcare-mandates-forming">
+    <a class="card featured" data-cat="insight" href="/healthcare-mandates-forming">
       <div class="thumb"><img src="/assets/img/healthcare.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body">
         <div class="tag">Featured · 6 min read</div>
@@ -70,63 +73,63 @@
     </a>
 
     <!-- sector mandate-insight series (live data) -->
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/tmt">
+    <a class="card" data-cat="insight" href="/tmt">
       <div class="thumb"><img src="/assets/img/tmt.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>TMT: the integration wave behind Europe's deal surge</h3>
         <p>140 deals, +37% last quarter — and 79% carry a post-acquisition integration mandate.</p>
         <div class="meta"><span>140 deals · 6mo</span><span style="color:var(--green)">▲ +37%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/fig">
+    <a class="card" data-cat="insight" href="/fig">
       <div class="thumb"><img src="/assets/img/fig.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>FIG: the +92% quarter, and the backlog behind it</h3>
         <p>114 deals, three-quarters integration-led and skewing large — the fastest-accelerating sector we track.</p>
         <div class="meta"><span>114 deals · 6mo</span><span style="color:var(--green)">▲ +92%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/business-services">
+    <a class="card" data-cat="insight" href="/business-services">
       <div class="thumb"><img src="/assets/img/business-services.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Business Services: 83% of deals carry an integration mandate</h3>
         <p>The most PMI-heavy sector we cover — a buy-and-build machine, quietly up 52% last quarter.</p>
         <div class="meta"><span>83 deals · 6mo</span><span style="color:var(--green)">▲ +52%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/energy-infrastructure">
+    <a class="card" data-cat="insight" href="/energy-infrastructure">
       <div class="thumb"><img src="/assets/img/energy-infrastructure.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Energy &amp; Infrastructure: capital deploys, the work forms</h3>
         <p>The most capital-intensive sector — 16 deals £1bn+, infra funds deploying into the transition. Up 45%.</p>
         <div class="meta"><span>71 deals · 6mo</span><span style="color:var(--green)">▲ +45%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/industrials">
+    <a class="card" data-cat="insight" href="/industrials">
       <div class="thumb"><img src="/assets/img/industrials.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Industrials: +56%, and a wave of big-ticket integration</h3>
         <p>Top-led rally — KONE–TK Elevator, Apollo–Forvia. 83% of deals open a multi-year integration programme.</p>
         <div class="meta"><span>64 deals · 6mo</span><span style="color:var(--green)">▲ +56%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/materials-chemicals">
+    <a class="card" data-cat="insight" href="/materials-chemicals">
       <div class="thumb"><img src="/assets/img/materials-chemicals.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Materials &amp; Chemicals: the +164% quarter nobody's talking about</h3>
         <p>The sharpest move in our coverage — battery and transition materials consolidating fast. Small sector, big inflection.</p>
         <div class="meta"><span>40 deals · 6mo</span><span style="color:var(--green)">▲ +164%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/consumer-retail">
+    <a class="card" data-cat="insight" href="/consumer-retail">
       <div class="thumb"><img src="/assets/img/consumer-retail.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Consumer &amp; Retail: the sector that cooled — and what stayed hot</h3>
         <p>The one outlier: volume eased 19% — but 85% of what's left is integration-led. The work concentrated.</p>
         <div class="meta"><span>65 deals · 6mo</span><span style="color:var(--ink-soft)">▼ −19%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/private-equity">
+    <a class="card" data-cat="insight" href="/private-equity">
       <div class="thumb"><img src="/assets/img/private-equity.jpg" alt="" onerror="this.remove()"><span class="cat">Market Insight</span></div>
       <div class="body"><h3>Private Equity: deploying hard — and every deal is a mandate</h3>
         <p>Sponsor-led deal flow +62% last quarter. 79 funds and 927 portfolio companies on watch.</p>
         <div class="meta"><span>97 deals · 6mo</span><span style="color:var(--green)">▲ +62%</span></div></div>
     </a>
 
-    <a class="card" data-cat="insight" target="_top" href="https://research.strategyai.co.uk/market-outlook">
+    <a class="card" data-cat="insight" href="/market-outlook">
       <div class="thumb"><img src="/assets/img/market-outlook.jpg" alt="" onerror="this.remove()"><span class="cat">Outlook</span></div>
       <div class="body"><h3>Where the market is heading: what 698 deals are telling us</h3>
         <p>698 deals, accelerating to a 6-month high, 78% integration-led. The signal across the signals.</p>
@@ -137,7 +140,7 @@
 
   <!-- COMMUNITY -->
   <div class="sec-h"><div><h2>From the network</h2><div class="sub">Insight published by partners, advisors and operators across the StrategyAI community. Every piece reviewed before it goes live.</div></div>
-    <a class="btn btn-ghost" target="_top" href="https://research.strategyai.co.uk/write.html">Write for us</a></div>
+    <a class="btn btn-ghost" href="/write.html">Write for us</a></div>
 
   <section class="grid" id="community-grid" style="padding-top:24px">
     <div class="card" data-cat="community">
@@ -156,36 +159,19 @@
 
 </main>
 
-<footer class="site-foot">
-  <div class="sf-grid">
-    <div class="sf-brand">
-      <div class="sf-word">Strategy<b>AI</b></div>
-      <p class="sf-tag">Pre-mandate origination intelligence for EMEA &amp; the GCC — surfacing the advisory mandates forming weeks before the RFP.</p>
-      <a class="sf-li" href="https://www.linkedin.com/company/strategyaiintelligenceuk/" target="_blank" rel="noopener" aria-label="StrategyAI on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.06 0 6 3.3 6 7.6V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9-2.4 0-2.7 1.8-2.7 3.8V24h-5V8z"/></svg></a>
-    </div>
-    <div class="sf-col">
-      <h5>Platform</h5>
-      <a href="https://strategyai.co.uk/product">Product</a>
-      <a href="https://strategyai.co.uk/architecture">Architecture</a>
-      <a href="https://strategyai.co.uk/pricing">Pricing</a>
-    </div>
-    <div class="sf-col">
-      <h5>Intelligence</h5>
-      <a href="https://strategyai.co.uk/deal-insights">Deal Insights</a>
-      <a href="https://research.strategyai.co.uk/">Research</a>
-      <a href="https://strategyai.co.uk">Get access</a>
-    </div>
-    <div class="sf-col">
-      <h5>Contribute</h5>
-      <a href="https://research.strategyai.co.uk/write.html">Write for us</a>
-      <a href="https://www.linkedin.com/company/strategyaiintelligenceuk/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-  <div class="sf-bar"><div class="wrap">
-    <span>&copy; 2026 StrategyAI &middot; All rights reserved.</span>
-    <span>strategyai.co.uk</span>
-  </div></div>
-</footer>
+<footer class="sai-footer" style="background: rgb(10, 19, 32); border-top: 1px solid rgba(201, 165, 91, 0.12); padding: 56px 40px 28px;"><style>
+        @media (max-width: 480px) {
+          .sai-footer { padding: 24px 16px 14px !important; }
+          .sai-footer-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 16px 10px !important; margin-bottom: 20px !important; }
+          .sai-footer-brand { grid-column: 1 / 3 !important; margin-bottom: 16px !important; }
+          .sai-footer-brand-desc { display: none !important; }
+          .sai-footer-bullets { display: none !important; }
+          .sai-footer-bottom { flex-direction: column !important; text-align: center !important; gap: 2px !important; padding-top: 10px !important; }
+          .sai-footer-bottom p { font-size: 7px !important; }
+          .sai-footer-link-item { font-size: 10px !important; margin-bottom: 5px !important; }
+          .sai-footer-col-title { font-size: 8px !important; margin-bottom: 8px !important; }
+        }
+      </style><div style="max-width: 1200px; margin: 0px auto;"><div class="sai-footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 48px;"><div class="sai-footer-brand"><p style="font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 400; color: rgb(245, 241, 234); margin-bottom: 4px;">Strategy<em style="font-style: italic; color: rgb(201, 165, 91);">AI</em></p><p class="sai-footer-brand-desc" style="font-family: Inter, Helvetica, sans-serif; font-weight: 400; font-size: 13px; color: rgb(201, 165, 91); letter-spacing: 0.02em; margin-bottom: 10px; max-width: 240px; line-height: 1.5;">Built for the European &amp; Middle East Strategy Consulting market.</p><div class="sai-footer-bullets" style="margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;"><div class="sai-footer-bullet" style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: rgb(201, 165, 91); font-size: 10px; margin-top: 2px; flex-shrink: 0;">·</span><span style="font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; color: rgb(137, 149, 166); line-height: 1.6;">Mandate intelligence for Strategy Partners.</span></div><div class="sai-footer-bullet" style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: rgb(201, 165, 91); font-size: 10px; margin-top: 2px; flex-shrink: 0;">·</span><span style="font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; color: rgb(137, 149, 166); line-height: 1.6;">See where momentum is building.</span></div><div class="sai-footer-bullet" style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: rgb(201, 165, 91); font-size: 10px; margin-top: 2px; flex-shrink: 0;">·</span><span style="font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; color: rgb(137, 149, 166); line-height: 1.6;">Move before the mandate is obvious.</span></div></div><a href="mailto:admin@strategyai.co.uk" style="font-family: &quot;JetBrains Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 10px; color: rgba(201, 165, 91, 0.6); text-decoration: none; letter-spacing: 0.08em; transition: color 0.15s; display: block; margin-bottom: 12px;">admin@strategyai.co.uk</a><a href="https://www.linkedin.com/company/strategyaiintelligenceuk/?viewAsMember=true" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block;"><div style="width: 28px; height: 28px; background: rgb(201, 165, 91); color: rgb(10, 13, 18); display: flex; align-items: center; justify-content: center; border-radius: 3px; font-family: &quot;JetBrains Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 12px; font-weight: 500; transition: transform 0.2s; cursor: pointer;">in</div></a></div><div><p class="sai-footer-col-title" style="font-family: &quot;JetBrains Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201, 165, 91, 0.5); margin-bottom: 16px;">Company</p><a class="sai-footer-link-item" href="https://strategyai.co.uk/why-strategyai" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Why StrategyAI</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/pricing" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Pricing</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/product" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Product</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/deal-pulse" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Deal Pulse</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/client-access" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Login →</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/onboarding" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Get Access →</a></div><div><p class="sai-footer-col-title" style="font-family: &quot;JetBrains Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201, 165, 91, 0.5); margin-bottom: 16px;">Legal</p><a class="sai-footer-link-item" href="https://strategyai.co.uk/privacy-policy" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Privacy Policy</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/terms" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Terms</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/cookie-policy" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Cookie Policy</a><a class="sai-footer-link-item" href="https://strategyai.co.uk/privacy-policy" style="display: block; font-family: Inter, Helvetica, sans-serif; font-weight: 300; font-size: 13px; text-decoration: none; color: rgb(137, 149, 166); margin-bottom: 9px; transition: color 0.15s;">Security</a><p class="sai-footer-privacy-note hide-mobile" style="font-family: Inter, Helvetica, sans-serif; font-style: italic; font-weight: 300; font-size: 11px; color: rgba(245, 241, 234, 0.4); max-width: 200px; line-height: 1.5; margin-top: 16px;">Privacy first — your queries never leave your account.</p></div></div><div class="sai-footer-bottom" style="border-top: 1px solid rgba(245, 241, 234, 0.08); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;"><p style="font-family: &quot;JetBrains Mono&quot;, &quot;Courier New&quot;, monospace; font-size: 9px; color: rgba(245, 241, 234, 0.25); letter-spacing: 0.06em; margin: 0px;">© 2026 StrategyAI Ltd · strategyai.co.uk · Built in London · BD Signal Intelligence · EMEIA</p></div></div></footer>
 
 <script src="/assets/config.js?v=8"></script>
 <script src="/assets/app.js?v=8"></script>
