@@ -251,3 +251,8 @@ html.embed body{background:var(--bg)}
 /* fix: CTA band heading/text inside articles must stay light (override .article h2/p) */
 .article .cta-band h2{color:var(--white)!important}
 .article .cta-band p{color:var(--ice)!important}
+
+/* embed: tighten bottom whitespace so content sits snug to the Base44 footer */
+html.embed main.wrap{padding-bottom:0}
+html.embed .cta-band{margin-bottom:30px}
+html.embed .article{padding-bottom:34px}
