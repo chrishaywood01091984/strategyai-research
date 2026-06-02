@@ -29,29 +29,23 @@
 
 <main class="wrap" style="padding:34px 28px 90px">
 
-  <!-- AUTH (Supabase) — sign in / sign up to author -->
-  <div id="auth" class="panel" style="margin-bottom:24px">
-    <div class="field"><label>Your email</label>
-      <input id="email" type="email" placeholder="you@firm.com" autocomplete="email">
-      <div class="hint">New here? Signing in creates your contributor account. We'll email you a secure link — no password.</div></div>
-    <button class="btn btn-solid" id="signin">Sign in / Sign up</button>
-    <div id="auth-msg" class="hint" style="margin-top:12px"></div>
-  </div>
-
   <!-- SUBMISSION FORM -->
   <form id="writeform" class="panel">
-    <div class="notice warn">Every submission is reviewed by the StrategyAI team before publishing. We'll email you when it's live.</div>
+    <div class="notice warn">Every submission is reviewed by the StrategyAI team before publishing — nothing goes live until it's approved.</div>
     <div class="field"><label>Headline</label>
-      <input id="f-title" maxlength="120" placeholder="A sharp, specific title" required></div>
+      <input id="f-title" maxlength="140" placeholder="A sharp, specific title" required></div>
     <div class="field formrow">
-      <div style="flex:1"><label>Category</label>
+      <div><label>Category</label>
         <select id="f-cat"><option value="article">Article</option><option value="insight">Market Insight</option><option value="report">Report</option></select></div>
-      <div style="flex:1"><label>Your name &amp; firm (byline)</label>
+      <div><label>Your name &amp; firm (byline)</label>
         <input id="f-author" placeholder="Jane Smith, Partner — Acme" required></div>
     </div>
+    <div class="field"><label>Your email <span style="text-transform:none;letter-spacing:0">(so we can tell you when it's live — not published)</span></label>
+      <input id="f-email" type="email" placeholder="you@firm.com" autocomplete="email"></div>
     <div class="field"><label>Body</label>
       <textarea id="f-body" placeholder="Write your piece. Markdown supported — use # for headings, **bold**, and blank lines between paragraphs." required></textarea>
       <div class="hint">Markdown supported. Aim for 500–1,200 words. Add links to back your point — evidence travels.</div></div>
+    <input id="f-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <button class="btn btn-solid" id="submit" type="submit">Submit for review</button>
     <div id="form-msg" class="hint" style="margin-top:12px"></div>
   </form>
@@ -67,31 +61,26 @@
 <script src="/assets/config.js"></script>
 <script src="/assets/app.js"></script>
 <script>
-// Contributor flow (wired to Supabase at deploy; UI works standalone for now)
+// Contributor flow — submits to the moderated edge function (no login required).
 const $=id=>document.getElementById(id);
-$('signin').addEventListener('click',async()=>{
-  const email=$('email').value.trim();
-  if(!/.+@.+\..+/.test(email)){$('auth-msg').textContent='Enter a valid email.';return;}
-  if(!SUPA.url){$('auth-msg').textContent='✓ Demo mode — account & magic-link sign-in activate once the backend is live.';return;}
-  try{
-    const r=await fetch(`${SUPA.url}/auth/v1/otp`,{method:'POST',
-      headers:{'apikey':SUPA.anonKey,'Content-Type':'application/json'},
-      body:JSON.stringify({email,create_user:true,options:{email_redirect_to:'https://research.strategyai.co.uk/write.html'}})});
-    $('auth-msg').textContent = r.ok ? '✓ Check your inbox for a secure sign-in link.' : 'Could not send link — try again.';
-  }catch(e){$('auth-msg').textContent='Network error — try again.';}
-});
 $('writeform').addEventListener('submit',async e=>{
   e.preventDefault();
-  const post={title:$('f-title').value.trim(),category:$('f-cat').value,
-    author_name:$('f-author').value.trim(),body_md:$('f-body').value.trim(),status:'pending'};
-  if(!SUPA.url){$('form-msg').textContent='✓ Demo mode — your piece would now enter the review queue. Backend goes live on deploy.';e.target.reset();return;}
+  const msg=$('form-msg');
+  const payload={action:'submit',
+    title:$('f-title').value.trim(), category:$('f-cat').value,
+    author_name:$('f-author').value.trim(), author_email:$('f-email').value.trim(),
+    body_md:$('f-body').value.trim(), website:$('f-website').value};
+  if(payload.title.length<3){msg.textContent='Add a headline.';return;}
+  if(payload.body_md.length<20){msg.textContent='Your piece is a little short.';return;}
+  $('submit').disabled=true; msg.textContent='Submitting…';
   try{
-    const r=await fetch(`${SUPA.url}/rest/v1/research_posts`,{method:'POST',
-      headers:{'apikey':SUPA.anonKey,'Content-Type':'application/json','Prefer':'return-minimal'},
-      body:JSON.stringify(post)});
-    $('form-msg').textContent = r.ok ? '✓ Submitted. We\'ll review it and email you when it\'s live.' : 'Submission failed — please sign in first.';
-    if(r.ok) e.target.reset();
-  }catch(e){$('form-msg').textContent='Network error — try again.';}
+    const r=await fetch(`${SUPA.url}/functions/v1/research`,{method:'POST',
+      headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    const d=await r.json();
+    if(r.ok&&d.ok){msg.textContent='✓ Submitted for review. We\'ll be in touch when it\'s live.';e.target.reset();}
+    else{msg.textContent=d.error||'Submission failed — please try again.';}
+  }catch(err){msg.textContent='Network error — please try again.';}
+  $('submit').disabled=false;
 });
 </script>
 </body>
