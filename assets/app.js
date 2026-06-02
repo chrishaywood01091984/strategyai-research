@@ -81,7 +81,7 @@ function initShare(){
   const title=encodeURIComponent(document.title);
   document.querySelectorAll('[data-share]').forEach(a=>{
     const k=a.dataset.share;
-    if(k==='linkedin') a.href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    if(k==='linkedin') a.href='https://www.linkedin.com/company/strategyaiintelligenceuk/';
     if(k==='x') a.href=`https://twitter.com/intent/tweet?url=${url}&text=${title}`;
     if(k!=='copy') a.target='_blank';
     if(k==='copy') a.addEventListener('click',e=>{e.preventDefault();
@@ -124,3 +124,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   nodeField(document.getElementById('nodefield'));
   navToggle(); initFilters(); initLikes(); initShare(); loadCommunity();
 });
+
+/* ---------- report content height to Base44 parent (auto-resize embed) ---------- */
+(function(){
+  if(window.parent===window) return;            // only when embedded in an iframe
+  function post(){ try{ parent.postMessage({type:'sa-research-height', height: Math.ceil(document.documentElement.scrollHeight)}, '*'); }catch(e){} }
+  addEventListener('load', post); addEventListener('resize', post);
+  [300,800,1500,2800].forEach(function(t){ setTimeout(post, t); });
+  try{ new ResizeObserver(post).observe(document.documentElement); }catch(e){}
+})();
