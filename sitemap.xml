@@ -2,4 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://research.strategyai.co.uk/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://research.strategyai.co.uk/healthcare-mandates-forming</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/tmt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/fig</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/business-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.strategyai.co.uk/energy-infrastructure</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
