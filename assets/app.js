@@ -77,7 +77,9 @@ async function initLikes(){
 
 /* ---------- share ---------- */
 function initShare(){
-  const url=encodeURIComponent(location.href);
+  const _c=document.querySelector('link[rel="canonical"]');
+  const canon=(_c&&_c.href)||location.href.split('?')[0];
+  const url=encodeURIComponent(canon);
   const title=encodeURIComponent(document.title);
   document.querySelectorAll('[data-share]').forEach(a=>{
     const k=a.dataset.share;
@@ -85,7 +87,7 @@ function initShare(){
     if(k==='x') a.href=`https://twitter.com/intent/tweet?url=${url}&text=${title}`;
     if(k!=='copy') a.target='_blank';
     if(k==='copy') a.addEventListener('click',e=>{e.preventDefault();
-      navigator.clipboard.writeText(location.href);a.title='Link copied';});
+      navigator.clipboard.writeText(canon);a.title='Link copied';});
   });
 }
 
