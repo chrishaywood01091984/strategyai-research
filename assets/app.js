@@ -128,8 +128,15 @@ document.addEventListener('DOMContentLoaded',()=>{
 /* ---------- report content height to Base44 parent (auto-resize embed) ---------- */
 (function(){
   if(window.parent===window) return;            // only when embedded in an iframe
-  function post(){ try{ parent.postMessage({type:'sa-research-height', height: Math.ceil(document.documentElement.scrollHeight)}, '*'); }catch(e){} }
-  addEventListener('load', post); addEventListener('resize', post);
-  [300,800,1500,2800].forEach(function(t){ setTimeout(post, t); });
-  try{ new ResizeObserver(post).observe(document.documentElement); }catch(e){}
+  var last=0;
+  function H(){ return Math.max(document.body?document.body.scrollHeight:0, document.documentElement.scrollHeight, document.documentElement.offsetHeight); }
+  function post(force){ var h=Math.ceil(H()); if(force||Math.abs(h-last)>2){ last=h; try{ parent.postMessage({type:'sa-research-height', height:h}, '*'); }catch(e){} } }
+  addEventListener('DOMContentLoaded', function(){post(1)});
+  addEventListener('load', function(){post(1)});
+  addEventListener('resize', function(){post(1)});
+  if(document.images) for(var i=0;i<document.images.length;i++){ document.images[i].addEventListener('load', function(){post(1)}); }
+  var n=0, iv=setInterval(function(){ post(); if(++n>25) clearInterval(iv); }, 350);   // ~9s safety net
+  try{ new ResizeObserver(function(){post()}).observe(document.documentElement); }catch(e){}
+  try{ new MutationObserver(function(){post()}).observe(document.documentElement,{subtree:true,childList:true,attributes:true,characterData:true}); }catch(e){}
+  post(1);
 })();
