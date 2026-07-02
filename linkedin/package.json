@@ -1,0 +1,11 @@
+{
+  "name": "strategyai-linkedin",
+  "private": true,
+  "description": "StrategyAI 10-week LinkedIn carousel generator + renderer (runs in CI, not locally)",
+  "scripts": {
+    "week01": "node week01/build_week1.js && node render.js week01/html StrategyAI_Week1_carousel.pdf"
+  },
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}
