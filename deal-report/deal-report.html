@@ -1,0 +1,252 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>StrategyAI Deal Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Libre+Baskerville:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--navy2:#12263b;--gold:#c9a84c;--cool:#3b6ea8;--cream:#f4efe4;--dim:#9fb0c3;--line:rgba(201,168,76,.28);}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:A4;margin:0}
+html,body{background:#05101b;color:var(--cream);font-family:"Libre Baskerville",serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:296mm;margin:0 auto;background:linear-gradient(160deg,#0d1b2a,#0a1622 60%,#091320);padding:20mm 18mm;position:relative;overflow:hidden;page-break-after:always}
+.page:last-child{page-break-after:auto}
+.mono{font-family:"DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:700;color:#fff;line-height:1.05}
+.kick{font-family:"DM Mono",monospace;font-size:9.5pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.read{font-size:10.5pt;line-height:1.75;color:#d7ddE6}
+.read b{color:#fff;font-weight:700}
+.gold{color:var(--gold)}
+.rule{height:1px;background:var(--line);margin:7mm 0}
+.foot{position:absolute;left:18mm;right:18mm;bottom:11mm;display:flex;justify-content:space-between;align-items:center;font-family:"DM Mono",monospace;font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);border-top:1px solid var(--line);padding-top:4mm}
+.brandmark{font-family:"Playfair Display",serif;font-weight:900;color:#fff}.brandmark i{color:var(--gold);font-style:normal}
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 80% at 78% 8%,rgba(201,168,76,.13),transparent 55%),linear-gradient(160deg,#0d1b2a,#081320)}
+.cover h1{font-size:44pt;line-height:1.02;margin:6mm 0 5mm}
+.cover .sub{font-size:12pt;color:#cdd6e2;max-width:150mm;line-height:1.7}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:40px;padding:2.4mm 6mm;font-size:8.5pt}
+.coverkpis{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.coverkpis>div{flex:1;padding:7mm 4mm 7mm 0}
+.coverkpis .n{font-family:"Playfair Display",serif;font-size:26pt;color:var(--gold);font-weight:900}
+.coverkpis .l{font-family:"DM Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:2mm}
+/* kpi grid */
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:6mm}
+.kcard{background:linear-gradient(155deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:4mm;padding:6mm}
+.kcard .n{font-family:"Playfair Display",serif;font-size:27pt;font-weight:900;color:#fff}
+.kcard .n small{font-size:13pt;color:var(--gold)}
+.kcard .l{font-family:"DM Mono",monospace;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:2mm}
+.kcard .d{font-size:8.5pt;color:var(--dim);margin-top:1.5mm;line-height:1.5}
+/* bars */
+.bars{margin-top:4mm}
+.bar{display:grid;grid-template-columns:42mm 1fr auto;align-items:center;gap:3mm;margin:2.6mm 0}
+.bar .lab{font-family:"DM Mono",monospace;font-size:8pt;letter-spacing:.06em;color:#cdd6e2;text-align:right;text-transform:uppercase}
+.bar .track{height:6.5mm;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.bar .fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),#e6c874)}
+.bar.cool .fill{background:linear-gradient(90deg,#3b6ea8,#5d8fc9)}
+.bar .val{font-family:"DM Mono",monospace;font-size:8pt;color:var(--gold);min-width:16mm}
+.bar .val i{color:var(--dim);font-style:normal;font-size:7pt}
+/* insight block */
+.insight{border-left:2.5px solid var(--gold);padding:1mm 0 1mm 6mm;margin:5mm 0}
+.insight .h{font-family:"DM Mono",monospace;font-size:8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2mm}
+.insight p{font-size:10pt;line-height:1.7;color:#dfe5ee}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:9mm}
+/* deal cards */
+.deal{border:1px solid var(--line);border-radius:3mm;padding:4.5mm 5mm;margin:3.2mm 0;background:linear-gradient(155deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+.deal .top{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
+.deal .nm{font-family:"Playfair Display",serif;font-weight:700;font-size:12.5pt;color:#fff}
+.deal .v{font-family:"DM Mono",monospace;font-size:11pt;color:var(--gold);white-space:nowrap}
+.deal .meta{font-family:"DM Mono",monospace;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:1.5mm 0 2.5mm}
+.deal .ang{font-size:9pt;line-height:1.6;color:#d2dae5}
+.deal .ang b{color:var(--gold);font-weight:400;font-family:"DM Mono",monospace;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:.6mm 3mm;font-family:"DM Mono",monospace;font-size:6.8pt;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-left:2mm}
+.cta{background:linear-gradient(155deg,rgba(201,168,76,.14),rgba(201,168,76,.04));border:1px solid var(--gold);border-radius:4mm;padding:8mm;text-align:center;margin-top:7mm}
+.cta h3{font-size:19pt;margin-bottom:3mm}
+.cta p{font-size:10pt;color:#dfe5ee;max-width:140mm;margin:0 auto;line-height:1.7}
+.cta .url{font-family:"DM Mono",monospace;color:var(--gold);letter-spacing:.14em;margin-top:4mm;font-size:9pt}
+.legend{font-family:"DM Mono",monospace;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);display:flex;gap:6mm;margin-top:3mm}
+.legend i{font-style:normal}.dotg{color:var(--gold)}.dotc{color:#5d8fc9}
+</style></head><body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="brandmark" style="font-size:16pt">Strategy<i>AI</i></div>
+      <div class="mono" style="font-size:8pt;color:var(--dim)">EMEA Deal Intelligence</div>
+    </div>
+    <div style="margin-top:34mm">
+      <span class="tag mono">The 30-Day Read &middot; to 3 July 2026</span>
+      <h1>Europe's deal<br>machine, decoded.</h1>
+      <p class="sub">Eighty-three M&amp;A, buyout and exit situations across EMEA in thirty days. Where the capital moved, which sectors ran hot, and the mandates forming behind the headlines. Read live from StrategyAI's signal engine.</p>
+    </div>
+  </div>
+  <div class="coverkpis">
+    <div><div class="n">83</div><div class="l">Deals tracked</div></div>
+    <div><div class="n">$88.8b</div><div class="l">Disclosed value</div></div>
+    <div><div class="n">16</div><div class="l">Countries</div></div>
+    <div><div class="n">23</div><div class="l">PE-led &amp; take-private</div></div>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="page">
+  <div class="kick">01 &middot; At a glance</div>
+  <h2 style="font-size:23pt;margin-top:3mm">Thirty days, in numbers</h2>
+  <div class="kgrid">
+    <div class="kcard"><div class="n">83</div><div class="l">Situations tracked</div><div class="d">Verified M&amp;A, buyouts, carve-outs, take-privates and exits across EMEA.</div></div>
+    <div class="kcard"><div class="n"><small>$</small>88.8b</div><div class="l">Disclosed value</div><div class="d">Across the 39 deals with a public figure. Many more undisclosed.</div></div>
+    <div class="kcard"><div class="n">16</div><div class="l">PE-led deals</div><div class="d">Plus a wave of sponsor exits and secondary buyouts.</div></div>
+    <div class="kcard"><div class="n">14</div><div class="l">Carve-outs</div><div class="d">Corporates shedding units at pace: VW, thyssenkrupp, Saint-Gobain, Evonik.</div></div>
+    <div class="kcard"><div class="n">7</div><div class="l">Take-privates</div><div class="d">Listed companies pulled off-market by sponsors and strategics.</div></div>
+    <div class="kcard"><div class="n">16</div><div class="l">Countries</div><div class="d">Germany, the UK and the Nordics the busiest, Italy carrying the value.</div></div>
+  </div>
+  <div class="insight">
+    <div class="h">&#9670; The StrategyAI read</div>
+    <p>This is not a quiet market. In a single month our engine surfaced eighty-three genuine mandates worth close to ninety billion dollars in disclosed value alone, led by the return of European bank consolidation and a relentless run of carve-outs and take-privates. The headline is not deal count, it is <b>structure</b>: corporates are simplifying, sponsors are recycling capital between each other, and global buyers are shopping in Europe.</p>
+  </div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>02</div></div>
+</section>
+
+<!-- SECTORS -->
+<section class="page">
+  <div class="kick">02 &middot; Sector heat</div>
+  <h2 style="font-size:23pt;margin-top:3mm">Industrials and TMT run the volume,<br>banking carries the value</h2>
+  <div class="legend"><i class="dotg">&#9632;</i> Deal count &nbsp; <i style="color:#7f8ea2">by sector, 30 days</i></div>
+  <div class="bars">
+    <div class="bar"><div class="lab">Industrials</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">16 <i>&middot; $16.2b</i></div></div>
+    <div class="bar"><div class="lab">TMT &amp; Software</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">16 <i>&middot; $8.4b</i></div></div>
+    <div class="bar"><div class="lab">Consumer &amp; Retail</div><div class="track"><div class="fill" style="width:69%"></div></div><div class="val">11 <i>&middot; $9.0b</i></div></div>
+    <div class="bar"><div class="lab">Financial Services</div><div class="track"><div class="fill" style="width:50%"></div></div><div class="val">8 <i>&middot; $34.0b</i></div></div>
+    <div class="bar"><div class="lab">Business Services</div><div class="track"><div class="fill" style="width:44%"></div></div><div class="val">7 <i>&middot; $1.5b</i></div></div>
+    <div class="bar"><div class="lab">Energy &amp; Infra</div><div class="track"><div class="fill" style="width:44%"></div></div><div class="val">7 <i>&middot; $7.7b</i></div></div>
+    <div class="bar"><div class="lab">Healthcare</div><div class="track"><div class="fill" style="width:38%"></div></div><div class="val">6 <i>&middot; $2.0b</i></div></div>
+    <div class="bar"><div class="lab">Real Estate</div><div class="track"><div class="fill" style="width:31%"></div></div><div class="val">5 <i>&middot; $7.0b</i></div></div>
+    <div class="bar"><div class="lab">Materials &amp; Chem</div><div class="track"><div class="fill" style="width:25%"></div></div><div class="val">4 <i>&middot; $1.9b</i></div></div>
+    <div class="bar"><div class="lab">Aerospace &amp; Defence</div><div class="track"><div class="fill" style="width:19%"></div></div><div class="val">3 <i>&middot; $1.1b</i></div></div>
+  </div>
+  <div class="insight">
+    <div class="h">&#9670; What we're seeing</div>
+    <p><b>Industrials and TMT are the workhorses</b> at sixteen deals each, dominated by carve-outs (Everllence, Kontron, Flender, tk accelis) and software consolidation (Schneider buying Cognite, Sixth Street backing Kpler). <b>Financial services carries the value</b> at thirty-four billion, almost entirely Intesa Sanpaolo's move on Monte dei Paschi. The pattern beneath the bars: complex, multi-workstream situations where the operating decisions happen in the first hundred days, not niche add-ons.</p>
+  </div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>03</div></div>
+</section>
+
+<!-- GEOGRAPHY + STRUCTURE -->
+<section class="page">
+  <div class="kick">03 &middot; Geography &amp; structure</div>
+  <h2 style="font-size:23pt;margin-top:3mm">The German-UK-Nordic engine</h2>
+  <div class="two" style="margin-top:5mm">
+    <div>
+      <div class="legend"><i class="dotc">&#9632;</i> Deals by country</div>
+      <div class="bars">
+        <div class="bar cool"><div class="lab">United Kingdom</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">15</div></div>
+        <div class="bar cool"><div class="lab">Germany</div><div class="track"><div class="fill" style="width:93%"></div></div><div class="val">14</div></div>
+        <div class="bar cool"><div class="lab">Italy</div><div class="track"><div class="fill" style="width:60%"></div></div><div class="val">9</div></div>
+        <div class="bar cool"><div class="lab">Sweden</div><div class="track"><div class="fill" style="width:47%"></div></div><div class="val">7</div></div>
+        <div class="bar cool"><div class="lab">Norway</div><div class="track"><div class="fill" style="width:47%"></div></div><div class="val">7</div></div>
+        <div class="bar cool"><div class="lab">France</div><div class="track"><div class="fill" style="width:27%"></div></div><div class="val">4</div></div>
+        <div class="bar cool"><div class="lab">Switzerland</div><div class="track"><div class="fill" style="width:27%"></div></div><div class="val">4</div></div>
+        <div class="bar cool"><div class="lab">Poland / NL / Austria</div><div class="track"><div class="fill" style="width:20%"></div></div><div class="val">3 <i>ea</i></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="legend"><i class="dotg">&#9632;</i> Deal structure</div>
+      <div class="bars">
+        <div class="bar"><div class="lab">Acquisition</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">53</div></div>
+        <div class="bar"><div class="lab">Carve-out</div><div class="track"><div class="fill" style="width:26%"></div></div><div class="val">14</div></div>
+        <div class="bar"><div class="lab">Minority / growth</div><div class="track"><div class="fill" style="width:11%"></div></div><div class="val">6</div></div>
+        <div class="bar"><div class="lab">IPO / listing</div><div class="track"><div class="fill" style="width:11%"></div></div><div class="val">6</div></div>
+        <div class="bar"><div class="lab">Merger</div><div class="track"><div class="fill" style="width:4%"></div></div><div class="val">2</div></div>
+        <div class="bar"><div class="lab">Joint venture</div><div class="track"><div class="fill" style="width:4%"></div></div><div class="val">2</div></div>
+      </div>
+      <div class="legend" style="margin-top:7mm"><i class="dotg">&#9632;</i> Who is buying</div>
+      <div class="bars">
+        <div class="bar"><div class="lab">Strategic</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">61</div></div>
+        <div class="bar cool"><div class="lab">Private equity</div><div class="track"><div class="fill" style="width:26%"></div></div><div class="val">16</div></div>
+        <div class="bar cool"><div class="lab">Sovereign / family</div><div class="track"><div class="fill" style="width:10%"></div></div><div class="val">6</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="insight">
+    <div class="h">&#9670; What we're seeing</div>
+    <p><b>Germany, the UK and the Nordics generate over two-thirds of activity.</b> Germany is the carve-out capital (VW, thyssenkrupp, Evonik all shedding assets), the UK is where take-privates cluster (Tate &amp; Lyle, Hyve, AMS), and the Nordics are consolidating hard (Norwegian buying Ving, Fortum buying Elmera, Telenor rolling up fibre). Strategics still lead by count, but the fourteen carve-outs and seven take-privates are where the richest advisory mandates sit.</p>
+  </div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>04</div></div>
+</section>
+
+<!-- SPONSORS -->
+<section class="page">
+  <div class="kick">04 &middot; The sponsors</div>
+  <h2 style="font-size:23pt;margin-top:3mm">Capital is recycling,<br>not sitting still</h2>
+  <div class="read" style="margin-top:5mm">
+    <p>Private equity was behind <b>sixteen deals directly</b>, but its fingerprints are on far more. The defining sponsor move of the month was <b>the secondary buyout</b>: assets passing from one fund to the next rather than to a strategic or the public market.</p>
+  </div>
+  <div class="kgrid" style="grid-template-columns:repeat(2,1fr);margin-top:6mm">
+    <div class="kcard"><div class="l" style="color:var(--gold)">Secondary buyouts</div><div class="d" style="margin-top:3mm;font-size:9.5pt;color:#dfe5ee;line-height:1.65">Triton bought <b style="color:#fff">Flender</b> from Carlyle. CVC bought <b style="color:#fff">Irca</b> from Advent. Hellman &amp; Friedman bought <b style="color:#fff">Hyve</b> from Providence. Arcline bought <b style="color:#fff">Avantus Aerospace</b> from Inflexion. Sponsor-to-sponsor is the exit route of choice.</div></div>
+    <div class="kcard"><div class="l" style="color:var(--gold)">Take-privates</div><div class="d" style="margin-top:3mm;font-size:9.5pt;color:#dfe5ee;line-height:1.65">Ingredion for <b style="color:#fff">Tate &amp; Lyle</b>. Mubadala for <b style="color:#fff">Pierre &amp; Vacances</b>. Norvestor for <b style="color:#fff">Zalaris</b>. A Riesling consortium for <b style="color:#fff">Viva Wine</b>. Dai Nippon for <b style="color:#fff">AUSTRIACARD</b>. Public markets are a source, not a destination.</div></div>
+    <div class="kcard"><div class="l" style="color:var(--gold)">Big-ticket sponsors</div><div class="d" style="margin-top:3mm;font-size:9.5pt;color:#dfe5ee;line-height:1.65"><b style="color:#fff">Bain</b> took a majority of Everllence from Volkswagen at 7.4bn euros. <b style="color:#fff">EQT</b> moved on Yorkshire Water's parent. <b style="color:#fff">Sixth Street</b> put over a billion into Kpler. Scale capital is chasing platforms, not just add-ons.</div></div>
+    <div class="kcard"><div class="l" style="color:var(--gold)">Sovereign &amp; global</div><div class="d" style="margin-top:3mm;font-size:9.5pt;color:#dfe5ee;line-height:1.65"><b style="color:#fff">Masdar</b> into Repsol's renewables. <b style="color:#fff">Mubadala</b> into French leisure. <b style="color:#fff">Foxconn</b> on Kontron, <b style="color:#fff">Dai Nippon</b> on AUSTRIACARD. Gulf and Asian capital is buying European operating assets directly.</div></div>
+  </div>
+  <div class="insight">
+    <div class="h">&#9670; Why it matters</div>
+    <p>A recycling market is a <b>mandate-rich market</b>. Every secondary buyout resets a value-creation plan. Every carve-out needs a standalone operating model. Every take-private opens a hundred-day agenda the day it delists. This is where advisory demand concentrates, and it is forming now, weeks before most of these deals close.</p>
+  </div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>05</div></div>
+</section>
+
+<!-- FEATURED DEALS 1 -->
+<section class="page">
+  <div class="kick">05 &middot; Ten deals that defined the month</div>
+  <h2 style="font-size:22pt;margin:3mm 0 5mm">The situations we are watching</h2>
+  <div class="deal"><div class="top"><div class="nm">Intesa Sanpaolo &rarr; Monte dei Paschi</div><div class="v">$33.0b</div></div><div class="meta">FIG &middot; Italy &middot; Acquisition <span class="chip">Deal of the month</span></div><div class="ang"><b>The read:</b> European bank consolidation is back. A 30.6bn euro combination folding MPS and its Mediobanca unit into Intesa, with a 635-branch divestment remedy. Integration architecture and branch carve-out run in parallel from day one.</div></div>
+  <div class="deal"><div class="top"><div class="nm">Bain Capital &rarr; Everllence (ex-MAN Energy)</div><div class="v">$8.0b</div></div><div class="meta">Industrials &middot; Germany &middot; Carve-out from Volkswagen</div><div class="ang"><b>The read:</b> The month's largest carve-out. A full standalone stand-up of a major engineering group, with VW retaining 49 percent. Operating model, transition-service exit and a fresh value-creation plan all commissioned early.</div></div>
+  <div class="deal"><div class="top"><div class="nm">Ingredion &rarr; Tate &amp; Lyle</div><div class="v">$4.9b</div></div><div class="meta">Consumer &middot; United Kingdom &middot; Take-private</div><div class="ang"><b>The read:</b> A recommended cash offer ending an 87-year London listing. Two ingredients platforms combine, opening integration and synergy planning across a long path to completion.</div></div>
+  <div class="deal"><div class="top"><div class="nm">RWE &rarr; Amprion (via M31)</div><div class="v">$3.9b</div></div><div class="meta">Energy &amp; Infra &middot; Germany &middot; Stake to majority</div><div class="ang"><b>The read:</b> RWE takes majority control of a national transmission grid, backed by QIA and Norges. Governance and operating-model work alongside a linked equity raise.</div></div>
+  <div class="deal"><div class="top"><div class="nm">thyssenkrupp &rarr; tk accelis spin-off</div><div class="v">$3.9b</div></div><div class="meta">Industrials &middot; Germany &middot; Spin-off / listing</div><div class="ang"><b>The read:</b> The materials-trading arm listed to Frankfurt. Standalone set-up and equity-story readiness through 2026 as the group simplifies.</div></div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>06</div></div>
+</section>
+
+<!-- FEATURED DEALS 2 -->
+<section class="page">
+  <div class="kick">05 &middot; Ten deals that defined the month</div>
+  <div class="deal"><div class="top"><div class="nm">Aedifica &rarr; Cofinimmo</div><div class="v">$3.35b</div></div><div class="meta">Real Estate &middot; Belgium &middot; All-share merger</div><div class="ang"><b>The read:</b> Two listed healthcare REITs combine, with a mandated 300m euro disposal programme. Portfolio integration and remedy execution run together.</div></div>
+  <div class="deal"><div class="top"><div class="nm">Schneider Electric &rarr; Cognite</div><div class="v">$3.1b</div></div><div class="meta">TMT &middot; Norway &middot; Acquisition (Aker exit)</div><div class="ang"><b>The read:</b> Industrial-AI software folded into AVEVA. Product rationalisation and commercial synergy planning in the first two quarters.</div></div>
+  <div class="deal"><div class="top"><div class="nm">CVC Capital Partners &rarr; Irca</div><div class="v">$2.75b</div></div><div class="meta">Consumer &middot; Italy &middot; Secondary buyout from Advent</div><div class="ang"><b>The read:</b> A classic sponsor-to-sponsor recycle. New value-creation and buy-and-build agenda for a bakery-ingredients platform under fresh CVC ownership.</div></div>
+  <div class="deal"><div class="top"><div class="nm">Holcim &rarr; Xella International</div><div class="v">$2.05b</div></div><div class="meta">Industrials &middot; Germany &middot; Acquisition (Lone Star exit)</div><div class="ang"><b>The read:</b> Completed inside the window. Plant-network rationalisation and synergy capture set the value case immediately.</div></div>
+  <div class="deal"><div class="top"><div class="nm">Korn Ferry &rarr; AMS (Alexander Mann)</div><div class="v">$1.1b</div></div><div class="meta">Business Services &middot; United Kingdom &middot; Sponsor exit (OMERS)</div><div class="ang"><b>The read:</b> A large RPO and MSP platform changes hands. Delivery-model alignment and cross-sell decide whether the case lands.</div></div>
+  <div class="deal"><div class="top"><div class="nm">EQT &rarr; Kelda / Yorkshire Water</div><div class="v">Undisclosed</div></div><div class="meta">Energy &amp; Infra &middot; United Kingdom &middot; Infrastructure stake</div><div class="ang"><b>The read:</b> Core infrastructure capital into a regulated UK water utility. Operating model, capital programme and regulatory strategy under new ownership.</div></div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>07</div></div>
+</section>
+
+<!-- OUTLOOK + CTA -->
+<section class="page">
+  <div class="kick">06 &middot; What it means</div>
+  <h2 style="font-size:23pt;margin-top:3mm">The takeaways</h2>
+  <div style="margin-top:6mm">
+    <div class="insight"><div class="h">01 &middot; Bank consolidation is the new headline</div><p>Intesa on MPS reopens European FIG consolidation at scale. Watch the Addiko Bank contest (NLB versus Raiffeisen) as the next domino.</p></div>
+    <div class="insight"><div class="h">02 &middot; It is a carve-out and take-private market</div><p>Corporates are simplifying and public markets are a hunting ground. Fourteen carve-outs and seven take-privates in a month is a structural signal, not noise.</p></div>
+    <div class="insight"><div class="h">03 &middot; Sponsors are trading with each other</div><p>Secondary buyouts dominate the exit route. Capital is moving, and every hand-off resets a value-creation clock.</p></div>
+    <div class="insight"><div class="h">04 &middot; Europe is on sale to global capital</div><p>US, Gulf and Asian buyers are acquiring European operating assets directly. Cross-border integration is the mandate that follows.</p></div>
+  </div>
+  <div class="cta">
+    <div class="mono" style="font-size:8pt;color:var(--gold);letter-spacing:.24em">Powered by StrategyAI</div>
+    <h3>The mandate shows up in the signal,<br>weeks before the headline.</h3>
+    <p>StrategyAI reads the live EMEA signal flow, scores every deal, restructuring and exit as it forms, and turns it into partner-ready intelligence with the angle, the evidence and the people to call. This report is one month of that engine, read straight from the platform.</p>
+    <div class="url">strategyai.co.uk/deal-insights</div>
+  </div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>08</div></div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="page">
+  <div class="kick">Methodology &amp; sources</div>
+  <h2 style="font-size:19pt;margin-top:3mm">How this was built</h2>
+  <div class="read" style="margin-top:5mm">
+    <p><b>Window.</b> The thirty days to 3 July 2026. <b>Scope.</b> Genuine M&amp;A, buyouts, carve-outs, take-privates, mergers, minority and growth investments, and exits across Europe, the Middle East and Africa. Equity and debt capital-markets issuance is tracked separately and excluded here to keep the read on control transactions.</p>
+    <p style="margin-top:4mm"><b>Data.</b> Eighty-three situations curated and verified against public sources by StrategyAI's intelligence engine. Values are disclosed enterprise or equity values in US dollars where public; thirty-nine of the eighty-three carry a disclosed figure, so the 88.8bn dollar total is a floor, not a ceiling. Every deal is source-linked and scored for mandate strength.</p>
+    <p style="margin-top:4mm"><b>What we do not do.</b> We do not blur what is confirmed with what is forming, and we do not publish a company on a single unverified source. Where a figure could not be stood up, it is left out.</p>
+  </div>
+  <div class="rule"></div>
+  <div class="read"><p style="color:var(--dim);font-size:9pt">StrategyAI is an EMEA deal-intelligence platform. It reads thousands of public signals a day, scores the mandates forming behind them, and delivers them to advisory and investing teams with the evidence and warm paths to act. This document is a market read, not investment advice, and names only publicly reported transactions.</p></div>
+  <div class="foot"><div class="brandmark">Strategy<i>AI</i> &middot; The 30-Day Read</div><div>&copy; 2026 StrategyAI</div></div>
+</section>
+
+</body></html>

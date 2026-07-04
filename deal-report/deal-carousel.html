@@ -1,0 +1,128 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>StrategyAI Carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Libre+Baskerville&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--gold:#c9a84c;--cool:#5d8fc9;--cream:#f4efe4;--dim:#9fb0c3;--line:rgba(201,168,76,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:200mm 200mm;margin:0}
+html,body{font-family:"Libre Baskerville",serif;color:var(--cream);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.s{width:200mm;height:200mm;background:radial-gradient(120% 90% at 80% 6%,rgba(201,168,76,.12),transparent 55%),linear-gradient(158deg,#0d1b2a,#081320);padding:16mm;position:relative;overflow:hidden;page-break-after:always;display:flex;flex-direction:column}
+.s:last-child{page-break-after:auto}
+.mono{font-family:"DM Mono",monospace;letter-spacing:.16em;text-transform:uppercase}
+h1,h2{font-family:"Playfair Display",serif;font-weight:900;color:#fff;line-height:1.03}
+.kick{font-family:"DM Mono",monospace;font-size:12pt;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.brand{font-family:"Playfair Display",serif;font-weight:900;font-size:15pt;color:#fff}.brand i{color:var(--gold)}
+.top{display:flex;justify-content:space-between;align-items:center}
+.pg{font-family:"DM Mono",monospace;font-size:10pt;color:var(--dim)}
+.mid{flex:1;display:flex;flex-direction:column;justify-content:center}
+.swipe{position:absolute;right:16mm;bottom:14mm;font-family:"DM Mono",monospace;font-size:10pt;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.big{font-family:"Playfair Display",serif;font-weight:900;color:var(--gold);font-size:96pt;line-height:.92}
+.big small{font-size:44pt;color:#fff}
+.sub{font-size:15pt;color:#dfe5ee;line-height:1.6;margin-top:8mm;max-width:150mm}
+.row{display:flex;gap:6mm;margin-top:10mm}
+.stat{flex:1;border:1px solid var(--line);border-radius:5mm;padding:8mm 6mm}
+.stat .n{font-family:"Playfair Display",serif;font-weight:900;font-size:40pt;color:#fff}
+.stat .n small{font-size:20pt;color:var(--gold)}
+.stat .l{font-family:"DM Mono",monospace;font-size:9pt;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:3mm}
+.bar{display:grid;grid-template-columns:52mm 1fr auto;align-items:center;gap:4mm;margin:4mm 0}
+.bar .lab{font-family:"DM Mono",monospace;font-size:11pt;color:#dfe5ee;text-align:right;text-transform:uppercase;letter-spacing:.04em}
+.bar .track{height:9mm;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.bar .fill{height:100%;background:linear-gradient(90deg,var(--gold),#e6c874);border-radius:3px}
+.bar.c .fill{background:linear-gradient(90deg,#3b6ea8,#5d8fc9)}
+.bar .v{font-family:"DM Mono",monospace;font-size:11pt;color:var(--gold);min-width:22mm}
+.bar .v i{color:var(--dim);font-style:normal;font-size:9pt}
+.dl{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:5mm 0}
+.dl .nm{font-family:"Playfair Display",serif;font-weight:700;font-size:16pt;color:#fff}
+.dl .nm span{font-family:"DM Mono",monospace;font-size:8.5pt;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);display:block;margin-top:1.5mm}
+.dl .v{font-family:"DM Mono",monospace;font-size:16pt;color:var(--gold);white-space:nowrap}
+.take{border-left:3px solid var(--gold);padding-left:7mm;margin:7mm 0}
+.take .h{font-family:"Playfair Display",serif;font-weight:700;font-size:17pt;color:#fff}
+.take p{font-size:12pt;color:#cdd6e2;margin-top:2mm;line-height:1.55}
+.cta{border:1px solid var(--gold);border-radius:6mm;background:linear-gradient(155deg,rgba(201,168,76,.14),rgba(201,168,76,.03));padding:12mm;text-align:center}
+.cta h2{font-size:26pt;line-height:1.1}.cta .u{font-family:"DM Mono",monospace;color:var(--gold);letter-spacing:.16em;margin-top:6mm;font-size:12pt}
+</style></head><body>
+
+<section class="s"><div class="top"><div class="brand">Strategy<i>AI</i></div><div class="pg mono" style="color:var(--gold)">EMEA Deal Intelligence</div></div>
+  <div class="mid"><span class="kick">The 30-Day Read &middot; to 3 Jul 2026</span>
+    <h1 style="font-size:56pt;margin-top:8mm">Europe's deal<br>machine,<br><span style="color:var(--gold)">decoded.</span></h1>
+    <p class="sub">83 M&amp;A, buyout and exit situations across EMEA in a single month. Here is what we are seeing.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">01 &middot; The month</span><div class="pg">02</div></div>
+  <div class="mid"><div class="big">83<small> deals</small></div>
+    <div class="row"><div class="stat"><div class="n"><small>$</small>88.8b</div><div class="l">Disclosed value</div></div>
+    <div class="stat"><div class="n">16</div><div class="l">Countries</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Mega-deals $5b+</div></div></div>
+    <p class="sub">Verified, source-linked, and scored as they formed. Not the whole market, the part worth acting on.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">02 &middot; The shape</span><div class="pg">03</div></div>
+  <div class="mid"><h2 style="font-size:34pt">A carve-out and<br>take-private market</h2>
+    <div class="row" style="margin-top:12mm"><div class="stat"><div class="n">14</div><div class="l">Carve-outs</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">Take-privates</div></div>
+    <div class="stat"><div class="n">16</div><div class="l">PE-led</div></div></div>
+    <p class="sub">Corporates are simplifying. Sponsors are recycling capital between each other. Public markets are a source, not a destination.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">03 &middot; Sector heat</span><div class="pg">04</div></div>
+  <div class="mid"><h2 style="font-size:30pt;margin-bottom:9mm">Volume in Industrials &amp; TMT,<br>value in banking</h2>
+    <div class="bar"><div class="lab">Industrials</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="v">16 <i>$16b</i></div></div>
+    <div class="bar"><div class="lab">TMT</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="v">16 <i>$8b</i></div></div>
+    <div class="bar"><div class="lab">Consumer</div><div class="track"><div class="fill" style="width:69%"></div></div><div class="v">11 <i>$9b</i></div></div>
+    <div class="bar c"><div class="lab">Financials</div><div class="track"><div class="fill" style="width:50%"></div></div><div class="v">8 <i>$34b</i></div></div>
+    <div class="bar"><div class="lab">Energy</div><div class="track"><div class="fill" style="width:44%"></div></div><div class="v">7 <i>$8b</i></div></div>
+    <p class="sub" style="margin-top:8mm">Financials carry the value on one deal: Intesa's move on Monte dei Paschi.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">04 &middot; Geography</span><div class="pg">05</div></div>
+  <div class="mid"><h2 style="font-size:32pt;margin-bottom:9mm">The German-UK-Nordic<br>engine</h2>
+    <div class="bar c"><div class="lab">United Kingdom</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="v">15</div></div>
+    <div class="bar c"><div class="lab">Germany</div><div class="track"><div class="fill" style="width:93%"></div></div><div class="v">14</div></div>
+    <div class="bar c"><div class="lab">Italy</div><div class="track"><div class="fill" style="width:60%"></div></div><div class="v">9</div></div>
+    <div class="bar c"><div class="lab">Sweden</div><div class="track"><div class="fill" style="width:47%"></div></div><div class="v">7</div></div>
+    <div class="bar c"><div class="lab">Norway</div><div class="track"><div class="fill" style="width:47%"></div></div><div class="v">7</div></div>
+    <p class="sub" style="margin-top:8mm">Germany carves out. The UK takes private. The Nordics consolidate.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">05 &middot; Deal of the month</span><div class="pg">06</div></div>
+  <div class="mid"><span class="kick" style="color:var(--dim)">Italy &middot; Financial Services</span>
+    <h2 style="font-size:40pt;margin:6mm 0">Intesa Sanpaolo<br>&rarr; Monte dei Paschi</h2>
+    <div class="big" style="font-size:70pt">$33b</div>
+    <p class="sub">European bank consolidation is back. A 30.6bn euro combination, a 635-branch divestment, and an integration clock running from day one. Next domino: the Addiko Bank contest.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">06 &middot; The big tickets</span><div class="pg">07</div></div>
+  <div class="mid">
+    <div class="dl"><div class="nm">Bain Capital &rarr; Everllence<span>Carve-out from Volkswagen &middot; Germany</span></div><div class="v">$8.0b</div></div>
+    <div class="dl"><div class="nm">Ingredion &rarr; Tate &amp; Lyle<span>Take-private &middot; United Kingdom</span></div><div class="v">$4.9b</div></div>
+    <div class="dl"><div class="nm">RWE &rarr; Amprion<span>Grid, stake to majority &middot; Germany</span></div><div class="v">$3.9b</div></div>
+    <div class="dl"><div class="nm">Schneider &rarr; Cognite<span>Software, Aker exit &middot; Norway</span></div><div class="v">$3.1b</div></div>
+    <div class="dl"><div class="nm">CVC &rarr; Irca<span>Secondary buyout from Advent &middot; Italy</span></div><div class="v">$2.8b</div></div>
+  </div><div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">07 &middot; The sponsors</span><div class="pg">08</div></div>
+  <div class="mid"><h2 style="font-size:32pt">Capital is recycling,<br>not sitting still</h2>
+    <p class="sub" style="margin-top:8mm">The exit route of the month was the secondary buyout, sponsor to sponsor:</p>
+    <div class="take" style="margin-top:8mm"><p style="font-size:14pt;color:#fff;line-height:1.7">Triton bought <b style="color:var(--gold)">Flender</b> from Carlyle. CVC bought <b style="color:var(--gold)">Irca</b> from Advent. Hellman &amp; Friedman bought <b style="color:var(--gold)">Hyve</b> from Providence. Arcline bought <b style="color:var(--gold)">Avantus</b> from Inflexion.</p></div>
+    <p class="sub">Every hand-off resets a value-creation clock. That is a mandate-rich market.</p></div>
+  <div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><span class="kick">08 &middot; What we're seeing</span><div class="pg">09</div></div>
+  <div class="mid">
+    <div class="take"><div class="h">Bank consolidation is the new headline</div></div>
+    <div class="take"><div class="h">Corporates are simplifying, fast</div></div>
+    <div class="take"><div class="h">Sponsors are trading with each other</div></div>
+    <div class="take"><div class="h">Europe is on sale to global capital</div></div>
+  </div><div class="swipe">Swipe &rarr;</div></section>
+
+<section class="s"><div class="top"><div class="brand">Strategy<i>AI</i></div><div class="pg">10</div></div>
+  <div class="mid"><div class="cta">
+    <div class="mono" style="color:var(--gold);font-size:10pt;letter-spacing:.24em">Powered by StrategyAI</div>
+    <h2 style="margin-top:5mm">The mandate shows up in the signal, weeks before the headline.</h2>
+    <p style="font-size:12.5pt;color:#dfe5ee;margin-top:6mm;line-height:1.6">We read the live EMEA signal flow, score every deal and exit as it forms, and hand teams the angle, the evidence and the people to call.</p>
+    <div class="u">strategyai.co.uk/deal-insights</div>
+  </div>
+  <p style="text-align:center;color:var(--dim);font-family:'DM Mono',monospace;font-size:9pt;margin-top:10mm;letter-spacing:.1em">Follow for the monthly read. &middot; Public deals only. Not investment advice.</p></div>
+</section>
+
+</body></html>
