@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#0d1b2a}
+#card{width:1600px;height:1000px;position:relative;overflow:hidden;
+  background:radial-gradient(130% 100% at 78% 0%, #12314a 0%, #0d1b2a 45%, #091320 100%);
+  font-family:'Inter',sans-serif;color:#fff}
+#card::before{content:"";position:absolute;inset:22px;border:1px solid rgba(201,168,76,.25);border-radius:6px;pointer-events:none}
+.hd{position:absolute;left:56px;top:46px;right:56px;display:flex;justify-content:space-between;align-items:flex-start}
+.title{font-family:'Fraunces',serif;font-size:40px;line-height:1.12;font-weight:600;max-width:1000px}
+.title i{color:#c9a84c;font-style:italic;font-weight:500}
+.sub{margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#9fb0c3}
+.brand{font-family:'Fraunces',serif;font-weight:600;font-size:30px;white-space:nowrap}
+.brand .ai{color:#c9a84c}
+#map{position:absolute;left:20px;top:150px;width:1050px;height:820px}
+.cty{stroke:#0d1b2a;stroke-width:.6}
+.lbl{font-family:'JetBrains Mono',monospace;fill:#fff;font-weight:500;text-anchor:middle;paint-order:stroke;stroke:#0b1826;stroke-width:2.4px}
+.panel{position:absolute;right:56px;top:196px;width:470px}
+.ptt{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:12px;border-bottom:1px solid #22364d;padding-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#9fb0c3;text-align:left;padding:7px 8px;border-bottom:1px solid #22364d}
+td{padding:8px 8px;border-bottom:1px solid #172a3f;color:#e7edf3}
+td.r{color:#c9a84c;font-family:'JetBrains Mono',monospace;font-weight:500}
+td.n{text-align:right;font-family:'JetBrains Mono',monospace;color:#fff;font-weight:500}
+td.v{color:#9fb0c3;font-size:13px}
+.note{margin-top:14px;font-size:12.5px;color:#7d8ea1;line-height:1.5}
+.legend{position:absolute;left:60px;bottom:70px;display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:#9fb0c3}
+.legend .bar{width:220px;height:10px;border-radius:5px;background:linear-gradient(90deg,#1c3350,#5b5f5a,#c9a84c)}
+.foot{position:absolute;left:56px;bottom:34px;right:56px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:#6f8093;text-transform:uppercase}
+</style></head>
+<body><div id="card">
+  <div class="hd">
+    <div>
+      <div class="title"><i>M&amp;A &amp; growth signals in Europe:</i><br>deal activity by country</div>
+      <div class="sub">Volume of tracked deal signals &middot; last 3 months</div>
+    </div>
+    <div class="brand">Strateg<span class="ai">AI</span></div>
+  </div>
+  <div id="map"></div>
+  <div class="panel">
+    <div class="ptt">Top 10 by deal volume</div>
+    <table><thead><tr><th style="width:26px">#</th><th>Country</th><th style="text-align:right">Signals</th><th>Landmark round</th></tr></thead>
+    <tbody id="tb"></tbody></table>
+    <div class="note">Signals span funding rounds, fund closes and M&amp;A surfaced by the StrategyAI engine. Counts are indicative of tracked activity, not a market total. Landmark round shows the largest disclosed deal we tracked in that market.</div>
+  </div>
+  <div class="legend"><span>Fewer</span><span class="bar"></span><span>More deal signals</span></div>
+  <div class="foot"><span>StrategyAI signal engine &middot; Europe, May&ndash;Jul 2026</span><span>strategyai.co.uk</span></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+const DATA={826:236,250:88,276:76,380:43,528:29,752:24,724:14,756:13,372:11,616:8,246:6,208:6,40:5,620:5,56:5,440:4,578:4,203:3};
+const NAME={826:'United Kingdom',250:'France',276:'Germany',380:'Italy',528:'Netherlands',752:'Sweden',724:'Spain',756:'Switzerland',372:'Ireland',616:'Poland',246:'Finland',208:'Denmark',40:'Austria',620:'Portugal',56:'Belgium',440:'Lithuania',578:'Norway',203:'Czechia'};
+const LAND={826:'Kraken €152.9M',250:'Skello €200M',276:'Proxima Fusion €411M',380:'ICOP–Trevi >€1B',724:'Factorial €129M',616:'Expeditions €197M',528:'Whispp €5M',752:'—',756:'—',372:'—'};
+// broad europe context set to draw
+const EUR=new Set([826,250,276,380,528,752,724,756,372,616,246,208,40,620,56,440,578,203,348,642,300,100,703,705,191,428,233,352,442,807,688,70,499,470,8,804,112]);
+const max=Math.max(...Object.values(DATA));
+const color=d3.interpolateRgb('#1c3350','#c9a84c');
+function fill(id){const v=DATA[id];if(!v)return '#15273b';return color(Math.sqrt(v/max));}
+// frame using territory-free countries that span Europe's extent
+// (Ireland=west, Sweden=north, Italy/Greece=south, Romania=east, Germany=centre)
+const FIT=new Set([372,752,380,300,642,276]);
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json").then(topo=>{
+  const feats=topojson.feature(topo,topo.objects.countries).features;
+  const eu=feats.filter(f=>EUR.has(+f.id));
+  const W=1050,H=820;
+  const proj=d3.geoConicConformal().rotate([-10,0]).parallels([40,62]);
+  proj.fitExtent([[20,20],[W-20,H-30]], {type:"FeatureCollection",features:feats.filter(f=>FIT.has(+f.id))});
+  const path=d3.geoPath(proj);
+  const svg=d3.select("#map").append("svg").attr("width",W).attr("height",H).attr("viewBox",`0 0 ${W} ${H}`);
+  svg.append("g").selectAll("path").data(eu).join("path")
+    .attr("d",path).attr("class","cty").attr("fill",d=>fill(+d.id));
+  // labels
+  const lg=svg.append("g");
+  // mainland label anchors for countries whose geometry includes far territories
+  const LONLAT={250:[2.6,47.2],724:[-3.7,40.2],620:[-8,39.7],578:[9,61],208:[9.5,56]};
+  eu.forEach(d=>{
+    const v=DATA[+d.id]; if(!v||v<3) return;
+    const c=LONLAT[+d.id]?proj(LONLAT[+d.id]):path.centroid(d); if(!c||!isFinite(c[0])||!isFinite(c[1])) return;
+    const fs=v>=150?32:v>=60?25:v>=20?19:15;
+    lg.append("text").attr("class","lbl").attr("x",c[0]).attr("y",c[1]+fs/3).attr("font-size",fs).text(v);
+  });
+  // table top10
+  const top=Object.entries(DATA).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const tb=document.getElementById("tb");
+  top.forEach(([id,v],i)=>{
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td class="r">${i+1}</td><td>${NAME[id]}</td><td class="n">${v}</td><td class="v">${LAND[id]||'—'}</td>`;
+    tb.appendChild(tr);
+  });
+  window.__ready=true;
+});
+</script>
+</body></html>
