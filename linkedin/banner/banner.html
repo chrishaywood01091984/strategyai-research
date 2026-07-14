@@ -8,17 +8,17 @@
              radial-gradient(90% 180% at 3% 130%, rgba(31,54,84,.55), transparent 60%);}
 #stars{position:absolute;inset:0;z-index:1;}
 .frame{position:absolute;inset:12px;border:1px solid rgba(201,168,76,.22);z-index:2;border-radius:2px;}
-.content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 40px 0;}
-.kick{font-family:'DM Mono';font-weight:500;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#c9a84c;display:flex;align-items:center;gap:9px;}
-.kick .d{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;display:inline-block;}
-.h1{font-family:'Playfair Display';font-weight:700;font-size:42px;line-height:1.05;letter-spacing:-.5px;color:#f3f1ea;margin-top:13px;}
+.content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:52px 40px 0;}
+.kick{font-family:'DM Mono';font-weight:500;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#c9a84c;display:flex;align-items:center;gap:9px;}
+.kick .d{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;display:inline-block;}
+.h1{font-family:'Playfair Display';font-weight:700;font-size:41px;line-height:1.05;letter-spacing:-.5px;color:#f3f1ea;margin-top:12px;}
 .h1 em{font-style:italic;color:#c9a84c;}
-.tag{font-family:'DM Mono';font-weight:400;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8c9db0;margin-top:14px;display:flex;align-items:center;gap:12px;}
+.tag{font-family:'DM Mono';font-weight:400;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:#8c9db0;margin-top:13px;display:flex;align-items:center;gap:12px;}
 .tag .rule{width:26px;height:2px;background:#c9a84c;display:inline-block;opacity:.85;}
-.badges{position:absolute;top:16px;left:22px;z-index:4;display:flex;gap:8px;}
-.seal{display:flex;align-items:center;gap:7px;background:rgba(245,241,234,.05);border:1px solid rgba(201,168,76,.28);border-radius:8px;padding:5px 9px;}
-.seal .t1{font-family:'DM Mono';font-weight:500;font-size:9.5px;letter-spacing:.4px;color:#f5f1ea;line-height:1.15;white-space:nowrap;}
-.seal .t2{font-family:'DM Mono';font-size:6.5px;letter-spacing:.5px;text-transform:uppercase;color:#8995a6;line-height:1.15;white-space:nowrap;}
+.badges{position:absolute;top:14px;left:20px;z-index:4;display:flex;gap:7px;}
+.seal{display:flex;align-items:center;gap:5px;background:rgba(245,241,234,.05);border:1px solid rgba(201,168,76,.28);border-radius:6px;padding:4px 7px;}
+.seal .t1{font-family:'DM Mono';font-weight:500;font-size:8px;letter-spacing:.3px;color:#f5f1ea;line-height:1.12;white-space:nowrap;}
+.seal .t2{font-family:'DM Mono';font-size:5.5px;letter-spacing:.4px;text-transform:uppercase;color:#8995a6;line-height:1.12;white-space:nowrap;}
 .seal svg{flex-shrink:0;}
 </style></head>
 <body>
@@ -27,9 +27,9 @@
   <canvas id="stars"></canvas>
   <div class="frame"></div>
   <div class="badges">
-    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">SOC 2 TYPE II</div><div class="t2">Certified infrastructure</div></div></div>
-    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ISO 27001</div><div class="t2">Certified infrastructure</div></div></div>
-    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ICO REGISTERED</div><div class="t2">ZC143495</div></div></div>
+    <div class="seal"><svg width="11" height="13" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">SOC 2 TYPE II</div><div class="t2">Certified infrastructure</div></div></div>
+    <div class="seal"><svg width="11" height="13" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ISO 27001</div><div class="t2">Certified infrastructure</div></div></div>
+    <div class="seal"><svg width="11" height="13" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ICO REGISTERED</div><div class="t2">ZC143495</div></div></div>
   </div>
   <div class="content">
     <div class="kick"><span class="d"></span>Mandate Origination Intelligence &nbsp;&middot;&nbsp; Live</div>
