@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+.banner{width:1128px;height:191px;position:relative;overflow:hidden;background:#0d1b2a;color:#e8edf3;font-family:'Libre Baskerville',Georgia,serif;}
+.bg{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(120% 200% at 88% 0%, rgba(201,168,76,.14), transparent 55%),
+             radial-gradient(90% 180% at 3% 130%, rgba(31,54,84,.55), transparent 60%);}
+#stars{position:absolute;inset:0;z-index:1;}
+.frame{position:absolute;inset:12px;border:1px solid rgba(201,168,76,.22);z-index:2;border-radius:2px;}
+.content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 40px 0;}
+.kick{font-family:'DM Mono';font-weight:500;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#c9a84c;display:flex;align-items:center;gap:9px;}
+.kick .d{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;display:inline-block;}
+.h1{font-family:'Playfair Display';font-weight:700;font-size:42px;line-height:1.05;letter-spacing:-.5px;color:#f3f1ea;margin-top:13px;}
+.h1 em{font-style:italic;color:#c9a84c;}
+.tag{font-family:'DM Mono';font-weight:400;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8c9db0;margin-top:14px;display:flex;align-items:center;gap:12px;}
+.tag .rule{width:26px;height:2px;background:#c9a84c;display:inline-block;opacity:.85;}
+.badges{position:absolute;top:16px;left:22px;z-index:4;display:flex;gap:8px;}
+.seal{display:flex;align-items:center;gap:7px;background:rgba(245,241,234,.05);border:1px solid rgba(201,168,76,.28);border-radius:8px;padding:5px 9px;}
+.seal .t1{font-family:'DM Mono';font-weight:500;font-size:9.5px;letter-spacing:.4px;color:#f5f1ea;line-height:1.15;white-space:nowrap;}
+.seal .t2{font-family:'DM Mono';font-size:6.5px;letter-spacing:.5px;text-transform:uppercase;color:#8995a6;line-height:1.15;white-space:nowrap;}
+.seal svg{flex-shrink:0;}
+</style></head>
+<body>
+<div class="banner">
+  <div class="bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="frame"></div>
+  <div class="badges">
+    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">SOC 2 TYPE II</div><div class="t2">Certified infrastructure</div></div></div>
+    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ISO 27001</div><div class="t2">Certified infrastructure</div></div></div>
+    <div class="seal"><svg width="13" height="15" viewBox="0 0 24 26" fill="none"><path d="M12 1 L22 5 V13 C22 19 17.5 23 12 25 C6.5 23 2 19 2 13 V5 Z" fill="rgba(201,168,76,0.12)" stroke="#c9a84c" stroke-width="1.5"/><path d="M7.3 12.6 l3 3 l6.4 -7" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t1">ICO REGISTERED</div><div class="t2">ZC143495</div></div></div>
+  </div>
+  <div class="content">
+    <div class="kick"><span class="d"></span>Mandate Origination Intelligence &nbsp;&middot;&nbsp; Live</div>
+    <div class="h1">See the mandate <em>before</em> the market does.</div>
+    <div class="tag"><span class="rule"></span>EMEA &nbsp;&middot;&nbsp; Signals, not noise &nbsp;&middot;&nbsp; StrategyAI.co.uk<span class="rule"></span></div>
+  </div>
+</div>
+<script>
+(function(){
+  var c=document.getElementById('stars');var dpr=window.devicePixelRatio||1;
+  var W=1128,H=191;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';
+  var x=c.getContext('2d');x.scale(dpr,dpr);
+  function rnd(){return Math.random();}
+  var pts=[],N=175;
+  for(var i=0;i<N;i++){var rx=Math.pow(rnd(),0.62);var px=150+rx*(W-150);var py=rnd()*H;var r=0.5+rnd()*1.7;pts.push({x:px,y:py,r:r});}
+  x.lineWidth=0.6;
+  for(var i=0;i<pts.length;i++){for(var j=i+1;j<pts.length;j++){var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<50){x.strokeStyle='rgba(29,158,117,'+(0.11*(1-d/50))+')';x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.stroke();}}}
+  for(var i=0;i<pts.length;i++){var p=pts[i];var t=rnd();var col=t<0.52?'rgba(29,158,117,':(t<0.82?'rgba(159,176,194,':'rgba(201,168,76,');var a=0.32+rnd()*0.5;x.fillStyle=col+a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();}
+  for(var k=0;k<5;k++){var p=pts[Math.floor(rnd()*pts.length)];x.fillStyle='rgba(34,197,94,0.9)';x.shadowBlur=8;x.shadowColor='rgba(34,197,94,0.8)';x.beginPath();x.arc(p.x,p.y,2.2,0,6.283);x.fill();x.shadowBlur=0;}
+})();
+</script>
+</body></html>
