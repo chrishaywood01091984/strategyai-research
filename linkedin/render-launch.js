@@ -16,5 +16,9 @@ const path = require("path");
     await el.screenshot({ path: path.join(outDir, name + ".png") });
     console.log("rendered " + name + ".png");
   }
+  // transparent device duo (laptop + phone) for the editable PowerPoint
+  const dev = await page.$("#heroDark .stage");
+  await dev.screenshot({ path: path.join(outDir, "newsletter-devices.png"), omitBackground: true });
+  console.log("rendered newsletter-devices.png");
   await browser.close();
 })();
