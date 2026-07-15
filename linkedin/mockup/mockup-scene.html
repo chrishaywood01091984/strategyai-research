@@ -1,0 +1,98 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#0a1320;}
+  .sai-scene{--navy:#0f1b2d;--gold:#c9a55b;--cream:#f5f1ea;--muted:#8995a6;--red:#e0524d;
+    position:relative;width:1200px;padding:64px 60px;overflow:hidden;
+    background:radial-gradient(120% 140% at 100% 0%,#12233b 0%,#0f1b2d 45%,#0a1320 100%);
+    display:flex;align-items:center;gap:52px;font-family:'Inter',Helvetica,Arial,sans-serif;}
+  .sai-scene *{box-sizing:border-box;}
+  .sai-blob{position:absolute;top:-120px;left:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(201,165,91,0.22),rgba(201,165,91,0) 70%);pointer-events:none;}
+  .sai-copy{flex:1;min-width:0;position:relative;z-index:2;}
+  .sai-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+  .sai-eyebrow i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e;display:inline-block;}
+  .sai-h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-.01em;color:var(--cream);margin:0 0 22px;}
+  .sai-h1 em{font-style:italic;color:var(--gold);}
+  .sai-sub{font-weight:300;font-size:19px;line-height:1.6;color:#aab6c6;max-width:400px;margin:0 0 34px;}
+  .sai-feat{display:flex;flex-direction:column;gap:15px;}
+  .sai-feat div{display:flex;align-items:center;gap:12px;font-size:17px;color:#c8d2de;}
+  .sai-phonewrap{position:relative;flex:0 0 auto;z-index:2;}
+  .sai-phone{position:relative;width:340px;height:700px;border-radius:52px;background:#05070b;padding:14px;box-shadow:0 60px 120px -30px rgba(0,0,0,.75),0 0 0 2.5px #1c2431,inset 0 0 0 2px #000;}
+  .sai-island{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:112px;height:30px;background:#000;border-radius:16px;z-index:5;}
+  .sai-screen{position:relative;width:100%;height:100%;border-radius:40px;overflow:hidden;background:var(--navy);color:var(--cream);}
+  .sai-status{display:flex;justify-content:space-between;align-items:center;padding:13px 24px 5px;font-size:14px;font-weight:600;color:var(--cream);}
+  .sai-topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 17px 10px;border-bottom:1px solid rgba(201,165,91,.12);}
+  .sai-wm{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--cream);}.sai-wm span{color:var(--gold);font-style:italic;}
+  .sai-ic{color:var(--muted);font-size:16px;}
+  .sai-tabs{display:flex;gap:3px;padding:10px 12px;}
+  .sai-tab{flex:1;text-align:center;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;color:var(--muted);padding:6px 0;border-radius:5px;text-transform:uppercase;}
+  .sai-tab.on{background:var(--gold);color:#0f1b2d;font-weight:500;}
+  .sai-prof{display:flex;align-items:center;gap:11px;padding:8px 17px 12px;}
+  .sai-av{width:42px;height:42px;border-radius:50%;flex:0 0 auto;background:linear-gradient(135deg,#2a3a52,#16233a);border:1.5px solid rgba(201,165,91,.5);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:var(--gold);font-size:18px;}
+  .sai-hi{font-family:'Playfair Display',serif;font-size:21px;color:var(--cream);line-height:1.1;}
+  .sai-hi small{display:block;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px;text-transform:uppercase;}
+  .sai-live{font-size:10px;color:var(--muted);margin-top:3px;}
+  .sai-pills{display:flex;gap:6px;padding:0 17px 10px;align-items:center;}
+  .sai-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;padding:6px 10px;border-radius:6px;border:1px solid rgba(201,165,91,.3);color:var(--muted);}
+  .sai-pill.g{background:rgba(63,174,122,.16);border-color:rgba(63,174,122,.5);color:#5fd39b;}
+  .sai-pill.gold{background:rgba(201,165,91,.14);border-color:rgba(201,165,91,.5);color:var(--gold);}
+  .sai-count{margin-left:auto;font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);}.sai-count b{color:var(--gold);}
+  .sai-search{margin:0 17px 11px;height:30px;border-radius:8px;border:1px solid rgba(201,165,91,.16);background:rgba(255,255,255,.02);display:flex;align-items:center;padding:0 11px;font-size:10px;color:var(--muted);}
+  .sai-feed{padding:0 14px;display:flex;flex-direction:column;gap:10px;}
+  .sai-card{position:relative;background:#132339;border:1px solid rgba(201,165,91,.1);border-left:3.5px solid var(--red);border-radius:9px;padding:11px 12px 11px 13px;}
+  .sai-card .conf{position:absolute;left:12px;top:11px;font-family:'Playfair Display',serif;font-size:23px;font-weight:600;color:var(--red);line-height:1;}
+  .sai-card .conf small{display:block;font-family:'DM Mono',monospace;font-size:7px;letter-spacing:.08em;color:var(--muted);margin-top:2px;}
+  .sai-card .body{margin-left:42px;}
+  .sai-card .ttl{font-family:'Playfair Display',serif;font-size:13px;color:var(--cream);line-height:1.25;margin-bottom:7px;}
+  .sai-badges{display:flex;gap:5px;margin-bottom:6px;}
+  .sai-b{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:.05em;padding:3px 5px;border-radius:4px;text-transform:capitalize;}
+  .sai-b.deals{background:rgba(63,174,122,.18);color:#5fd39b;}
+  .sai-b.high{background:rgba(224,82,77,.2);color:#f2938f;}
+  .sai-b.post{background:rgba(137,149,166,.16);color:#a9b4c2;}
+  .sai-note{font-size:8.5px;color:var(--muted);line-height:1.35;}
+  .sai-callout{position:absolute;right:20px;bottom:34px;z-index:6;background:rgba(10,13,18,.96);border:1px solid rgba(63,174,122,.55);border-radius:11px;padding:12px 14px;width:196px;box-shadow:0 20px 50px rgba(0,0,0,.6);}
+  .sai-callout .h{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;color:#5fd39b;font-weight:500;margin-bottom:6px;text-transform:uppercase;}
+  .sai-callout .h i{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;}
+  .sai-callout p{margin:0;font-family:'Playfair Display',serif;font-size:13px;color:var(--cream);line-height:1.3;}
+  .sai-callout p em{color:var(--gold);font-style:italic;}
+  .sai-callout .m{font-family:'DM Mono',monospace;font-size:7.5px;color:var(--muted);margin-top:6px;}
+</style></head>
+<body>
+<div class="sai-scene">
+  <div class="sai-blob"></div>
+  <div class="sai-copy">
+    <div class="sai-eyebrow"><i></i>Live on mobile</div>
+    <h1 class="sai-h1">Your mandate pipeline. <em>In your pocket.</em></h1>
+    <p class="sai-sub">The full signal feed, warm paths and one-tap briefs, on your desk or between meetings.</p>
+    <div class="sai-feat">
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#c9a55b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Live signals ranked by mandate potential</div>
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#c9a55b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Warm paths from your network</div>
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#c9a55b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Brief and share in one tap</div>
+    </div>
+  </div>
+  <div class="sai-phonewrap">
+    <div class="sai-phone">
+      <div class="sai-island"></div>
+      <div class="sai-screen">
+        <div class="sai-status"><span>9:41</span><span>&#9642; &#9642; &#9642; &#8987; 100</span></div>
+        <div class="sai-topbar"><span class="sai-ic">&#9776;</span><span class="sai-wm">Strategy<span>AI</span></span><span class="sai-ic">?</span></div>
+        <div class="sai-tabs"><div class="sai-tab on">Signals</div><div class="sai-tab">Network</div><div class="sai-tab">Watchlist</div><div class="sai-tab">Intel</div></div>
+        <div class="sai-prof"><div class="sai-av">C</div><div><div class="sai-hi"><small>StrategyAI &middot; McKinsey</small>Welcome back, Chris.</div><div class="sai-live">Your mandate pipeline is live.</div></div></div>
+        <div class="sai-pills"><span class="sai-pill g">&#9733; Live</span><span class="sai-pill gold">&#9711; Forming</span><span class="sai-count">Signals <b>1,146</b></span></div>
+        <div class="sai-search">&#8981;&nbsp; Search company, sector, mandate</div>
+        <div class="sai-feed">
+          <div class="sai-card"><div class="conf">95<small>Conf</small></div><div class="body"><div class="ttl">Merck KGaA to acquire Bio-Techne in $11.3bn deal</div><div class="sai-badges"><span class="sai-b deals">Deals</span><span class="sai-b high">High</span><span class="sai-b post">Post-deal</span></div><div class="sai-note">Deal just announced. Integration scoping happens now.</div></div></div>
+          <div class="sai-card"><div class="conf">92<small>Conf</small></div><div class="body"><div class="ttl">INNIO Group announces pricing of upsized IPO</div><div class="sai-badges"><span class="sai-b" style="background:rgba(97,125,204,.2);color:#9db0ff">Strategy</span><span class="sai-b high">High</span><span class="sai-b" style="background:rgba(201,165,91,.18);color:#e3c98a">Pre-deal</span></div><div class="sai-note">Listing process underway. Readiness mandates scoped now.</div></div></div>
+          <div class="sai-card"><div class="conf">92<small>Conf</small></div><div class="body"><div class="ttl">GSK in talks to acquire Nuvalent for more than $9bn</div><div class="sai-badges"><span class="sai-b deals">Deals</span><span class="sai-b high">High</span><span class="sai-b post">Post-deal</span></div><div class="sai-note">Deal just announced. Integration scoping happens now.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="sai-callout">
+      <div class="h"><i></i>New signal detected</div>
+      <p><em>Emirates NBD</em> &mdash; $3bn majority stake approved</p>
+      <div class="m">FS &middot; Middle East &middot; 4 sources &middot; 92%</div>
+    </div>
+  </div>
+</div>
+</body></html>
