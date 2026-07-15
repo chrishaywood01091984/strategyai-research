@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Mono:wght@400;500&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#333;display:flex;gap:24px;padding:24px;flex-wrap:wrap;}
+  .cover{position:relative;width:300px;height:300px;overflow:hidden;background:radial-gradient(120% 120% at 80% 0%,#12233b 0%,#0f1b2d 48%,#0a1320 100%);font-family:'DM Mono',monospace;}
+  .glow{position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,165,91,0.22),rgba(201,165,91,0) 70%);}
+  /* mini desktop dashboard */
+  .desk{background:#0f1b2d;border:1px solid rgba(201,165,91,.3);border-radius:9px;overflow:hidden;box-shadow:0 22px 44px rgba(0,0,0,.55);}
+  .desk .bar{height:22px;background:#0a1320;border-bottom:1px solid rgba(201,165,91,.15);display:flex;align-items:center;padding:0 9px;}
+  .desk .wm{font-family:'Playfair Display',serif;font-size:10px;color:#f5f1ea;font-weight:600;}
+  .desk .wm em{color:#c9a55b;font-style:italic;}
+  .desk .row{display:flex;align-items:center;gap:7px;padding:7px 9px;border-bottom:1px solid rgba(255,255,255,.04);}
+  .desk .conf{font-family:'Playfair Display',serif;font-size:15px;color:#e0524d;font-weight:600;width:20px;}
+  .desk .rt{flex:1;min-width:0;}
+  .desk .rt .t{font-family:'Playfair Display',serif;font-size:8px;color:#f5f1ea;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px;}
+  .desk .badge{display:inline-block;font-size:4.5px;color:#5fd39b;background:rgba(63,174,122,.18);padding:1px 3px;border-radius:2px;margin-right:3px;letter-spacing:.04em;}
+  .desk .badge.h{color:#f2938f;background:rgba(224,82,77,.2);}
+  /* mini phone */
+  .ph{background:#05070b;border-radius:16px;padding:4px;box-shadow:0 22px 44px rgba(0,0,0,.6);border:1px solid #1c2431;}
+  .ph .scr{width:100%;height:100%;background:#0f1b2d;border-radius:12px;overflow:hidden;position:relative;}
+  .ph .notch{position:absolute;top:5px;left:50%;transform:translateX(-50%);width:34px;height:9px;background:#000;border-radius:5px;z-index:2;}
+  .ph .pwm{text-align:center;font-family:'Playfair Display',serif;font-size:9px;color:#f5f1ea;padding:11px 0 6px;border-bottom:1px solid rgba(201,165,91,.14);}
+  .ph .pwm em{color:#c9a55b;font-style:italic;}
+  .ph .prow{display:flex;align-items:center;gap:5px;padding:6px 7px;border-bottom:1px solid rgba(255,255,255,.04);}
+  .ph .pc{font-family:'Playfair Display',serif;font-size:12px;color:#e0524d;font-weight:600;}
+  .ph .pt{font-family:'Playfair Display',serif;font-size:6.5px;color:#f5f1ea;line-height:1.2;}
+  /* labels */
+  .kick{font-size:7px;letter-spacing:.22em;text-transform:uppercase;color:#c9a55b;}
+  .title{font-family:'Playfair Display',serif;color:#f5f1ea;font-weight:500;line-height:1.02;}
+  .title em{color:#c9a55b;font-style:italic;}
+  .foot{font-size:6px;letter-spacing:.18em;text-transform:uppercase;color:#8995a6;}
+</style></head>
+<body>
+
+<!-- COVER 1: Device duo (desktop + mobile) -->
+<div class="cover" id="c1">
+  <div class="glow"></div>
+  <div class="desk" style="position:absolute;top:40px;left:26px;width:200px;transform:rotate(-4deg);">
+    <div class="bar"><span class="wm">Strategy<em>AI</em></span></div>
+    <div class="row"><span class="conf">95</span><div class="rt"><div class="t">Merck KGaA to acquire Bio-Techne</div><span class="badge">DEALS</span><span class="badge h">HIGH</span></div></div>
+    <div class="row"><span class="conf">92</span><div class="rt"><div class="t">INNIO Group prices upsized IPO</div><span class="badge">STRATEGY</span><span class="badge h">HIGH</span></div></div>
+    <div class="row"><span class="conf">92</span><div class="rt"><div class="t">GSK in talks to acquire Nuvalent</div><span class="badge">DEALS</span><span class="badge h">HIGH</span></div></div>
+  </div>
+  <div class="ph" style="position:absolute;bottom:44px;right:22px;width:82px;height:168px;transform:rotate(3deg);">
+    <div class="scr"><div class="notch"></div><div class="pwm">Strategy<em>AI</em></div>
+      <div class="prow"><span class="pc">95</span><div class="pt">Merck KGaA<br>$11.3bn deal</div></div>
+      <div class="prow"><span class="pc">92</span><div class="pt">GSK / Nuvalent<br>$9bn talks</div></div>
+      <div class="prow"><span class="pc">92</span><div class="pt">INNIO Group<br>upsized IPO</div></div>
+    </div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;padding:12px 16px;background:linear-gradient(0deg,rgba(10,13,18,.92),rgba(10,13,18,0));">
+    <div class="kick" style="margin-bottom:3px;">Before the</div>
+    <div class="title" style="font-size:26px;">Mandate</div>
+  </div>
+</div>
+
+<!-- COVER 2: Phone hero -->
+<div class="cover" id="c2">
+  <div class="glow"></div>
+  <div style="position:absolute;top:26px;left:0;right:0;text-align:center;">
+    <div class="kick" style="margin-bottom:6px;">EMEA Mandate Intelligence</div>
+    <div class="title" style="font-size:27px;">Before the <em>Mandate</em></div>
+  </div>
+  <div class="ph" style="position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);width:118px;height:236px;">
+    <div class="scr"><div class="notch"></div><div class="pwm" style="font-size:11px;">Strategy<em>AI</em></div>
+      <div class="prow"><span class="pc" style="font-size:15px;">95</span><div class="pt" style="font-size:8px;">Merck KGaA<br>$11.3bn deal</div></div>
+      <div class="prow"><span class="pc" style="font-size:15px;">92</span><div class="pt" style="font-size:8px;">GSK / Nuvalent<br>$9bn talks</div></div>
+      <div class="prow"><span class="pc" style="font-size:15px;">92</span><div class="pt" style="font-size:8px;">INNIO Group<br>upsized IPO</div></div>
+      <div class="prow" style="border:none;"><span class="pc" style="font-size:15px;">90</span><div class="pt" style="font-size:8px;">KNDS<br>Paris IPO plan</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COVER 3: Editorial wordmark + dashboard texture -->
+<div class="cover" id="c3">
+  <div class="glow"></div>
+  <div class="desk" style="position:absolute;top:-14px;right:-40px;width:220px;opacity:.28;transform:rotate(-6deg);">
+    <div class="bar"><span class="wm">Strategy<em>AI</em></span></div>
+    <div class="row"><span class="conf">95</span><div class="rt"><div class="t">Merck KGaA to acquire Bio-Techne</div></div></div>
+    <div class="row"><span class="conf">92</span><div class="rt"><div class="t">INNIO Group prices upsized IPO</div></div></div>
+    <div class="row"><span class="conf">92</span><div class="rt"><div class="t">GSK in talks to acquire Nuvalent</div></div></div>
+    <div class="row"><span class="conf">90</span><div class="rt"><div class="t">KNDS plans Paris IPO</div></div></div>
+  </div>
+  <div style="position:absolute;left:22px;right:22px;top:50%;transform:translateY(-50%);">
+    <div class="kick" style="margin-bottom:10px;">Strategy&#8202;AI</div>
+    <div class="title" style="font-size:40px;">Before<br>the <em>Mandate</em></div>
+    <div style="width:34px;height:2px;background:#c9a55b;margin:16px 0 12px;"></div>
+    <div class="foot">The signal, weeks before the headline</div>
+  </div>
+</div>
+
+</body></html>
