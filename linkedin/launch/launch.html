@@ -58,6 +58,16 @@
   .bg2{display:flex;gap:5px;}
   .b{font-family:'DM Mono',monospace;font-size:7.5px;padding:3px 5px;border-radius:4px;text-transform:capitalize;white-space:nowrap;}
   .b.d{background:rgba(63,174,122,.18);color:#5fd39b;}.b.h{background:rgba(224,82,77,.2);color:#f2938f;}.b.p{background:rgba(137,149,166,.16);color:#a9b4c2;}
+  .brandmark{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#f5f1ea;margin-bottom:26px;letter-spacing:.3px;}
+  .brandmark em{color:#c9a55b;font-style:italic;}
+  .hero.light .brandmark{color:#0f1b2d;}
+  .hero.light .brandmark em{color:#b8923f;}
+  .callout{margin:12px 14px 0;background:rgba(10,13,18,.5);border:1px solid rgba(63,174,122,.55);border-radius:11px;padding:12px 14px;}
+  .callout .ch{display:flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:#5fd39b;font-weight:500;margin-bottom:7px;text-transform:uppercase;}
+  .callout .ch i{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;display:inline-block;flex:0 0 auto;}
+  .callout p{margin:0;font-family:'Playfair Display',serif;font-size:13px;color:#f5f1ea;line-height:1.3;}
+  .callout p em{color:#c9a55b;font-style:italic;}
+  .callout .cm{font-family:'DM Mono',monospace;font-size:8px;color:#8995a6;margin-top:7px;}
 </style></head>
 <body>
 
@@ -73,12 +83,14 @@
       <div class="card"><div class="cf">92</div><div class="bd"><div class="tt">GSK in talks to acquire Nuvalent for $9bn</div><div class="bg2"><span class="b d">Deals</span><span class="b h">High</span><span class="b p">Post-deal</span></div></div></div>
       <div class="card"><div class="cf">92</div><div class="bd"><div class="tt">INNIO Group prices upsized IPO</div><div class="bg2"><span class="b p">Strategy</span><span class="b h">High</span></div></div></div>
     </div>
+    <div class="callout"><div class="ch"><i></i>New signal detected</div><p><em>Emirates NBD</em> &mdash; $3bn majority stake approved</p><div class="cm">FS &middot; Middle East &middot; 4 sources &middot; 92%</div></div>
   </div></div>
 </template>
 
 <div class="hero" id="heroDark">
   <div class="glow"></div>
   <div class="copy">
+    <div class="brandmark">Strategy<em>AI</em></div>
     <div class="kick"><i></i>New newsletter &middot; EMEA</div>
     <h1>Before the <em>Mandate</em></h1>
     <div class="sub">The consulting mandate, weeks before the market sees it. Each issue shows where the next advisory mandates are forming across EMEA, why the window is open now, and who to call.</div>
@@ -98,6 +110,7 @@
 <div class="hero light" id="heroLight">
   <div class="glow"></div>
   <div class="copy">
+    <div class="brandmark">Strategy<em>AI</em></div>
     <div class="kick"><i></i>New newsletter &middot; EMEA</div>
     <h1>Before the <em>Mandate</em></h1>
     <div class="sub">The consulting mandate, weeks before the market sees it. Each issue shows where the next advisory mandates are forming across EMEA, why the window is open now, and who to call.</div>
