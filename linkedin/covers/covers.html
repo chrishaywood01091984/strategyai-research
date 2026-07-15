@@ -7,126 +7,87 @@
   .cover.light{background:#f5efe4;}
   .glow{position:absolute;top:-70px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,165,91,0.22),rgba(201,165,91,0) 70%);}
 
-  /* ---- laptop ---- */
-  .laptop{position:absolute;}
-  .lid{background:#0c1017;border:1px solid #232a34;border-radius:9px;padding:6px;box-shadow:0 26px 50px rgba(0,0,0,.55);}
-  .cam{width:3px;height:3px;border-radius:50%;background:#2a323d;margin:0 auto 3px;}
-  .lscreen{border-radius:4px;overflow:hidden;background:#0f1b2d;}
-  .lbase{position:relative;height:8px;background:linear-gradient(180deg,#d7dbe0,#a9afb6);border-radius:0 0 9px 9px;box-shadow:0 8px 14px rgba(0,0,0,.35);}
-  .lbase:after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:34px;height:3px;background:#8f959c;border-radius:0 0 5px 5px;}
+  /* real desktop dashboard image, in a screen frame */
+  .deskimg{position:absolute;border-radius:8px;overflow:hidden;border:1px solid rgba(201,165,91,.28);box-shadow:0 26px 52px rgba(0,0,0,.55);background:#0f1b2d;}
+  .deskimg img{display:block;width:100%;height:auto;}
 
-  /* desktop dashboard content */
-  .dbar{display:flex;align-items:center;justify-content:space-between;padding:4px 7px;background:#0a1320;border-bottom:1px solid rgba(201,165,91,.14);}
-  .dwm{font-family:'Playfair Display',serif;font-size:8px;color:#f5f1ea;font-weight:600;}
-  .dwm em{color:#c9a55b;font-style:italic;}
-  .dtabs{font-size:4px;letter-spacing:.1em;color:#8995a6;}
-  .drow{display:flex;align-items:center;gap:5px;padding:4.5px 7px;border-bottom:1px solid rgba(255,255,255,.04);}
-  .dconf{font-family:'Playfair Display',serif;font-size:11px;color:#e0524d;font-weight:600;width:15px;}
-  .dtt{flex:1;min-width:0;font-family:'Playfair Display',serif;font-size:6px;color:#f5f1ea;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .dbadge{font-size:3.5px;color:#5fd39b;background:rgba(63,174,122,.18);padding:1px 2.5px;border-radius:2px;letter-spacing:.04em;}
-  .dbadge.h{color:#f2938f;background:rgba(224,82,77,.2);}
+  /* the phone we built (scaled) */
+  .phwrap{position:absolute;transform-origin:top left;}
+  .phone{width:340px;height:700px;border-radius:52px;background:#05070b;padding:14px;box-shadow:0 40px 90px -24px rgba(0,0,0,.7),0 0 0 2.5px #1c2431,inset 0 0 0 2px #000;position:relative;}
+  .island{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:112px;height:30px;background:#000;border-radius:16px;z-index:5;}
+  .screen{position:relative;width:100%;height:100%;border-radius:40px;overflow:hidden;background:#0f1b2d;color:#f5f1ea;}
+  .st{display:flex;justify-content:space-between;align-items:center;padding:13px 24px 5px;font-size:14px;font-weight:600;}
+  .tb{display:flex;align-items:center;justify-content:space-between;padding:8px 17px 10px;border-bottom:1px solid rgba(201,165,91,.12);}
+  .wm{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;}.wm em{color:#c9a55b;font-style:italic;}
+  .ic{color:#8995a6;font-size:16px;}
+  .tabs{display:flex;gap:3px;padding:10px 12px;}
+  .tab{flex:1;text-align:center;font-size:8px;letter-spacing:.1em;color:#8995a6;padding:6px 0;border-radius:5px;text-transform:uppercase;}
+  .tab.on{background:#c9a55b;color:#0f1b2d;font-weight:500;}
+  .prof{display:flex;align-items:center;gap:11px;padding:8px 17px 12px;}
+  .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2a3a52,#16233a);border:1.5px solid rgba(201,165,91,.5);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:#c9a55b;font-size:18px;}
+  .hi{font-family:'Playfair Display',serif;font-size:21px;line-height:1.1;}
+  .hi small{display:block;font-size:8px;letter-spacing:.14em;color:#c9a55b;margin-bottom:4px;text-transform:uppercase;}
+  .pills{display:flex;gap:6px;padding:2px 17px 10px;align-items:center;}
+  .pill{font-size:9px;padding:6px 10px;border-radius:6px;border:1px solid rgba(201,165,91,.3);color:#8995a6;}
+  .pill.g{background:rgba(63,174,122,.16);border-color:rgba(63,174,122,.5);color:#5fd39b;}
+  .pill.gold{background:rgba(201,165,91,.14);border-color:rgba(201,165,91,.5);color:#c9a55b;}
+  .cnt{margin-left:auto;font-size:9px;color:#8995a6;}.cnt b{color:#c9a55b;}
+  .feed{padding:0 14px;display:flex;flex-direction:column;gap:10px;}
+  .card{position:relative;background:#132339;border:1px solid rgba(201,165,91,.1);border-left:3.5px solid #e0524d;border-radius:9px;padding:11px 12px 11px 13px;}
+  .card .cf{position:absolute;left:12px;top:11px;font-family:'Playfair Display',serif;font-size:23px;font-weight:600;color:#e0524d;}
+  .card .bd{margin-left:42px;}
+  .card .tt{font-family:'Playfair Display',serif;font-size:13px;color:#f5f1ea;line-height:1.25;margin-bottom:7px;}
+  .bg2{display:flex;gap:5px;}
+  .b{font-size:7.5px;padding:3px 5px;border-radius:4px;text-transform:capitalize;white-space:nowrap;}
+  .b.d{background:rgba(63,174,122,.18);color:#5fd39b;}.b.h{background:rgba(224,82,77,.2);color:#f2938f;}.b.p{background:rgba(137,149,166,.16);color:#a9b4c2;}
 
-  /* ---- phone ---- */
-  .ph{background:#05070b;border-radius:15px;padding:3px;box-shadow:0 26px 50px rgba(0,0,0,.6);border:1px solid #1c2431;}
-  .pscr{width:100%;height:100%;background:#0f1b2d;border-radius:12px;overflow:hidden;position:relative;}
-  .notch{position:absolute;top:4px;left:50%;transform:translateX(-50%);width:28px;height:7px;background:#000;border-radius:4px;z-index:2;}
-  .pwm{text-align:center;font-family:'Playfair Display',serif;font-size:8px;color:#f5f1ea;padding:9px 0 5px;border-bottom:1px solid rgba(201,165,91,.14);}
-  .pwm em{color:#c9a55b;font-style:italic;}
-  .prow{display:flex;align-items:center;gap:4px;padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.04);}
-  .pc{font-family:'Playfair Display',serif;font-size:11px;color:#e0524d;font-weight:600;}
-  .pt{font-family:'Playfair Display',serif;font-size:5.5px;color:#f5f1ea;line-height:1.25;}
-
-  .kick{font-size:6.5px;letter-spacing:.2em;text-transform:uppercase;color:#c9a55b;}
   .title{font-family:'Playfair Display',serif;color:#f5f1ea;font-weight:500;line-height:1.02;}
   .title em{color:#c9a55b;font-style:italic;}
+  .kick{font-size:6.5px;letter-spacing:.2em;text-transform:uppercase;color:#c9a55b;}
   .foot{font-size:5.5px;letter-spacing:.16em;text-transform:uppercase;color:#8995a6;}
 </style></head>
 <body>
 
-<!-- Reusable device-duo macro via inline duplication -->
+<!-- shared phone markup template rendered inline in each cover -->
+<template id="phoneTpl">
+  <div class="phone"><div class="island"></div><div class="screen">
+    <div class="st"><span>9:41</span><span>&#9642; &#9642; &#9642; &#8987; 100</span></div>
+    <div class="tb"><span class="ic">&#9776;</span><span class="wm">Strategy<em>AI</em></span><span class="ic">?</span></div>
+    <div class="tabs"><div class="tab on">Signals</div><div class="tab">Network</div><div class="tab">Watchlist</div><div class="tab">Intel</div></div>
+    <div class="prof"><div class="av">C</div><div class="hi"><small>StrategyAI &middot; McKinsey</small>Welcome back, Chris.</div></div>
+    <div class="pills"><span class="pill g">&#9733; Live</span><span class="pill gold">&#9711; Forming</span><span class="cnt">Signals <b>1,146</b></span></div>
+    <div class="feed">
+      <div class="card"><div class="cf">95</div><div class="bd"><div class="tt">Merck KGaA to acquire Bio-Techne in $11.3bn deal</div><div class="bg2"><span class="b d">Deals</span><span class="b h">High</span><span class="b p">Post-deal</span></div></div></div>
+      <div class="card"><div class="cf">92</div><div class="bd"><div class="tt">GSK in talks to acquire Nuvalent for $9bn</div><div class="bg2"><span class="b d">Deals</span><span class="b h">High</span><span class="b p">Post-deal</span></div></div></div>
+      <div class="card"><div class="cf">92</div><div class="bd"><div class="tt">INNIO Group prices upsized IPO</div><div class="bg2"><span class="b p">Strategy</span><span class="b h">High</span></div></div></div>
+    </div>
+  </div></div>
+</template>
 
-<!-- COVER 1: device duo on navy, product-forward -->
-<div class="cover" id="c1">
-  <div class="glow"></div>
-  <div style="position:absolute;top:16px;left:16px;" class="kick">Strategy&#8202;AI</div>
-  <!-- laptop -->
-  <div class="laptop" style="top:78px;right:20px;">
-    <div class="lid" style="width:196px;">
-      <div class="cam"></div>
-      <div class="lscreen">
-        <div class="dbar"><span class="dwm">Strategy<em>AI</em></span><span class="dtabs">SIGNALS &middot; NETWORK &middot; INTEL</span></div>
-        <div class="drow"><span class="dconf">95</span><span class="dtt">Merck KGaA to acquire Bio-Techne</span><span class="dbadge">DEALS</span><span class="dbadge h">HIGH</span></div>
-        <div class="drow"><span class="dconf">92</span><span class="dtt">INNIO Group prices upsized IPO</span><span class="dbadge">STRATEGY</span></div>
-        <div class="drow"><span class="dconf">92</span><span class="dtt">GSK in talks to acquire Nuvalent</span><span class="dbadge">DEALS</span></div>
-        <div class="drow" style="border:none;"><span class="dconf">90</span><span class="dtt">KNDS plans Paris &amp; Frankfurt IPO</span><span class="dbadge">STRATEGY</span></div>
-      </div>
-    </div>
-    <div class="lbase" style="width:222px;margin-left:-13px;"></div>
-  </div>
-  <!-- phone overlapping front-left -->
-  <div class="ph" style="position:absolute;bottom:26px;left:20px;width:70px;height:146px;">
-    <div class="pscr"><div class="notch"></div><div class="pwm">Strategy<em>AI</em></div>
-      <div class="prow"><span class="pc">95</span><div class="pt">Merck KGaA<br>$11.3bn</div></div>
-      <div class="prow"><span class="pc">92</span><div class="pt">GSK / Nuvalent<br>$9bn</div></div>
-      <div class="prow" style="border:none;"><span class="pc">92</span><div class="pt">INNIO Group<br>IPO</div></div>
-    </div>
-  </div>
+<div class="cover" id="c1"><div class="glow"></div>
+  <div style="position:absolute;top:15px;left:16px;" class="kick">Strategy&#8202;AI</div>
+  <div class="deskimg" style="top:74px;right:16px;width:210px;"><img src="https://media.base44.com/images/public/69d2c9012f4f4b98110a8837/f122969a6_image.png"></div>
+  <div class="phwrap" data-phone style="bottom:22px;left:18px;transform:scale(0.235);"></div>
   <div style="position:absolute;left:16px;bottom:12px;" class="foot">EMEA Mandate Intelligence</div>
 </div>
 
-<!-- COVER 2: device duo on navy + title -->
-<div class="cover" id="c2">
-  <div class="glow"></div>
-  <!-- laptop -->
-  <div class="laptop" style="top:30px;right:14px;">
-    <div class="lid" style="width:184px;">
-      <div class="cam"></div>
-      <div class="lscreen">
-        <div class="dbar"><span class="dwm">Strategy<em>AI</em></span><span class="dtabs">SIGNALS</span></div>
-        <div class="drow"><span class="dconf">95</span><span class="dtt">Merck KGaA to acquire Bio-Techne</span><span class="dbadge">DEALS</span></div>
-        <div class="drow"><span class="dconf">92</span><span class="dtt">INNIO Group prices upsized IPO</span><span class="dbadge">STRATEGY</span></div>
-        <div class="drow" style="border:none;"><span class="dconf">92</span><span class="dtt">GSK in talks to acquire Nuvalent</span><span class="dbadge">DEALS</span></div>
-      </div>
-    </div>
-    <div class="lbase" style="width:208px;margin-left:-12px;"></div>
-  </div>
-  <!-- phone -->
-  <div class="ph" style="position:absolute;top:56px;left:16px;width:64px;height:134px;">
-    <div class="pscr"><div class="notch"></div><div class="pwm" style="font-size:7px;">Strategy<em>AI</em></div>
-      <div class="prow"><span class="pc" style="font-size:10px;">95</span><div class="pt">Merck<br>$11.3bn</div></div>
-      <div class="prow" style="border:none;"><span class="pc" style="font-size:10px;">92</span><div class="pt">GSK<br>$9bn</div></div>
-    </div>
-  </div>
-  <div style="position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(0deg,rgba(10,13,18,.96) 40%,rgba(10,13,18,0));">
+<div class="cover" id="c2"><div class="glow"></div>
+  <div class="deskimg" style="top:26px;right:12px;width:196px;"><img src="https://media.base44.com/images/public/69d2c9012f4f4b98110a8837/f122969a6_image.png"></div>
+  <div class="phwrap" data-phone style="top:52px;left:14px;transform:scale(0.215);"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(0deg,rgba(10,13,18,.96) 42%,rgba(10,13,18,0));">
     <div class="title" style="font-size:23px;">Before the <em>Mandate</em></div>
   </div>
 </div>
 
-<!-- COVER 3: device duo on cream (matches reference aesthetic) -->
 <div class="cover light" id="c3">
-  <div class="laptop" style="top:52px;right:16px;">
-    <div class="lid" style="width:190px;">
-      <div class="cam"></div>
-      <div class="lscreen">
-        <div class="dbar"><span class="dwm">Strategy<em>AI</em></span><span class="dtabs">SIGNALS &middot; NETWORK</span></div>
-        <div class="drow"><span class="dconf">95</span><span class="dtt">Merck KGaA to acquire Bio-Techne</span><span class="dbadge">DEALS</span></div>
-        <div class="drow"><span class="dconf">92</span><span class="dtt">INNIO Group prices upsized IPO</span><span class="dbadge">STRATEGY</span></div>
-        <div class="drow" style="border:none;"><span class="dconf">92</span><span class="dtt">GSK in talks to acquire Nuvalent</span><span class="dbadge">DEALS</span></div>
-      </div>
-    </div>
-    <div class="lbase" style="width:216px;margin-left:-13px;"></div>
-  </div>
-  <div class="ph" style="position:absolute;bottom:30px;left:18px;width:68px;height:142px;">
-    <div class="pscr"><div class="notch"></div><div class="pwm">Strategy<em>AI</em></div>
-      <div class="prow"><span class="pc">95</span><div class="pt">Merck KGaA<br>$11.3bn</div></div>
-      <div class="prow"><span class="pc">92</span><div class="pt">GSK / Nuvalent<br>$9bn</div></div>
-      <div class="prow" style="border:none;"><span class="pc">92</span><div class="pt">INNIO<br>IPO</div></div>
-    </div>
-  </div>
-  <div style="position:absolute;left:18px;top:16px;">
-    <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#0f1b2d;line-height:1.05;">Before the<br><em style="color:#b8923f;font-style:italic;">Mandate</em></div>
-  </div>
+  <div class="deskimg" style="top:70px;right:16px;width:206px;box-shadow:0 26px 52px rgba(15,27,45,.28);"><img src="https://media.base44.com/images/public/69d2c9012f4f4b98110a8837/f122969a6_image.png"></div>
+  <div class="phwrap" data-phone style="bottom:24px;left:18px;transform:scale(0.235);"></div>
+  <div style="position:absolute;left:18px;top:16px;"><div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:500;color:#0f1b2d;line-height:1.05;">Before the<br><em style="color:#b8923f;font-style:italic;">Mandate</em></div></div>
   <div style="position:absolute;left:18px;bottom:12px;font-size:5.5px;letter-spacing:.16em;text-transform:uppercase;color:#6b6355;">EMEA Mandate Intelligence</div>
 </div>
 
+<script>
+  var tpl=document.getElementById('phoneTpl');
+  document.querySelectorAll('[data-phone]').forEach(function(w){ w.appendChild(tpl.content.cloneNode(true)); });
+</script>
 </body></html>
