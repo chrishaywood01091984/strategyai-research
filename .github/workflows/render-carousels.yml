@@ -1,8 +1,7 @@
 name: Render LinkedIn carousels
 
-# Renders the LinkedIn carousel HTML into PNGs + PDF entirely in GitHub Actions.
-# Nothing is rendered on any local machine. Trigger manually, or on changes to the
-# generator/render source. Outputs are committed back with [skip ci] to avoid loops.
+# Renders LinkedIn carousel + post HTML into PNGs (and PDFs) in GitHub Actions.
+# Nothing is rendered on any local machine. Outputs are committed back with [skip ci].
 
 on:
   workflow_dispatch:
@@ -37,16 +36,23 @@ jobs:
         working-directory: linkedin
         run: npm install
 
-      - name: Build + render Week 1
+      - name: Build + render Week 1 carousel
         working-directory: linkedin
         run: |
           node week01/build_week1.js
           node render.js week01/html StrategyAI_Week1_carousel.pdf
 
+      - name: Build + render Security post
+        working-directory: linkedin
+        run: |
+          node security/build_security.js
+          node render.js security/html
+
       - name: Commit rendered assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add linkedin/week01/html linkedin/week01/png linkedin/week01/*.pdf
-          git commit -m "Render Week 1 LinkedIn carousel [skip ci]" || echo "nothing to commit"
+          git add linkedin/week01/html linkedin/week01/png linkedin/week01/*.pdf \
+                  linkedin/security/html linkedin/security/png
+          git commit -m "Render LinkedIn assets [skip ci]" || echo "nothing to commit"
           git push
