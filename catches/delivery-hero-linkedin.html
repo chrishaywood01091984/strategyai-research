@@ -1,181 +1,166 @@
 <title>StrategyAI · Six weeks of warning on a €13bn deal</title>
 <style>
   :root{
-    --navy:#0d1b2a; --navy-2:#14263a; --gold:#c9a84c; --gold-dim:#8a7433;
-    --ink:#eef3f8; --muted:#8ba0b6; --line:rgba(201,168,76,.3);
+    --navy:#0d1b2a; --gold:#c9a84c; --gold-dim:#7d6a31;
+    --ink:#eef3f8; --muted:#8ba0b6;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:#050b12;font-family:"Libre Baskerville",Georgia,serif;color:var(--ink)}
-  .card{width:1200px;min-height:750px;margin:0 auto;background:
-      radial-gradient(1100px 500px at 15% -10%, #162c42 0%, transparent 60%), var(--navy);
-    padding:44px 56px 40px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-  .card:after{content:"";position:absolute;inset:0;pointer-events:none;
-    background:repeating-linear-gradient(90deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px)}
+  body{margin:0;background:#050b12;display:flex;justify-content:center;
+    font-family:"Libre Baskerville",Georgia,serif}
+  /* LinkedIn landscape: 1200 x 628 */
+  .card{position:relative;width:1200px;height:628px;flex:0 0 auto;color:var(--ink);
+    background:radial-gradient(900px 420px at 12% -14%, #17304a 0%, transparent 62%), var(--navy);
+    overflow:hidden}
 
-  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
-  .eyebrow{font-family:"DM Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.26em;
-    text-transform:uppercase;color:var(--gold)}
-  h1{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:44px;line-height:1.08;
-    margin:12px 0 8px;color:#fff;max-width:20ch}
+  .eyebrow{position:absolute;left:44px;top:34px;font-family:"DM Mono",ui-monospace,monospace;
+    font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+  /* Vertical budget above the spine (y=372): h1 54-160, sub 170-236, event labels 244-318,
+     stems 334-372. Every band is fixed so nothing can run into anything else. */
+  h1{position:absolute;left:44px;top:54px;width:630px;height:106px;margin:0;
+    font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:31px;line-height:1.14;
+    color:#fff}
   h1 em{font-style:normal;color:var(--gold)}
-  .sub{color:var(--muted);font-size:15px;max-width:56ch;margin:0}
+  .sub{position:absolute;left:44px;top:170px;width:648px;height:66px;margin:0;
+    font-size:12.5px;line-height:1.55;color:var(--muted)}
+  .sub b{color:#dbe6f1;font-weight:700}
 
-  .dials{display:flex;gap:18px;flex-shrink:0}
-  .dial{text-align:center;width:112px}
-  .dial svg{display:block;margin:0 auto}
-  .dial .val{font-family:"Playfair Display",serif;font-size:26px;fill:#fff}
-  .dial .unit{font-family:"DM Mono",monospace;font-size:8.5px;fill:var(--muted);
-    letter-spacing:.14em;text-transform:uppercase}
-  .dial p{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.13em;
-    text-transform:uppercase;color:var(--muted);margin:8px 0 0;line-height:1.5}
+  /* donuts */
+  .dials{position:absolute;right:44px;top:44px;display:flex;gap:16px}
+  .dial{width:104px;text-align:center}
+  .dial p{font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);margin:6px 0 0;line-height:1.5}
+  .v{font-family:"Playfair Display",serif;font-size:24px;fill:#fff}
+  .u{font-family:"DM Mono",monospace;font-size:7.5px;fill:var(--muted);letter-spacing:.14em}
 
-  .tl{flex:1;display:flex;align-items:center;margin:6px 0 0;position:relative}
-  .track{position:relative;width:100%;height:270px}
-  .spine{position:absolute;left:0;right:0;top:50%;height:2px;
-    background:linear-gradient(90deg,rgba(201,168,76,.25),rgba(201,168,76,.75))}
-  .node{position:absolute;top:50%;transform:translate(-50%,-50%);width:15px;height:15px;
-    border-radius:50%;background:var(--navy);border:2px solid var(--gold);z-index:3}
-  .node.small{width:11px;height:11px;border-color:var(--gold-dim)}
-  .node.flag{width:23px;height:23px;border-width:3px;background:var(--gold);
-    box-shadow:0 0 0 7px rgba(201,168,76,.14)}
-  .node.deal{width:27px;height:27px;border-width:3px;background:#fff;border-color:#fff;
-    box-shadow:0 0 0 8px rgba(255,255,255,.11)}
-  .stem{position:absolute;left:50%;width:1px;background:var(--line);z-index:1}
-  .ev{position:absolute;width:186px;transform:translateX(-50%);z-index:2}
-  .ev .d{font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--gold)}
-  .ev .t{font-size:12.5px;line-height:1.42;color:#dbe6f1;margin-top:3px}
-  .ev .s{font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.09em;
-    text-transform:uppercase;color:var(--muted);margin-top:5px}
-  .ev.hi .t{color:#fff;font-weight:600}
+  /* timeline: spine fixed at y=372 */
+  .spine{position:absolute;left:44px;right:44px;top:372px;height:2px;
+    background:linear-gradient(90deg,rgba(201,168,76,.22),rgba(201,168,76,.5))}
+  .run{position:absolute;top:370px;height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--gold),#e6cd86)}
+  .pill{position:absolute;top:359px;transform:translateX(-50%);white-space:nowrap;
+    font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--navy);background:var(--gold);padding:5px 14px;border-radius:3px;
+    box-shadow:0 0 0 5px rgba(13,27,42,.95)}
 
-  .span{position:absolute;top:calc(50% - 54px);height:34px;z-index:1}
-  .span:before,.span:after{content:"";position:absolute;bottom:0;width:1px;height:34px;
-    background:var(--gold)}
-  .span:before{left:0}.span:after{right:0}
-  .span i{position:absolute;left:0;right:0;top:0;height:1px;background:var(--gold)}
-  .span b{position:absolute;left:50%;top:-15px;transform:translateX(-50%);white-space:nowrap;
-    font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--navy);background:var(--gold);padding:4px 13px;border-radius:2px;font-weight:400}
+  .n{position:absolute;border-radius:50%;background:var(--navy);border:2px solid var(--gold-dim);
+    width:11px;height:11px;top:367px;transform:translateX(-50%)}
+  .n.flag{width:22px;height:22px;top:362px;background:var(--gold);border:3px solid var(--gold);
+    box-shadow:0 0 0 6px rgba(201,168,76,.15)}
+  .n.deal{width:24px;height:24px;top:361px;background:#fff;border:3px solid #fff;
+    box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+  .stem{position:absolute;width:1px;background:rgba(201,168,76,.3);transform:translateX(-50%)}
 
-  footer{display:flex;justify-content:space-between;align-items:center;gap:24px;
-    border-top:1px solid rgba(255,255,255,.09);padding-top:16px;margin-top:8px;
-    font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.14em;
+  .lbl{position:absolute;width:150px;transform:translateX(-50%)}
+  .lbl .d{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.11em;color:var(--gold)}
+  .lbl .t{font-size:11.5px;line-height:1.4;color:#cfdcea;margin-top:3px}
+  .lbl .s{font-family:"DM Mono",monospace;font-size:7.5px;letter-spacing:.09em;
+    text-transform:uppercase;color:#6f8298;margin-top:4px}
+  .lbl.hero{width:196px}
+  .lbl.hero .t{font-size:13px;color:#fff;font-weight:600;line-height:1.38}
+  .lbl.hero .d{color:#fff}
+
+  footer{position:absolute;left:44px;right:44px;bottom:26px;display:flex;
+    justify-content:space-between;align-items:center;
+    border-top:1px solid rgba(255,255,255,.09);padding-top:14px;
+    font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.15em;
     text-transform:uppercase;color:var(--muted)}
-  .wm{font-size:15px;letter-spacing:.03em;color:#fff;text-transform:none;
-    font-family:"Playfair Display",serif}
+  .wm{font-family:"Playfair Display",serif;font-size:15px;letter-spacing:.02em;
+    color:#fff;text-transform:none}
   .wm b{color:var(--gold);font-weight:600}
 </style>
 
 <div class="card">
-  <div class="top">
-    <div>
-      <div class="eyebrow">Before the mandate · Proof</div>
-      <h1>Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.</h1>
-      <p class="sub">Uber's bid for Delivery Hero broke on 15 July 2026. Every signal that led there was
-        public, scattered and individually forgettable. We held them together as one situation from 2 June.</p>
-    </div>
+  <div class="eyebrow">Before the mandate · Proof</div>
+  <h1>Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.</h1>
+  <p class="sub">Uber's bid for Delivery Hero broke on 15 July 2026. Most of the individual signals were
+     public and easy to miss. <b>We sequenced the behavioural pattern</b>, the hiring, the positioning and
+     the market reaction, to work out what was coming and roughly when.</p>
 
-    <div class="dials">
-      <div class="dial">
-        <svg width="112" height="112" viewBox="0 0 112 112">
-          <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="9"/>
-          <circle cx="56" cy="56" r="45" fill="none" stroke="#c9a84c" stroke-width="9"
-                  stroke-linecap="round" stroke-dasharray="213 283"
-                  transform="rotate(-90 56 56)"/>
-          <text class="val" x="56" y="54" text-anchor="middle">43</text>
-          <text class="unit" x="56" y="70" text-anchor="middle">DAYS EARLY</text>
-        </svg>
-        <p>Ahead of<br>announcement</p>
-      </div>
-      <div class="dial">
-        <svg width="112" height="112" viewBox="0 0 112 112">
-          <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="9"/>
-          <circle cx="56" cy="56" r="45" fill="none" stroke="#7fb3d5" stroke-width="9"
-                  stroke-linecap="round" stroke-dasharray="221 283"
-                  transform="rotate(-90 56 56)"/>
-          <text class="val" x="56" y="54" text-anchor="middle">78</text>
-          <text class="unit" x="56" y="70" text-anchor="middle">CONFIDENCE</text>
-        </svg>
-        <p>Scored when<br>first surfaced</p>
-      </div>
-      <div class="dial">
-        <svg width="112" height="112" viewBox="0 0 112 112">
-          <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="9"/>
-          <circle cx="56" cy="56" r="45" fill="none" stroke="#9ccfa0" stroke-width="9"
-                  stroke-linecap="round" stroke-dasharray="283 283"
-                  transform="rotate(-90 56 56)"/>
-          <text class="val" x="56" y="54" text-anchor="middle">8</text>
-          <text class="unit" x="56" y="70" text-anchor="middle">SOURCES</text>
-        </svg>
-        <p>Linked across<br>six events</p>
-      </div>
+  <div class="dials">
+    <div class="dial">
+      <svg width="104" height="104" viewBox="0 0 104 104">
+        <circle cx="52" cy="52" r="42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="8"/>
+        <circle cx="52" cy="52" r="42" fill="none" stroke="#c9a84c" stroke-width="8"
+                stroke-linecap="round" stroke-dasharray="199 264" transform="rotate(-90 52 52)"/>
+        <text class="v" x="52" y="50" text-anchor="middle">43</text>
+        <text class="u" x="52" y="65" text-anchor="middle">DAYS EARLY</text>
+      </svg>
+      <p>Ahead of<br>announcement</p>
+    </div>
+    <div class="dial">
+      <svg width="104" height="104" viewBox="0 0 104 104">
+        <circle cx="52" cy="52" r="42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="8"/>
+        <circle cx="52" cy="52" r="42" fill="none" stroke="#7fb3d5" stroke-width="8"
+                stroke-linecap="round" stroke-dasharray="206 264" transform="rotate(-90 52 52)"/>
+        <text class="v" x="52" y="50" text-anchor="middle">78</text>
+        <text class="u" x="52" y="65" text-anchor="middle">CONFIDENCE</text>
+      </svg>
+      <p>Scored when<br>first surfaced</p>
+    </div>
+    <div class="dial">
+      <svg width="104" height="104" viewBox="0 0 104 104">
+        <circle cx="52" cy="52" r="42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="8"/>
+        <circle cx="52" cy="52" r="42" fill="none" stroke="#9ccfa0" stroke-width="8"
+                stroke-linecap="round" stroke-dasharray="264 264" transform="rotate(-90 52 52)"/>
+        <text class="v" x="52" y="50" text-anchor="middle">8</text>
+        <text class="u" x="52" y="65" text-anchor="middle">SOURCES</text>
+      </svg>
+      <p>Linked across<br>six events</p>
     </div>
   </div>
 
-  <div class="tl">
-    <div class="track">
-      <div class="spine"></div>
+  <div class="spine"></div>
+  <div class="run" style="left:570px;width:520px"></div>
+  <div class="pill" style="left:866px">43 days of advantage</div>
 
-      <!-- 43-day span bracket, from the flag to the announcement -->
-      <div class="span" style="left:29%;right:5.5%">
-        <i></i><b>43 days of advantage</b>
-      </div>
+  <!-- ABOVE the spine -->
+  <div class="n" style="left:90px"></div>
+  <div class="stem" style="left:90px;top:334px;height:38px"></div>
+  <div class="lbl" style="left:90px;top:246px">
+    <div class="d">19 MAY</div>
+    <div class="t">Delivery Hero hires a senior antitrust and trade lawyer</div>
+    <div class="s">Recruitment listing</div>
+  </div>
 
-      <!-- 19 May · above -->
-      <div class="node small" style="left:5%"></div>
-      <div class="stem" style="left:5%;bottom:50%;height:44px"></div>
-      <div class="ev" style="left:5%;bottom:calc(50% + 44px)">
-        <div class="d">19 MAY</div>
-        <div class="t">Delivery Hero recruits a senior antitrust and trade lawyer in Berlin</div>
-        <div class="s">Recruitment listing</div>
-      </div>
+  <div class="n" style="left:410px"></div>
+  <div class="stem" style="left:410px;top:334px;height:38px"></div>
+  <div class="lbl" style="left:410px;top:260px">
+    <div class="d">25 MAY</div>
+    <div class="t">Uber weighs raising its offer; shares climb 10%</div>
+    <div class="s">Three outlets</div>
+  </div>
 
-      <!-- 22 May · below -->
-      <div class="node small" style="left:17%"></div>
-      <div class="stem" style="left:17%;top:50%;height:40px"></div>
-      <div class="ev" style="left:17%;top:calc(50% + 40px)">
-        <div class="d">22 MAY</div>
-        <div class="t">First reports that Uber is studying a full takeover</div>
-        <div class="s">Financial press</div>
-      </div>
+  <div class="n" style="left:730px"></div>
+  <div class="stem" style="left:730px;top:334px;height:38px"></div>
+  <div class="lbl" style="left:730px;top:260px">
+    <div class="d">12 JUNE</div>
+    <div class="t">Structure narrows to the regional businesses</div>
+    <div class="s">Financial press</div>
+  </div>
 
-      <!-- 25 May · above -->
-      <div class="node small" style="left:29%"></div>
-      <div class="stem" style="left:29%;bottom:50%;height:44px"></div>
-      <div class="ev" style="left:29%;bottom:calc(50% + 44px)">
-        <div class="d">25 MAY</div>
-        <div class="t">Uber weighs raising its offer; shares climb 10%</div>
-        <div class="s">Three outlets</div>
-      </div>
+  <!-- BELOW the spine -->
+  <div class="n" style="left:250px"></div>
+  <div class="stem" style="left:250px;top:384px;height:34px"></div>
+  <div class="lbl" style="left:250px;top:420px">
+    <div class="d">22 MAY</div>
+    <div class="t">First reports Uber is studying a full takeover</div>
+    <div class="s">Financial press</div>
+  </div>
 
-      <!-- 2 June · FLAG · below -->
-      <div class="node flag" style="left:41%"></div>
-      <div class="stem" style="left:41%;top:50%;height:46px;background:var(--gold)"></div>
-      <div class="ev hi" style="left:41%;top:calc(50% + 46px)">
-        <div class="d" style="color:#fff">2 JUNE · STRATEGYAI</div>
-        <div class="t">Surfaced to partners as a live situation, with the angle and the window</div>
-        <div class="s" style="color:var(--gold)">Our partners see it here</div>
-      </div>
+  <div class="n flag" style="left:570px"></div>
+  <div class="stem" style="left:570px;top:388px;height:32px;background:var(--gold)"></div>
+  <div class="lbl hero" style="left:570px;top:422px">
+    <div class="d">2 JUNE · STRATEGYAI</div>
+    <div class="t">We sequenced the events, judged the pattern worth partners seeing, and put it in front of them with the angle and the window</div>
+    <div class="s" style="color:var(--gold)">Our partners see it here</div>
+  </div>
 
-      <!-- 12 June · above -->
-      <div class="node small" style="left:57%"></div>
-      <div class="stem" style="left:57%;bottom:50%;height:44px"></div>
-      <div class="ev" style="left:57%;bottom:calc(50% + 44px)">
-        <div class="d">12 JUNE</div>
-        <div class="t">Structure narrows to the regional businesses</div>
-        <div class="s">Financial press</div>
-      </div>
-
-      <!-- 15 July · DEAL · below -->
-      <div class="node deal" style="left:94.5%"></div>
-      <div class="stem" style="left:94.5%;top:50%;height:50px;background:rgba(255,255,255,.5)"></div>
-      <div class="ev hi" style="left:88%;top:calc(50% + 50px);width:210px;text-align:right;
-                                transform:none">
-        <div class="d" style="color:#fff">15 JULY · ANNOUNCED</div>
-        <div class="t" style="font-size:14px">Uber bids €41.50 a share.<br>Delivery Hero valued near €13bn.</div>
-        <div class="s">Global press · the market finds out</div>
-      </div>
-    </div>
+  <div class="n deal" style="left:1090px"></div>
+  <div class="stem" style="left:1090px;top:388px;height:32px;background:rgba(255,255,255,.45)"></div>
+  <div class="lbl hero" style="left:1058px;top:422px;text-align:right">
+    <div class="d">15 JULY · ANNOUNCED</div>
+    <div class="t">Uber bids €41.50 a share, valuing Delivery Hero near €13bn</div>
+    <div class="s">The market finds out</div>
   </div>
 
   <footer>
