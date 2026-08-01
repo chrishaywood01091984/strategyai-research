@@ -26,10 +26,16 @@
     background:linear-gradient(90deg,rgba(201,168,76,.22),rgba(201,168,76,.5))}
   .run{position:absolute;top:370px;height:6px;border-radius:3px;
     background:linear-gradient(90deg,var(--gold),#e6cd86)}
-  .pill{position:absolute;top:359px;transform:translateX(-50%);white-space:nowrap;
-    font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--navy);background:var(--gold);padding:5px 14px;border-radius:3px;
-    box-shadow:0 0 0 5px rgba(13,27,42,.95)}
+  /* The lead-time badge is the whole point of the card, so it is sized to dominate the
+     spine. Vertical budget between the label rows is 332-412, badge occupies 342-402. */
+  .pill{position:absolute;top:342px;transform:translateX(-50%);white-space:nowrap;
+    display:flex;align-items:center;gap:11px;padding:9px 22px 9px 20px;border-radius:7px;
+    background:linear-gradient(135deg,#f0dc9d 0%,#c9a84c 55%,#b0902f 100%);color:#0d1b2a;
+    box-shadow:0 0 0 7px rgba(13,27,42,.96), 0 8px 26px rgba(201,168,76,.42)}
+  .pill .num{font-family:"Playfair Display",Georgia,serif;font-size:40px;line-height:.9;
+    font-weight:700;letter-spacing:-.01em}
+  .pill .txt{font-family:"DM Mono",monospace;font-size:11.5px;line-height:1.28;
+    letter-spacing:.19em;text-transform:uppercase;font-weight:700;text-align:left}
   .n{position:absolute;border-radius:50%;background:var(--navy);border:2px solid var(--gold-dim);
     width:11px;height:11px;top:367px;transform:translateX(-50%)}
   .n.flag{width:22px;height:22px;top:362px;background:var(--gold);border:3px solid var(--gold);
@@ -47,14 +53,15 @@
   .lbl.hero .d{color:#fff}
   /* Method panel: sits in the clear zone right of the last above-label, under the dials.
      Describes what we do, not what fired on this deal. */
-  .method{position:absolute;left:812px;top:243px;width:344px;padding:11px 14px 12px;
+  /* Kept short so its lower edge clears the lead-time badge, which starts at 335 with its ring. */
+  .method{position:absolute;left:812px;top:240px;width:344px;padding:10px 14px 11px;
     border:1px solid rgba(201,168,76,.3);border-left:3px solid var(--gold);border-radius:3px;
     background:rgba(201,168,76,.06)}
-  .method h4{margin:0 0 6px;font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.2em;
+  .method h4{margin:0 0 5px;font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.2em;
     text-transform:uppercase;color:var(--gold);font-weight:400}
-  .method .row{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.07em;
-    text-transform:uppercase;color:#cfdcea;line-height:1.85}
-  .method p{margin:6px 0 0;font-size:10.5px;line-height:1.45;color:var(--muted)}
+  .method .row{font-family:"DM Mono",monospace;font-size:8.6px;letter-spacing:.06em;
+    text-transform:uppercase;color:#cfdcea;line-height:1.7}
+  .method p{margin:5px 0 0;font-size:10.5px;line-height:1.4;color:var(--muted)}
   .method p b{color:#fff;font-weight:700}
   footer{position:absolute;left:44px;right:44px;bottom:26px;display:flex;
     justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.09);
@@ -89,12 +96,12 @@
 </svg><p>Linked across<br>six events</p></div></div>
   <div class="method">
     <h4>How the signal is built</h4>
-    <div class="row">Behavioural patterns · Hiring trends<br>Signal velocity · Sequenced as one situation</div>
-    <p>Partners get <b>the evidence</b>, <b>who to approach</b>, and <b>why the timing works now</b>.</p>
+    <div class="row">Behavioural patterns · Hiring trends · Velocity<br>Sequenced into one situation</div>
+    <p><b>The evidence</b>, <b>who to approach</b>, <b>why now</b>.</p>
   </div>
   <div class="spine"></div>
   <div class="run" style="left:230px;width:860px"></div>
-  <div class="pill" style="left:905px">38 days of advantage</div>
+  <div class="pill" style="left:905px"><span class="num">38</span><span class="txt">days<br>ahead</span></div>
   <div class="n" style="left:105px"></div>
   <div class="stem" style="left:105px;top:334px;height:38px"></div>
   <div class="lbl" style="left:105px;top:246px"><div class="d">20 MAY</div><div class="t">Commerzbank's chief executive publicly rebuffs the approach</div><div class="s" style="">Financial press</div></div>
