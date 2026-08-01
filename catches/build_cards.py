@@ -57,6 +57,17 @@ TPL = """<title>StrategyAI · {title_tag}</title>
   .lbl.hero{{width:200px}}
   .lbl.hero .t{{font-size:13px;color:#fff;font-weight:600;line-height:1.38}}
   .lbl.hero .d{{color:#fff}}
+  /* Method panel: sits in the clear zone right of the last above-label, under the dials.
+     Describes what we do, not what fired on this deal. */
+  .method{{position:absolute;left:812px;top:243px;width:344px;padding:11px 14px 12px;
+    border:1px solid rgba(201,168,76,.3);border-left:3px solid var(--gold);border-radius:3px;
+    background:rgba(201,168,76,.06)}}
+  .method h4{{margin:0 0 6px;font-family:"DM Mono",monospace;font-size:8.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold);font-weight:400}}
+  .method .row{{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.07em;
+    text-transform:uppercase;color:#cfdcea;line-height:1.85}}
+  .method p{{margin:6px 0 0;font-size:10.5px;line-height:1.45;color:var(--muted)}}
+  .method p b{{color:#fff;font-weight:700}}
   footer{{position:absolute;left:44px;right:44px;bottom:26px;display:flex;
     justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.09);
     padding-top:14px;font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.15em;
@@ -70,6 +81,11 @@ TPL = """<title>StrategyAI · {title_tag}</title>
   <h1>{headline}</h1>
   <p class="sub">{sub}</p>
   <div class="dials">{dials}</div>
+  <div class="method">
+    <h4>How the signal is built</h4>
+    <div class="row">Behavioural patterns · Hiring trends<br>Signal velocity · Sequenced as one situation</div>
+    <p>Partners get <b>the evidence</b>, <b>who to approach</b>, and <b>why the timing works now</b>.</p>
+  </div>
   <div class="spine"></div>
   <div class="run" style="left:{run_from}px;width:{run_w}px"></div>
   <div class="pill" style="left:{pill_x}px">{pill}</div>
