@@ -1,0 +1,267 @@
+<title>StrategyAI · Six weeks of warning on a €13bn deal · cream</title>
+<style>
+  :root{
+    --cream:#F5F1EA; --navy:#0d1b2a; --navy-2:#132a41;
+    --gold:#c9a84c; --gold-ink:#8f701b;      /* gold that reads on cream */
+    --ink:#14213a; --ink-2:#3c4a5c; --ink-3:#6b7787;
+    --on-dark:#eef3f8; --on-dark-2:#a9bcd0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#ded8cd;display:flex;justify-content:center;
+    font-family:"Libre Baskerville",Georgia,serif}
+  .card{position:relative;width:1200px;height:1334px;flex:0 0 auto;background:var(--cream);
+    color:var(--ink);overflow:hidden}
+
+  /* ---------- head ---------- */
+  .eyebrow{position:absolute;left:48px;top:40px;font-family:"DM Mono",ui-monospace,monospace;
+    font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink);
+    font-weight:500}
+  h1{position:absolute;left:48px;top:64px;width:700px;margin:0;
+    font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:36px;line-height:1.14;
+    color:var(--ink)}
+  h1 em{font-style:normal;color:var(--gold-ink)}
+  .sub{position:absolute;left:48px;top:196px;width:690px;margin:0;font-size:14.5px;
+    line-height:1.62;color:var(--ink-2)}
+  .sub b{color:var(--ink);font-weight:700}
+
+  /* dials on a navy tile */
+  .dialtile{position:absolute;right:48px;top:44px;width:376px;background:var(--navy);
+    border-radius:10px;padding:20px 18px 16px;display:flex;gap:8px;justify-content:center;
+    box-shadow:0 10px 30px rgba(13,27,42,.22)}
+  .dial{width:112px;text-align:center}
+  .dial p{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--on-dark-2);margin:8px 0 0;line-height:1.55}
+  .v{font-family:"Playfair Display",serif;font-size:27px;font-weight:700;fill:#fff}
+  .u{font-family:"DM Mono",monospace;font-size:8px;fill:#9db1c6;letter-spacing:.14em}
+
+  /* ---------- navy timeline tile ---------- */
+  .tl{position:absolute;left:48px;right:48px;top:300px;height:442px;background:var(--navy);
+    border-radius:12px;box-shadow:0 14px 40px rgba(13,27,42,.26);overflow:hidden}
+  .tl:before{content:"";position:absolute;inset:0;
+    background:radial-gradient(700px 260px at 8% -20%,#1b3busa 0%,transparent 60%)}
+  .tlhead{position:absolute;left:26px;top:20px;font-family:"DM Mono",monospace;font-size:10.5px;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .method{position:absolute;right:22px;top:16px;width:352px;padding:11px 15px 12px;
+    border:1px solid rgba(201,168,76,.34);border-left:3px solid var(--gold);border-radius:4px;
+    background:rgba(201,168,76,.09)}
+  .method h4{margin:0 0 6px;font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold);font-weight:500}
+  .method .row{font-family:"DM Mono",monospace;font-size:9.6px;letter-spacing:.05em;
+    text-transform:uppercase;color:#dbe7f2;line-height:1.75}
+  .method p{margin:6px 0 0;font-size:11.5px;line-height:1.45;color:var(--on-dark-2)}
+  .method p b{color:#fff;font-weight:700}
+
+  .spine{position:absolute;left:26px;right:26px;top:196px;height:2px;
+    background:linear-gradient(90deg,rgba(201,168,76,.25),rgba(201,168,76,.55))}
+  .run{position:absolute;top:194px;height:6px;border-radius:3px;
+    background:linear-gradient(90deg,var(--gold),#f0dc9d)}
+  .pill{position:absolute;top:166px;transform:translateX(-50%);white-space:nowrap;display:flex;
+    align-items:center;gap:12px;padding:10px 24px 10px 21px;border-radius:8px;
+    background:linear-gradient(135deg,#f0dc9d 0%,#c9a84c 55%,#b0902f 100%);color:var(--navy);
+    box-shadow:0 0 0 7px rgba(13,27,42,.96),0 10px 28px rgba(201,168,76,.45)}
+  .pill .num{font-family:"Playfair Display",serif;font-size:44px;line-height:.9;font-weight:700}
+  .pill .txt{font-family:"DM Mono",monospace;font-size:12.5px;line-height:1.26;letter-spacing:.18em;
+    text-transform:uppercase;font-weight:700;text-align:left}
+
+  .n{position:absolute;border-radius:50%;background:var(--navy);border:2px solid #8a7433;
+    width:12px;height:12px;top:191px;transform:translateX(-50%)}
+  .n.flag{width:24px;height:24px;top:185px;background:var(--gold);border:3px solid var(--gold);
+    box-shadow:0 0 0 6px rgba(201,168,76,.18)}
+  .n.deal{width:26px;height:26px;top:184px;background:#fff;border:3px solid #fff;
+    box-shadow:0 0 0 6px rgba(255,255,255,.14)}
+  .stem{position:absolute;width:1px;background:rgba(201,168,76,.34);transform:translateX(-50%)}
+  .lbl{position:absolute;width:166px;transform:translateX(-50%)}
+  .lbl .d{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);
+    font-weight:500}
+  .lbl .t{font-size:13px;line-height:1.42;color:#e2ecf6;margin-top:4px}
+  .lbl .s{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+    color:#8ba0b6;margin-top:5px}
+  .lbl.hero{width:212px}
+  .lbl.hero .t{font-size:14px;color:#fff;font-weight:700;line-height:1.4}
+  .lbl.hero .d{color:#fff}
+
+  /* ---------- cream columns ---------- */
+  .banner{position:absolute;left:48px;top:772px;font-family:"DM Mono",monospace;font-size:11.5px;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+  .banner span{color:var(--ink-3);letter-spacing:.15em}
+  .cols{position:absolute;left:48px;right:48px;top:806px;display:flex;gap:30px}
+  .col{flex:1;border-top:2px solid rgba(143,112,27,.4);padding-top:16px}
+  .col h5{margin:0 0 10px;font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+  .col .who{font-size:15px;line-height:1.45;color:var(--ink);font-weight:700}
+  .col .whosub{font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--ink-3);margin-top:9px;line-height:1.8}
+  .col p{margin:0;font-size:14.5px;line-height:1.68;color:var(--ink-2)}
+  .col .stamp{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
+
+  /* ---------- navy approach tile ---------- */
+  .approach{position:absolute;left:48px;right:48px;top:1016px;background:var(--navy);
+    border-radius:12px;padding:22px 26px 24px;box-shadow:0 14px 40px rgba(13,27,42,.26)}
+  .approach h5{margin:0 0 4px;font-family:"DM Mono",monospace;font-size:11.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold);font-weight:500}
+  .approach .lead{font-size:13px;color:var(--on-dark-2);margin:0 0 17px;line-height:1.5}
+  .people{display:flex;gap:18px}
+  .person{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    border-radius:6px;padding:14px 16px}
+  .redact{height:15px;border-radius:2px;background:linear-gradient(90deg,#a4b6c8,#7b8ea3);
+    filter:blur(4px);opacity:.9;margin-bottom:8px}
+  .redact.e{height:11px;width:86%;background:linear-gradient(90deg,#8ea1b5,#66798f);
+    margin-bottom:13px}
+  .person .role{font-size:14px;line-height:1.4;color:#fff;font-weight:700}
+  .person .org{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--gold);margin-top:6px}
+
+  .basis{position:absolute;left:48px;right:48px;bottom:86px;text-align:center;
+    font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-3)}
+  footer{position:absolute;left:48px;right:48px;bottom:30px;display:flex;justify-content:space-between;
+    align-items:center;border-top:1px solid rgba(20,33,58,.16);padding-top:16px;
+    font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-3)}
+  .wm{font-family:"Playfair Display",serif;font-size:17px;letter-spacing:.02em;color:var(--ink);
+    text-transform:none;font-weight:700}
+  .wm b{color:var(--gold-ink);font-weight:700}
+</style>
+
+<div class="card">
+  <div class="eyebrow">Before the mandate · Proof</div>
+  <h1>Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.</h1>
+  <p class="sub">Uber's bid for Delivery Hero broke on 15 July 2026. Most of the individual signals
+     were public and easy to miss. <b>We sequenced the behavioural pattern</b>, the hiring, the
+     positioning and the market reaction, to work out what was coming and roughly when.</p>
+
+  <div class="dialtile">
+    <div class="dial">
+      <svg width="112" height="112" viewBox="0 0 112 112">
+        <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="9"/>
+        <circle cx="56" cy="56" r="45" fill="none" stroke="#c9a84c" stroke-width="9"
+                stroke-linecap="round" stroke-dasharray="213 283" transform="rotate(-90 56 56)"/>
+        <text class="v" x="56" y="54" text-anchor="middle">43</text>
+        <text class="u" x="56" y="70" text-anchor="middle">DAYS EARLY</text>
+      </svg><p>Ahead of<br>announcement</p>
+    </div>
+    <div class="dial">
+      <svg width="112" height="112" viewBox="0 0 112 112">
+        <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="9"/>
+        <circle cx="56" cy="56" r="45" fill="none" stroke="#7fb3d5" stroke-width="9"
+                stroke-linecap="round" stroke-dasharray="221 283" transform="rotate(-90 56 56)"/>
+        <text class="v" x="56" y="54" text-anchor="middle">78</text>
+        <text class="u" x="56" y="70" text-anchor="middle">CONFIDENCE</text>
+      </svg><p>Scored when<br>first surfaced</p>
+    </div>
+    <div class="dial">
+      <svg width="112" height="112" viewBox="0 0 112 112">
+        <circle cx="56" cy="56" r="45" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="9"/>
+        <circle cx="56" cy="56" r="45" fill="none" stroke="#9ccfa0" stroke-width="9"
+                stroke-linecap="round" stroke-dasharray="283 283" transform="rotate(-90 56 56)"/>
+        <text class="v" x="56" y="54" text-anchor="middle">8</text>
+        <text class="u" x="56" y="70" text-anchor="middle">SOURCES</text>
+      </svg><p>Linked across<br>six events</p>
+    </div>
+  </div>
+
+  <div class="tl">
+    <div class="tlhead">The sequence</div>
+    <div class="method">
+      <h4>How the signal is built</h4>
+      <div class="row">Behavioural patterns · Hiring trends · Velocity<br>Sequenced into one situation</div>
+      <p><b>The evidence</b>, <b>who to approach</b>, <b>why now</b>.</p>
+    </div>
+
+    <div class="spine"></div>
+    <div class="run" style="left:534px;width:466px"></div>
+    <div class="pill" style="left:800px"><span class="num">43</span><span class="txt">days<br>ahead</span></div>
+
+    <div class="n" style="left:70px"></div>
+    <div class="stem" style="left:70px;top:158px;height:38px"></div>
+    <div class="lbl" style="left:96px;top:74px">
+      <div class="d">19 MAY</div>
+      <div class="t">Delivery Hero hires a senior antitrust and trade lawyer</div>
+      <div class="s">Recruitment listing</div>
+    </div>
+
+    <div class="n" style="left:236px"></div>
+    <div class="stem" style="left:236px;top:203px;height:32px"></div>
+    <div class="lbl" style="left:236px;top:239px">
+      <div class="d">22 MAY</div>
+      <div class="t">First reports Uber is studying a full takeover</div>
+      <div class="s">Financial press</div>
+    </div>
+
+    <div class="n" style="left:392px"></div>
+    <div class="stem" style="left:392px;top:158px;height:38px"></div>
+    <div class="lbl" style="left:392px;top:80px">
+      <div class="d">25 MAY</div>
+      <div class="t">Uber weighs raising its offer; shares climb 10%</div>
+      <div class="s">Three outlets</div>
+    </div>
+
+    <div class="n flag" style="left:534px"></div>
+    <div class="stem" style="left:534px;top:209px;height:30px;background:var(--gold)"></div>
+    <div class="lbl hero" style="left:534px;top:243px">
+      <div class="d">2 JUNE · STRATEGYAI</div>
+      <div class="t">An antitrust hire alongside takeover chatter is a preparation pattern. We sequenced it and gave partners the angle and the window</div>
+      <div class="s" style="color:var(--gold)">Our partners see it here</div>
+    </div>
+
+    <div class="n" style="left:636px"></div>
+    <div class="stem" style="left:636px;top:158px;height:38px"></div>
+    <div class="lbl" style="left:636px;top:80px">
+      <div class="d">12 JUNE</div>
+      <div class="t">Structure narrows to the regional businesses</div>
+      <div class="s">Financial press</div>
+    </div>
+
+    <div class="n deal" style="left:1000px"></div>
+    <div class="stem" style="left:1000px;top:210px;height:29px;background:rgba(255,255,255,.5)"></div>
+    <div class="lbl hero" style="left:938px;top:243px;width:244px;text-align:right">
+      <div class="d">15 JULY · ANNOUNCED</div>
+      <div class="t">Uber bids €41.50 a share,<br>valuing Delivery Hero near €13bn</div>
+      <div class="s">The market finds out</div>
+    </div>
+  </div>
+
+  <div class="banner">What our partners received <span>· on the day we surfaced it</span></div>
+  <div class="cols">
+    <div class="col">
+      <h5>Who this is for</h5>
+      <div class="who">TMT and Consumer practices</div>
+      <div class="whosub">Separation and carve-out<br>Regulatory remedies<br>Post-merger integration</div>
+    </div>
+    <div class="col">
+      <h5>What we told them</h5>
+      <div class="stamp">2 June 2026</div>
+      <p>A cross-border public bid of this size runs for months on competition filings across many
+         jurisdictions, remedy design around the overlapping markets, and integration planning for
+         technology, logistics and shared functions. That work starts at announcement, not at close.</p>
+    </div>
+    <div class="col">
+      <h5>What we said to do</h5>
+      <div class="stamp">The next move</div>
+      <p>Approach corporate development at both groups with separation planning and carve-out
+         readiness while regulatory review runs. A 14-market divestment was already pre-agreed, so
+         the carve-out perimeter was knowable before the market had priced it.</p>
+    </div>
+  </div>
+
+  <div class="approach">
+    <h5>Who to approach</h5>
+    <p class="lead">Named individuals and direct email addresses were supplied to partners. Redacted here.</p>
+    <div class="people">
+      <div class="person"><div class="redact"></div><div class="redact e"></div>
+        <div class="role">SVP Delivery, acquirer</div><div class="org">Sponsor of integration mandates</div></div>
+      <div class="person"><div class="redact"></div><div class="redact e"></div>
+        <div class="role">Chief Executive, target</div><div class="org">Decides advisory appointments</div></div>
+      <div class="person"><div class="redact"></div><div class="redact e"></div>
+        <div class="role">President &amp; CFO, 17% shareholder</div><div class="org">Board-level route in</div></div>
+    </div>
+  </div>
+
+  <div class="basis">Behaviour patterns mapped across 15,000+ awarded mandates and 55,000 tracked signals</div>
+  <footer>
+    <div class="wm">Strategy<b>AI</b></div>
+    <div>We did not break this story. We assembled it.</div>
+    <div>strategyai.co.uk</div>
+  </footer>
+</div>
