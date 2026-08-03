@@ -5,6 +5,7 @@
     --gold:#c9a84c; --gold-ink:#8f701b;      /* gold that reads on cream */
     --ink:#14213a; --ink-2:#3c4a5c; --ink-3:#6b7787;
     --on-dark:#eef3f8; --on-dark-2:#a9bcd0;
+    --green:#1D9E75; --green-ink:#14795a;
   }
   *{box-sizing:border-box}
   body{margin:0;background:#ded8cd;display:flex;justify-content:center;
@@ -53,8 +54,9 @@
 
   .spine{position:absolute;left:26px;right:26px;top:196px;height:2px;
     background:linear-gradient(90deg,rgba(201,168,76,.25),rgba(201,168,76,.55))}
-  .run{position:absolute;top:194px;height:6px;border-radius:3px;
-    background:linear-gradient(90deg,var(--gold),#f0dc9d)}
+  .run{position:absolute;top:193px;height:8px;border-radius:4px;
+    background:linear-gradient(90deg,var(--green),#2fc492);
+    box-shadow:0 0 16px rgba(29,158,117,.55)}
   .pill{position:absolute;top:166px;transform:translateX(-50%);white-space:nowrap;display:flex;
     align-items:center;gap:12px;padding:10px 24px 10px 21px;border-radius:8px;
     background:linear-gradient(135deg,#f0dc9d 0%,#c9a84c 55%,#b0902f 100%);color:var(--navy);
@@ -70,14 +72,14 @@
   .n.deal{width:26px;height:26px;top:184px;background:#fff;border:3px solid #fff;
     box-shadow:0 0 0 6px rgba(255,255,255,.14)}
   .stem{position:absolute;width:1px;background:rgba(201,168,76,.34);transform:translateX(-50%)}
-  .lbl{position:absolute;width:166px;transform:translateX(-50%)}
-  .lbl .d{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);
-    font-weight:500}
-  .lbl .t{font-size:13px;line-height:1.42;color:#e2ecf6;margin-top:4px}
-  .lbl .s{font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;
-    color:#8ba0b6;margin-top:5px}
-  .lbl.hero{width:212px}
-  .lbl.hero .t{font-size:14px;color:#fff;font-weight:700;line-height:1.4}
+  .lbl{position:absolute;width:186px;transform:translateX(-50%)}
+  .lbl .d{font-family:"DM Mono",monospace;font-size:12.5px;letter-spacing:.09em;color:var(--gold);
+    font-weight:600}
+  .lbl .t{font-size:15px;line-height:1.45;color:#eaf2fa;margin-top:5px}
+  .lbl .s{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;
+    color:#9db1c6;margin-top:6px}
+  .lbl.hero{width:236px}
+  .lbl.hero .t{font-size:16px;color:#fff;font-weight:700;line-height:1.42}
   .lbl.hero .d{color:#fff}
 
   /* ---------- cream columns ---------- */
@@ -89,8 +91,9 @@
   .col h5{margin:0 0 10px;font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.18em;
     text-transform:uppercase;color:var(--gold-ink);font-weight:500}
   .col .who{font-size:15px;line-height:1.45;color:var(--ink);font-weight:700}
-  .col .whosub{font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.07em;
-    text-transform:uppercase;color:var(--ink-3);margin-top:9px;line-height:1.8}
+  .col .whosub{font-family:"DM Mono",monospace;font-size:13px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--green-ink);margin-top:12px;line-height:2;
+    font-weight:600}
   .col p{margin:0;font-size:14.5px;line-height:1.68;color:var(--ink-2)}
   .col .stamp{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.13em;
     text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
