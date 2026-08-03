@@ -1,0 +1,122 @@
+{
+  "delivery-hero": {
+    "meta": {
+      "title_tag": "Six weeks of warning on a 13bn euro deal",
+      "headline": "Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.",
+      "sub": "Uber's bid for Delivery Hero broke on 15 July 2026. Most of the individual signals were public and easy to miss. <b>We sequenced the behavioural pattern</b>, the hiring, the positioning and the market reaction, to work out what was coming and roughly when.",
+      "run_from": 534, "run_w": 466, "pill_x": 800, "pill_num": "43",
+      "forming_head": "What was forming, and when the work lands",
+      "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
+      "strap": "We did not break this story. We assembled it."
+    },
+    "dials": [
+      {"value": "43", "unit": "DAYS EARLY", "caption": "Ahead of<br>announcement", "colour": "#c9a84c", "dash": "213"},
+      {"value": "78", "unit": "CONFIDENCE", "caption": "Scored when<br>first surfaced", "colour": "#7fb3d5", "dash": "221"},
+      {"value": "8", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
+    ],
+    "events": [
+      {"x": 70, "lx": 96, "side": "above", "date": "19 MAY", "text": "Delivery Hero hires a senior antitrust and trade lawyer", "src": "Recruitment listing", "top": 74},
+      {"x": 236, "side": "below", "date": "22 MAY", "text": "First reports Uber is studying a full takeover", "src": "Financial press", "top": 239},
+      {"x": 392, "side": "above", "date": "25 MAY", "text": "Uber weighs raising its offer; shares climb 10%", "src": "Three outlets", "top": 80},
+      {"x": 534, "kind": "flag", "side": "below", "date": "2 JUNE · STRATEGYAI", "text": "An antitrust hire alongside takeover chatter is a preparation pattern. We sequenced it and gave partners the angle and the window", "src": "Our partners see it here", "top": 243},
+      {"x": 636, "side": "above", "date": "12 JUNE", "text": "Structure narrows to the regional businesses", "src": "Financial press", "top": 80},
+      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "15 JULY · ANNOUNCED", "text": "Uber bids €41.50 a share,<br>valuing Delivery Hero near €13bn", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
+    ],
+    "steps": [
+      {"no": "01", "head": "We found it", "when": "19 May · 57 days out", "body": "A senior antitrust and trade lawyer hired in Berlin. On its own, an ordinary vacancy. Nobody was reading it as a deal signal."},
+      {"no": "02", "head": "We sequenced it", "when": "Pattern matched · scored 78", "body": "The hire, the takeover reports and the market reaction held together as one situation, not five unrelated stories."},
+      {"no": "03", "head": "We told you", "when": "2 June · 43 days ahead", "body": "On the board with the evidence, the reason it mattered now, and the window before the market repriced it."}
+    ],
+    "wins": [
+      {"name": "Separation and carve-out", "window": "From announcement · 3 to 6 months", "left": 0, "width": 42},
+      {"name": "Regulatory remedies", "window": "Filings onward · 6 to 12 months", "left": 18, "width": 56},
+      {"name": "Post-merger integration", "window": "On closing · 12 months and beyond", "left": 46, "width": 54}
+    ],
+    "people": [
+      {"role": "SVP Delivery, acquirer", "org": "Sponsor of integration mandates"},
+      {"role": "Chief Executive, target", "org": "Decides advisory appointments"},
+      {"role": "President &amp; CFO, 17% shareholder", "org": "Board-level route in"}
+    ]
+  },
+
+  "easyjet": {
+    "meta": {
+      "title_tag": "Five weeks ahead of a 5.7bn take-private",
+      "headline": "We tracked a <em>£5.7bn take-private</em> from first rumour to final bid.",
+      "sub": "Castlelake's interest in easyJet surfaced on 30 May 2026. It was on our board the next day. <b>We read the behaviour, not the headline</b>: a rejected approach that keeps returning with a higher number is a pattern we track, and it told us terms were coming well before they did.",
+      "run_from": 130, "run_w": 870, "pill_x": 800, "pill_num": "36",
+      "forming_head": "What was forming, and when the work lands",
+      "lead": "Named individuals and direct email addresses were supplied to partners on 31 May. Redacted here.",
+      "strap": "Four rejections. Two bidders. One sequence."
+    },
+    "dials": [
+      {"value": "36", "unit": "DAYS EARLY", "caption": "On our board<br>before terms", "colour": "#c9a84c", "dash": "188"},
+      {"value": "88", "unit": "CONFIDENCE", "caption": "Rose from 65<br>as it escalated", "colour": "#7fb3d5", "dash": "249"},
+      {"value": "9", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
+    ],
+    "events": [
+      {"x": 70, "lx": 100, "side": "above", "date": "30 MAY", "text": "A US private credit firm is reported to be circling", "src": "Financial press", "top": 74},
+      {"x": 130, "kind": "flag", "side": "below", "date": "31 MAY · STRATEGYAI", "text": "An opportunistic approach into a depressed share price, the profile that historically precedes a repeat bidder. On the board next morning", "src": "Our partners see it here", "top": 243, "lx": 156},
+      {"x": 330, "side": "above", "date": "1 JUNE", "text": "easyJet calls the timing opportunistic; shares jump 10%", "src": "Financial press", "top": 80},
+      {"x": 470, "side": "below", "date": "12 JUNE", "text": "A second suitor is reported to be interested", "src": "Financial press", "top": 239},
+      {"x": 636, "side": "above", "date": "22 JUNE", "text": "Third proposal rejected; bidder goes direct to shareholders", "src": "Trade press", "top": 74},
+      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "6 JULY · ANNOUNCED", "text": "Board agrees terms.<br>Rival bid follows at £5.7bn", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
+    ],
+    "steps": [
+      {"no": "01", "head": "We found it", "when": "30 May · 37 days out", "body": "A US private credit firm circling a depressed UK airline. Reported once, then largely dropped by the market."},
+      {"no": "02", "head": "We sequenced it", "when": "Rejected, returned, raised", "body": "An opportunistic approach into a weak share price is a profile that historically precedes a repeat bidder, so we tracked the escalation rather than the headline."},
+      {"no": "03", "head": "We told you", "when": "31 May · 36 days ahead", "body": "On the board the next morning at confidence 65, lifted to 88 as the bidder returned twice more and a second suitor appeared."}
+    ],
+    "wins": [
+      {"name": "Ownership and control structuring", "window": "Pre-close · 2 to 4 months", "left": 0, "width": 34},
+      {"name": "Slot and regulatory analysis", "window": "Through the offer · 3 to 9 months", "left": 12, "width": 52},
+      {"name": "100-day value creation", "window": "On closing · fleet, loyalty, holidays", "left": 50, "width": 50}
+    ],
+    "people": [
+      {"role": "Chief Financial Officer, target", "org": "Financing and carve-out mandates"},
+      {"role": "Aviation Deal Lead, sponsor", "org": "Owns the value-creation thesis"},
+      {"role": "CEO, holidays division", "org": "The identified value lever"}
+    ]
+  },
+
+  "commerzbank": {
+    "meta": {
+      "title_tag": "Five weeks inside Europe's biggest bank fight",
+      "headline": "We had partners inside the <em>€39bn bank fight</em> five weeks before its endgame.",
+      "sub": "A public rebuff, a regulator complaint, a government rejection, and the stake rising anyway. <b>We sequenced the behaviour, not the headlines.</b> An acquirer that keeps buying through every obstacle is telling you how this ends, months before the market prices it.",
+      "run_from": 200, "run_w": 800, "pill_x": 800, "pill_num": "38",
+      "forming_head": "What was forming, and when the work lands",
+      "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
+      "strap": "Nobody missed the deal. Everybody missed the build-up."
+    },
+    "dials": [
+      {"value": "38", "unit": "DAYS EARLY", "caption": "On our board<br>before the endgame", "colour": "#c9a84c", "dash": "199"},
+      {"value": "88", "unit": "CONFIDENCE", "caption": "Scored when<br>surfaced", "colour": "#7fb3d5", "dash": "249"},
+      {"value": "15", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
+    ],
+    "events": [
+      {"x": 70, "lx": 100, "side": "above", "date": "20 MAY", "text": "Commerzbank's chief executive publicly rebuffs the approach", "src": "Financial press", "top": 74},
+      {"x": 200, "kind": "flag", "side": "below", "date": "2 JUNE · STRATEGYAI", "text": "Rebuffed in public yet still accumulating stock. That behaviour rarely reverses, so we surfaced it at confidence 88", "src": "Our partners see it here", "top": 243, "lx": 226},
+      {"x": 380, "side": "above", "date": "4 JUNE", "text": "The bank contacts the German regulator over the stake build", "src": "Financial press", "top": 80},
+      {"x": 500, "side": "below", "date": "16 JUNE", "text": "Berlin rejects the €39bn approach outright", "src": "Financial press", "top": 239},
+      {"x": 636, "side": "above", "date": "19 JUNE", "text": "The stake is lifted to 42.5% regardless", "src": "Financial press", "top": 80},
+      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "8 JULY · ENDGAME", "text": "Control nears.<br>Institutions accept.", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
+    ],
+    "steps": [
+      {"no": "01", "head": "We found it", "when": "20 May · 49 days out", "body": "A chief executive publicly rebuffing an approach. Read as a defence, it looks like the end of a story rather than the start of one."},
+      {"no": "02", "head": "We sequenced it", "when": "Rebuffed, yet still buying", "body": "The rebuff, the regulator complaint, the government rejection and a rising stake are one behaviour, not four events. An acquirer buying through every obstacle has already decided."},
+      {"no": "03", "head": "We told you", "when": "2 June · 38 days ahead", "body": "Surfaced at confidence 88 as a live situation rather than a rumour, with work identified for both sides regardless of who prevailed."}
+    ],
+    "wins": [
+      {"name": "ECB and regulatory strategy", "window": "Immediate · 3 to 9 months", "left": 0, "width": 46},
+      {"name": "Political and works council", "window": "Through the process · 6 to 12 months", "left": 16, "width": 58},
+      {"name": "Contingency integration", "window": "On control · 12 months and beyond", "left": 48, "width": 52}
+    ],
+    "people": [
+      {"role": "Chief Executive, target", "org": "Standalone strategy and minorities"},
+      {"role": "Chief Executive, acquirer", "org": "Integration and ECB sequencing"},
+      {"role": "Chairman, Supervisory Board", "org": "Governance counterpart"},
+      {"role": "Head of Corporate Development", "org": "Buyer of scenario modelling"}
+    ]
+  }
+}
