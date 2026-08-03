@@ -10,7 +10,7 @@
   *{box-sizing:border-box}
   body{margin:0;background:#ded8cd;display:flex;justify-content:center;
     font-family:"Libre Baskerville",Georgia,serif}
-  .card{position:relative;width:1200px;height:1334px;flex:0 0 auto;background:var(--cream);
+  .card{position:relative;width:1200px;height:1600px;flex:0 0 auto;background:var(--cream);
     color:var(--ink);overflow:hidden}
 
   /* ---------- head ---------- */
@@ -83,7 +83,7 @@
   .lbl.hero .d{color:#fff}
 
   /* ---------- cream columns ---------- */
-  .banner{position:absolute;left:48px;top:772px;font-family:"DM Mono",monospace;font-size:11.5px;
+  .banner{position:absolute;left:48px;top:768px;font-family:"DM Mono",monospace;font-size:11.5px;
     letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
   .banner span{color:var(--ink-3);letter-spacing:.15em}
   .cols{position:absolute;left:48px;right:48px;top:806px;display:flex;gap:30px}
@@ -98,11 +98,44 @@
   .col .stamp{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.13em;
     text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
 
+
+  /* ---------- the arc: numbered steps ---------- */
+  .arc{position:absolute;left:48px;right:48px;top:806px;display:flex;gap:26px}
+  .step{flex:1;border-top:3px solid var(--green);padding-top:15px}
+  .step .no{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--green-ink);
+    font-weight:700}
+  .step h6{margin:5px 0 4px;font-family:"Playfair Display",Georgia,serif;font-size:19px;
+    font-weight:700;color:var(--ink);line-height:1.2}
+  .step .when{font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--gold-ink);margin-bottom:8px;font-weight:600}
+  .step p{margin:0;font-size:14px;line-height:1.62;color:var(--ink-2)}
+
+  /* ---------- mandates forming, with windows ---------- */
+  .forming{position:absolute;left:48px;right:48px;top:988px;border:1px solid rgba(29,158,117,.35);
+    border-left:4px solid var(--green);border-radius:8px;background:rgba(29,158,117,.07);
+    padding:20px 24px 22px}
+  .forming .no{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.2em;
+    color:var(--green-ink);font-weight:700}
+  .forming h6{margin:5px 0 14px;font-family:"Playfair Display",Georgia,serif;font-size:20px;
+    font-weight:700;color:var(--ink)}
+  .wins{display:flex;gap:20px}
+  .win{flex:1;background:rgba(255,255,255,.6);border:1px solid rgba(29,158,117,.22);
+    border-radius:6px;padding:13px 16px 15px}
+  .win .name{font-family:"DM Mono",monospace;font-size:12.5px;letter-spacing:.05em;
+    text-transform:uppercase;color:var(--green-ink);font-weight:700;line-height:1.4}
+  .win .window{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-3);margin-top:9px}
+  .win .bar{height:5px;border-radius:3px;background:rgba(20,33,58,.1);margin-top:8px;
+    position:relative;overflow:hidden}
+  .win .bar i{position:absolute;top:0;bottom:0;border-radius:3px;background:var(--green)}
+
   /* ---------- navy approach tile ---------- */
-  .approach{position:absolute;left:48px;right:48px;top:1016px;background:var(--navy);
+  .approach{position:absolute;left:48px;right:48px;top:1204px;background:var(--navy);
     border-radius:12px;padding:22px 26px 24px;box-shadow:0 14px 40px rgba(13,27,42,.26)}
-  .approach h5{margin:0 0 4px;font-family:"DM Mono",monospace;font-size:11.5px;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--gold);font-weight:500}
+  .approach .no{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.2em;color:#4fd3a4;
+    font-weight:700}
+  .approach h5{margin:5px 0 4px;font-family:"Playfair Display",Georgia,serif;font-size:20px;
+    letter-spacing:0;text-transform:none;color:#fff;font-weight:700}
   .approach .lead{font-size:13px;color:var(--on-dark-2);margin:0 0 17px;line-height:1.5}
   .people{display:flex;gap:18px}
   .person{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
@@ -115,7 +148,7 @@
   .person .org{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.09em;
     text-transform:uppercase;color:var(--gold);margin-top:6px}
 
-  .basis{position:absolute;left:48px;right:48px;bottom:86px;text-align:center;
+  .basis{position:absolute;left:48px;right:48px;bottom:104px;text-align:center;
     font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--ink-3)}
   footer{position:absolute;left:48px;right:48px;bottom:30px;display:flex;justify-content:space-between;
@@ -225,32 +258,54 @@
     </div>
   </div>
 
-  <div class="banner">What our partners received <span>· on the day we surfaced it</span></div>
-  <div class="cols">
-    <div class="col">
-      <h5>Who this is for</h5>
-      <div class="who">TMT and Consumer practices</div>
-      <div class="whosub">Separation and carve-out<br>Regulatory remedies<br>Post-merger integration</div>
+  <div class="banner">Found · sequenced · surfaced <span>· then handed over with the people to call</span></div>
+  <div class="arc">
+    <div class="step">
+      <div class="no">01</div>
+      <h6>We found it</h6>
+      <div class="when">19 May · 57 days out</div>
+      <p>A senior antitrust and trade lawyer hired in Berlin. On its own, an ordinary vacancy. Nobody was reading it as a deal signal.</p>
     </div>
-    <div class="col">
-      <h5>What we told them</h5>
-      <div class="stamp">2 June 2026</div>
-      <p>A cross-border public bid of this size runs for months on competition filings across many
-         jurisdictions, remedy design around the overlapping markets, and integration planning for
-         technology, logistics and shared functions. That work starts at announcement, not at close.</p>
+    <div class="step">
+      <div class="no">02</div>
+      <h6>We sequenced it</h6>
+      <div class="when">Pattern matched · scored 78</div>
+      <p>The hire, the takeover reports and the market reaction held together as one situation, not five unrelated stories.</p>
     </div>
-    <div class="col">
-      <h5>What we said to do</h5>
-      <div class="stamp">The next move</div>
-      <p>Approach corporate development at both groups with separation planning and carve-out
-         readiness while regulatory review runs. A 14-market divestment was already pre-agreed, so
-         the carve-out perimeter was knowable before the market had priced it.</p>
+    <div class="step">
+      <div class="no">03</div>
+      <h6>We told you</h6>
+      <div class="when">2 June · 43 days ahead</div>
+      <p>On the board with the evidence, the reason it mattered now, and the window before the market repriced it.</p>
+    </div>
+  </div>
+
+  <div class="forming">
+    <div class="no">04</div>
+    <h6>What was forming, and when the work lands</h6>
+    <div class="wins">
+      <div class="win">
+        <div class="name">Separation and carve-out</div>
+        <div class="window">From announcement · 3 to 6 months</div>
+        <div class="bar"><i style="left:0;width:42%"></i></div>
+      </div>
+      <div class="win">
+        <div class="name">Regulatory remedies</div>
+        <div class="window">Filings onward · 6 to 12 months</div>
+        <div class="bar"><i style="left:18%;width:56%"></i></div>
+      </div>
+      <div class="win">
+        <div class="name">Post-merger integration</div>
+        <div class="window">On closing · 12 months and beyond</div>
+        <div class="bar"><i style="left:46%;width:54%"></i></div>
+      </div>
     </div>
   </div>
 
   <div class="approach">
-    <h5>Who to approach</h5>
-    <p class="lead">Named individuals and direct email addresses were supplied to partners. Redacted here.</p>
+    <div class="no">05</div>
+    <h5>Who to call</h5>
+    <p class="lead">Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.</p>
     <div class="people">
       <div class="person"><div class="redact"></div><div class="redact e"></div>
         <div class="role">SVP Delivery, acquirer</div><div class="org">Sponsor of integration mandates</div></div>
