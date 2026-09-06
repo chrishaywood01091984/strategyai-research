@@ -10,6 +10,19 @@
   *{box-sizing:border-box}
   body{margin:0;background:#ded8cd;display:flex;justify-content:center;
     font-family:"Libre Baskerville",Georgia,serif}
+  /* Print: one card, one page, at its true size. Without this the 1200x1600
+     card is sliced across three Letter pages, which is what you get if you
+     print-to-PDF for a LinkedIn document post. 1200x1600px at 96dpi. */
+  @page { size: 12.5in 16.667in; margin: 0; }
+  @media print {
+    html, body { margin:0; padding:0; background:#fff;
+                  width:1200px; height:1600px; overflow:hidden; }
+    body { display:block !important; }
+    /* 1599px, not 1600: at exactly the page height a sub-pixel rounding in the
+       renderer spills a second, blank page. */
+    .card { box-shadow:none !important; margin:0 !important;
+             height:1599px !important; break-inside:avoid; break-after:avoid; }
+  }
   .card{position:relative;width:1200px;height:1600px;flex:0 0 auto;background:var(--cream);
     color:var(--ink);overflow:hidden}
 
@@ -206,14 +219,14 @@
     <div class="stem" style="left:70px;top:158px;height:38px"></div>
     <div class="lbl" style="left:96px;top:74px"><div class="d">8 JUNE</div><div class="t">Apollo withdraws a £1.5bn approach for Bodycote</div><div class="s">Private equity press</div></div>
     <div class="n" style="left:300px"></div>
-    <div class="stem" style="left:300px;top:203px;height:32px;background:rgba(201,168,76,.34)"></div>
-    <div class="lbl" style="left:300px;top:239px"><div class="d">28 JULY</div><div class="t">First-half growth reported alongside a streamlining plan</div><div class="s">Two outlets</div></div>
+    <div class="stem" style="left:300px;top:158px;height:38px"></div>
+    <div class="lbl" style="left:330px;top:80px"><div class="d">28 JULY</div><div class="t">First-half growth reported alongside a streamlining plan</div><div class="s">Two outlets</div></div>
     <div class="n flag" style="left:470px"></div>
     <div class="stem" style="left:470px;top:209px;height:30px;background:var(--gold)"></div>
     <div class="lbl hero" style="left:470px;top:243px"><div class="d">28 JULY · STRATEGYAI</div><div class="t">A withdrawn bid alongside self-help restructuring is a board defending a valuation it has already been shown. Surfaced at confidence 90</div><div class="s" style="color:var(--gold)">Our partners see it here</div></div>
     <div class="n" style="left:700px"></div>
-    <div class="stem" style="left:700px;top:158px;height:38px"></div>
-    <div class="lbl" style="left:700px;top:80px"><div class="d">5 AUGUST</div><div class="t">Twin private equity bids land on the board</div><div class="s">Financial press</div></div>
+    <div class="stem" style="left:700px;top:203px;height:32px;background:rgba(201,168,76,.34)"></div>
+    <div class="lbl" style="left:700px;top:239px"><div class="d">5 AUGUST</div><div class="t">Twin private equity bids land on the board</div><div class="s">Financial press</div></div>
     <div class="n deal" style="left:1000px"></div>
     <div class="stem" style="left:1000px;top:210px;height:29px;background:rgba(255,255,255,.5)"></div>
     <div class="lbl hero" style="left:938px;top:243px;width:244px;text-align:right"><div class="d">1 SEPT · ANNOUNCED</div><div class="t">Veritas Capital wins the board recommendation<br>at 940 pence, with CVC still in the room</div><div class="s">The market finds out</div></div>

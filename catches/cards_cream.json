@@ -494,11 +494,12 @@
    },
    {
     "x": 300,
-    "side": "below",
+    "side": "above",
     "date": "28 JULY",
     "text": "First-half growth reported alongside a streamlining plan",
     "src": "Two outlets",
-    "top": 239
+    "top": 80,
+    "lx": 330
    },
    {
     "x": 470,
@@ -511,11 +512,12 @@
    },
    {
     "x": 700,
-    "side": "above",
+    "side": "below",
     "date": "5 AUGUST",
     "text": "Twin private equity bids land on the board",
     "src": "Financial press",
-    "top": 80
+    "top": 239,
+    "lx": 700
    },
    {
     "x": 1000,
@@ -639,14 +641,6 @@
     "text": "A sponsor readying a 70-venue estate is an exit with a calendar, not a rumour. Surfaced with the seller named and the scale stated",
     "src": "Our partners see it here",
     "top": 243
-   },
-   {
-    "x": 640,
-    "side": "above",
-    "date": "THROUGH JUNE AND JULY",
-    "text": "No public buyer emerges; the process runs privately",
-    "src": "Sponsor hold period",
-    "top": 80
    },
    {
     "x": 1000,
@@ -785,7 +779,8 @@
     "date": "5 – 7 AUGUST",
     "text": "Deadline extended again; BlackRock files Form 8.3",
     "src": "Regulatory filings",
-    "top": 239
+    "top": 239,
+    "lx": 700
    },
    {
     "x": 1000,
@@ -909,14 +904,6 @@
     "text": "A named bidder at a named figure, with a majority holder on the register. The outcome turns on one shareholder, not on the market",
     "src": "Our partners see it here",
     "top": 243
-   },
-   {
-    "x": 680,
-    "side": "above",
-    "date": "EARLY AUGUST",
-    "text": "Board considers the proposal; the majority holder's position becomes decisive",
-    "src": "Shareholder register",
-    "top": 80
    },
    {
     "x": 1000,
