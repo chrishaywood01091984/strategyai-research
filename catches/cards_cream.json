@@ -1,122 +1,989 @@
 {
-  "delivery-hero": {
-    "meta": {
-      "title_tag": "Six weeks of warning on a 13bn euro deal",
-      "headline": "Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.",
-      "sub": "Uber's bid for Delivery Hero broke on 15 July 2026. Most of the individual signals were public and easy to miss. <b>We sequenced the behavioural pattern</b>, the hiring, the positioning and the market reaction, to work out what was coming and roughly when.",
-      "run_from": 534, "run_w": 466, "pill_x": 800, "pill_num": "43",
-      "forming_head": "What was forming, and when the work lands",
-      "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
-      "strap": "We did not break this story. We assembled it."
-    },
-    "dials": [
-      {"value": "43", "unit": "DAYS EARLY", "caption": "Ahead of<br>announcement", "colour": "#c9a84c", "dash": "213"},
-      {"value": "78", "unit": "CONFIDENCE", "caption": "Scored when<br>first surfaced", "colour": "#7fb3d5", "dash": "221"},
-      {"value": "8", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
-    ],
-    "events": [
-      {"x": 70, "lx": 96, "side": "above", "date": "19 MAY", "text": "Delivery Hero hires a senior antitrust and trade lawyer", "src": "Recruitment listing", "top": 74},
-      {"x": 236, "side": "below", "date": "22 MAY", "text": "First reports Uber is studying a full takeover", "src": "Financial press", "top": 239},
-      {"x": 392, "side": "above", "date": "25 MAY", "text": "Uber weighs raising its offer; shares climb 10%", "src": "Three outlets", "top": 80},
-      {"x": 534, "kind": "flag", "side": "below", "date": "2 JUNE · STRATEGYAI", "text": "An antitrust hire alongside takeover chatter is a preparation pattern. We sequenced it and gave partners the angle and the window", "src": "Our partners see it here", "top": 243},
-      {"x": 636, "side": "above", "date": "12 JUNE", "text": "Structure narrows to the regional businesses", "src": "Financial press", "top": 80},
-      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "15 JULY · ANNOUNCED", "text": "Uber bids €41.50 a share,<br>valuing Delivery Hero near €13bn", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
-    ],
-    "steps": [
-      {"no": "01", "head": "We found it", "when": "19 May · 57 days out", "body": "A senior antitrust and trade lawyer hired in Berlin. On its own, an ordinary vacancy. Nobody was reading it as a deal signal."},
-      {"no": "02", "head": "We sequenced it", "when": "Pattern matched · scored 78", "body": "The hire, the takeover reports and the market reaction held together as one situation, not five unrelated stories."},
-      {"no": "03", "head": "We told you", "when": "2 June · 43 days ahead", "body": "On the board with the evidence, the reason it mattered now, and the window before the market repriced it."}
-    ],
-    "wins": [
-      {"name": "Separation and carve-out", "window": "From announcement · 3 to 6 months", "left": 0, "width": 42},
-      {"name": "Regulatory remedies", "window": "Filings onward · 6 to 12 months", "left": 18, "width": 56},
-      {"name": "Post-merger integration", "window": "On closing · 12 months and beyond", "left": 46, "width": 54}
-    ],
-    "people": [
-      {"role": "SVP Delivery, acquirer", "org": "Sponsor of integration mandates"},
-      {"role": "Chief Executive, target", "org": "Decides advisory appointments"},
-      {"role": "President &amp; CFO, 17% shareholder", "org": "Board-level route in"}
-    ]
+ "delivery-hero": {
+  "meta": {
+   "title_tag": "Six weeks of warning on a 13bn euro deal",
+   "headline": "Our partners were briefed on a <em>€13bn takeover</em> six weeks before the market called it.",
+   "sub": "Uber's bid for Delivery Hero broke on 15 July 2026. Most of the individual signals were public and easy to miss. <b>We sequenced the behavioural pattern</b>, the hiring, the positioning and the market reaction, to work out what was coming and roughly when.",
+   "run_from": 534,
+   "run_w": 466,
+   "pill_x": 800,
+   "pill_num": "43",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
+   "strap": "We did not break this story. We assembled it."
   },
-
-  "easyjet": {
-    "meta": {
-      "title_tag": "Five weeks ahead of a 5.7bn take-private",
-      "headline": "We tracked a <em>£5.7bn take-private</em> from first rumour to final bid.",
-      "sub": "Castlelake's interest in easyJet surfaced on 30 May 2026. It was on our board the next day. <b>We read the behaviour, not the headline</b>: a rejected approach that keeps returning with a higher number is a pattern we track, and it told us terms were coming well before they did.",
-      "run_from": 130, "run_w": 870, "pill_x": 800, "pill_num": "36",
-      "forming_head": "What was forming, and when the work lands",
-      "lead": "Named individuals and direct email addresses were supplied to partners on 31 May. Redacted here.",
-      "strap": "Four rejections. Two bidders. One sequence."
-    },
-    "dials": [
-      {"value": "36", "unit": "DAYS EARLY", "caption": "On our board<br>before terms", "colour": "#c9a84c", "dash": "188"},
-      {"value": "88", "unit": "CONFIDENCE", "caption": "Rose from 65<br>as it escalated", "colour": "#7fb3d5", "dash": "249"},
-      {"value": "9", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
-    ],
-    "events": [
-      {"x": 70, "lx": 100, "side": "above", "date": "30 MAY", "text": "A US private credit firm is reported to be circling", "src": "Financial press", "top": 74},
-      {"x": 130, "kind": "flag", "side": "below", "date": "31 MAY · STRATEGYAI", "text": "An opportunistic approach into a depressed share price, the profile that historically precedes a repeat bidder. On the board next morning", "src": "Our partners see it here", "top": 243, "lx": 156},
-      {"x": 330, "side": "above", "date": "1 JUNE", "text": "easyJet calls the timing opportunistic; shares jump 10%", "src": "Financial press", "top": 80},
-      {"x": 470, "side": "below", "date": "12 JUNE", "text": "A second suitor is reported to be interested", "src": "Financial press", "top": 239},
-      {"x": 636, "side": "above", "date": "22 JUNE", "text": "Third proposal rejected; bidder goes direct to shareholders", "src": "Trade press", "top": 74},
-      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "6 JULY · ANNOUNCED", "text": "Board agrees terms.<br>Rival bid follows at £5.7bn", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
-    ],
-    "steps": [
-      {"no": "01", "head": "We found it", "when": "30 May · 37 days out", "body": "A US private credit firm circling a depressed UK airline. Reported once, then largely dropped by the market."},
-      {"no": "02", "head": "We sequenced it", "when": "Rejected, returned, raised", "body": "An opportunistic approach into a weak share price is a profile that historically precedes a repeat bidder, so we tracked the escalation rather than the headline."},
-      {"no": "03", "head": "We told you", "when": "31 May · 36 days ahead", "body": "On the board the next morning at confidence 65, lifted to 88 as the bidder returned twice more and a second suitor appeared."}
-    ],
-    "wins": [
-      {"name": "Ownership and control structuring", "window": "Pre-close · 2 to 4 months", "left": 0, "width": 34},
-      {"name": "Slot and regulatory analysis", "window": "Through the offer · 3 to 9 months", "left": 12, "width": 52},
-      {"name": "100-day value creation", "window": "On closing · fleet, loyalty, holidays", "left": 50, "width": 50}
-    ],
-    "people": [
-      {"role": "Chief Financial Officer, target", "org": "Financing and carve-out mandates"},
-      {"role": "Aviation Deal Lead, sponsor", "org": "Owns the value-creation thesis"},
-      {"role": "CEO, holidays division", "org": "The identified value lever"}
-    ]
+  "dials": [
+   {
+    "value": "43",
+    "unit": "DAYS EARLY",
+    "caption": "Ahead of<br>announcement",
+    "colour": "#c9a84c",
+    "dash": "213"
+   },
+   {
+    "value": "78",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>first surfaced",
+    "colour": "#7fb3d5",
+    "dash": "221"
+   },
+   {
+    "value": "8",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>six events",
+    "colour": "#9ccfa0",
+    "dash": "283"
+   }
+  ],
+  "events": [
+   {
+    "x": 70,
+    "lx": 96,
+    "side": "above",
+    "date": "19 MAY",
+    "text": "Delivery Hero hires a senior antitrust and trade lawyer",
+    "src": "Recruitment listing",
+    "top": 74
+   },
+   {
+    "x": 236,
+    "side": "below",
+    "date": "22 MAY",
+    "text": "First reports Uber is studying a full takeover",
+    "src": "Financial press",
+    "top": 239
+   },
+   {
+    "x": 392,
+    "side": "above",
+    "date": "25 MAY",
+    "text": "Uber weighs raising its offer; shares climb 10%",
+    "src": "Three outlets",
+    "top": 80
+   },
+   {
+    "x": 534,
+    "kind": "flag",
+    "side": "below",
+    "date": "2 JUNE · STRATEGYAI",
+    "text": "An antitrust hire alongside takeover chatter is a preparation pattern. We sequenced it and gave partners the angle and the window",
+    "src": "Our partners see it here",
+    "top": 243
+   },
+   {
+    "x": 636,
+    "side": "above",
+    "date": "12 JUNE",
+    "text": "Structure narrows to the regional businesses",
+    "src": "Financial press",
+    "top": 80
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "15 JULY · ANNOUNCED",
+    "text": "Uber bids €41.50 a share,<br>valuing Delivery Hero near €13bn",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "19 May · 57 days out",
+    "body": "A senior antitrust and trade lawyer hired in Berlin. On its own, an ordinary vacancy. Nobody was reading it as a deal signal."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Pattern matched · scored 78",
+    "body": "The hire, the takeover reports and the market reaction held together as one situation, not five unrelated stories."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "2 June · 43 days ahead",
+    "body": "On the board with the evidence, the reason it mattered now, and the window before the market repriced it."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Separation and carve-out",
+    "window": "From announcement · 3 to 6 months",
+    "left": 0,
+    "width": 42
+   },
+   {
+    "name": "Regulatory remedies",
+    "window": "Filings onward · 6 to 12 months",
+    "left": 18,
+    "width": 56
+   },
+   {
+    "name": "Post-merger integration",
+    "window": "On closing · 12 months and beyond",
+    "left": 46,
+    "width": 54
+   }
+  ],
+  "people": [
+   {
+    "role": "SVP Delivery, acquirer",
+    "org": "Sponsor of integration mandates"
+   },
+   {
+    "role": "Chief Executive, target",
+    "org": "Decides advisory appointments"
+   },
+   {
+    "role": "President &amp; CFO, 17% shareholder",
+    "org": "Board-level route in"
+   }
+  ]
+ },
+ "easyjet": {
+  "meta": {
+   "title_tag": "Five weeks ahead of a 5.7bn take-private",
+   "headline": "We tracked a <em>£5.7bn take-private</em> from first rumour to final bid.",
+   "sub": "Castlelake's interest in easyJet surfaced on 30 May 2026. It was on our board the next day. <b>We read the behaviour, not the headline</b>: a rejected approach that keeps returning with a higher number is a pattern we track, and it told us terms were coming well before they did.",
+   "run_from": 130,
+   "run_w": 870,
+   "pill_x": 800,
+   "pill_num": "36",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 31 May. Redacted here.",
+   "strap": "Four rejections. Two bidders. One sequence."
   },
-
-  "commerzbank": {
-    "meta": {
-      "title_tag": "Five weeks inside Europe's biggest bank fight",
-      "headline": "We had partners inside the <em>€39bn bank fight</em> five weeks before its endgame.",
-      "sub": "A public rebuff, a regulator complaint, a government rejection, and the stake rising anyway. <b>We sequenced the behaviour, not the headlines.</b> An acquirer that keeps buying through every obstacle is telling you how this ends, months before the market prices it.",
-      "run_from": 200, "run_w": 800, "pill_x": 800, "pill_num": "38",
-      "forming_head": "What was forming, and when the work lands",
-      "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
-      "strap": "Nobody missed the deal. Everybody missed the build-up."
-    },
-    "dials": [
-      {"value": "38", "unit": "DAYS EARLY", "caption": "On our board<br>before the endgame", "colour": "#c9a84c", "dash": "199"},
-      {"value": "88", "unit": "CONFIDENCE", "caption": "Scored when<br>surfaced", "colour": "#7fb3d5", "dash": "249"},
-      {"value": "15", "unit": "SOURCES", "caption": "Linked across<br>six events", "colour": "#9ccfa0", "dash": "283"}
-    ],
-    "events": [
-      {"x": 70, "lx": 100, "side": "above", "date": "20 MAY", "text": "Commerzbank's chief executive publicly rebuffs the approach", "src": "Financial press", "top": 74},
-      {"x": 200, "kind": "flag", "side": "below", "date": "2 JUNE · STRATEGYAI", "text": "Rebuffed in public yet still accumulating stock. That behaviour rarely reverses, so we surfaced it at confidence 88", "src": "Our partners see it here", "top": 243, "lx": 226},
-      {"x": 380, "side": "above", "date": "4 JUNE", "text": "The bank contacts the German regulator over the stake build", "src": "Financial press", "top": 80},
-      {"x": 500, "side": "below", "date": "16 JUNE", "text": "Berlin rejects the €39bn approach outright", "src": "Financial press", "top": 239},
-      {"x": 636, "side": "above", "date": "19 JUNE", "text": "The stake is lifted to 42.5% regardless", "src": "Financial press", "top": 80},
-      {"x": 1000, "lx": 938, "kind": "deal", "side": "below", "date": "8 JULY · ENDGAME", "text": "Control nears.<br>Institutions accept.", "src": "The market finds out", "top": 243, "width": 244, "align": "right"}
-    ],
-    "steps": [
-      {"no": "01", "head": "We found it", "when": "20 May · 49 days out", "body": "A chief executive publicly rebuffing an approach. Read as a defence, it looks like the end of a story rather than the start of one."},
-      {"no": "02", "head": "We sequenced it", "when": "Rebuffed, yet still buying", "body": "The rebuff, the regulator complaint, the government rejection and a rising stake are one behaviour, not four events. An acquirer buying through every obstacle has already decided."},
-      {"no": "03", "head": "We told you", "when": "2 June · 38 days ahead", "body": "Surfaced at confidence 88 as a live situation rather than a rumour, with work identified for both sides regardless of who prevailed."}
-    ],
-    "wins": [
-      {"name": "ECB and regulatory strategy", "window": "Immediate · 3 to 9 months", "left": 0, "width": 46},
-      {"name": "Political and works council", "window": "Through the process · 6 to 12 months", "left": 16, "width": 58},
-      {"name": "Contingency integration", "window": "On control · 12 months and beyond", "left": 48, "width": 52}
-    ],
-    "people": [
-      {"role": "Chief Executive, target", "org": "Standalone strategy and minorities"},
-      {"role": "Chief Executive, acquirer", "org": "Integration and ECB sequencing"},
-      {"role": "Chairman, Supervisory Board", "org": "Governance counterpart"},
-      {"role": "Head of Corporate Development", "org": "Buyer of scenario modelling"}
-    ]
-  }
+  "dials": [
+   {
+    "value": "36",
+    "unit": "DAYS EARLY",
+    "caption": "On our board<br>before terms",
+    "colour": "#c9a84c",
+    "dash": "188"
+   },
+   {
+    "value": "88",
+    "unit": "CONFIDENCE",
+    "caption": "Rose from 65<br>as it escalated",
+    "colour": "#7fb3d5",
+    "dash": "249"
+   },
+   {
+    "value": "9",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>six events",
+    "colour": "#9ccfa0",
+    "dash": "283"
+   }
+  ],
+  "events": [
+   {
+    "x": 70,
+    "lx": 100,
+    "side": "above",
+    "date": "30 MAY",
+    "text": "A US private credit firm is reported to be circling",
+    "src": "Financial press",
+    "top": 74
+   },
+   {
+    "x": 130,
+    "kind": "flag",
+    "side": "below",
+    "date": "31 MAY · STRATEGYAI",
+    "text": "An opportunistic approach into a depressed share price, the profile that historically precedes a repeat bidder. On the board next morning",
+    "src": "Our partners see it here",
+    "top": 243,
+    "lx": 156
+   },
+   {
+    "x": 330,
+    "side": "above",
+    "date": "1 JUNE",
+    "text": "easyJet calls the timing opportunistic; shares jump 10%",
+    "src": "Financial press",
+    "top": 80
+   },
+   {
+    "x": 470,
+    "side": "below",
+    "date": "12 JUNE",
+    "text": "A second suitor is reported to be interested",
+    "src": "Financial press",
+    "top": 239
+   },
+   {
+    "x": 636,
+    "side": "above",
+    "date": "22 JUNE",
+    "text": "Third proposal rejected; bidder goes direct to shareholders",
+    "src": "Trade press",
+    "top": 74
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "6 JULY · ANNOUNCED",
+    "text": "Board agrees terms.<br>Rival bid follows at £5.7bn",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "30 May · 37 days out",
+    "body": "A US private credit firm circling a depressed UK airline. Reported once, then largely dropped by the market."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Rejected, returned, raised",
+    "body": "An opportunistic approach into a weak share price is a profile that historically precedes a repeat bidder, so we tracked the escalation rather than the headline."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "31 May · 36 days ahead",
+    "body": "On the board the next morning at confidence 65, lifted to 88 as the bidder returned twice more and a second suitor appeared."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Ownership and control structuring",
+    "window": "Pre-close · 2 to 4 months",
+    "left": 0,
+    "width": 34
+   },
+   {
+    "name": "Slot and regulatory analysis",
+    "window": "Through the offer · 3 to 9 months",
+    "left": 12,
+    "width": 52
+   },
+   {
+    "name": "100-day value creation",
+    "window": "On closing · fleet, loyalty, holidays",
+    "left": 50,
+    "width": 50
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Financial Officer, target",
+    "org": "Financing and carve-out mandates"
+   },
+   {
+    "role": "Aviation Deal Lead, sponsor",
+    "org": "Owns the value-creation thesis"
+   },
+   {
+    "role": "CEO, holidays division",
+    "org": "The identified value lever"
+   }
+  ]
+ },
+ "commerzbank": {
+  "meta": {
+   "title_tag": "Five weeks inside Europe's biggest bank fight",
+   "headline": "We had partners inside the <em>€39bn bank fight</em> five weeks before its endgame.",
+   "sub": "A public rebuff, a regulator complaint, a government rejection, and the stake rising anyway. <b>We sequenced the behaviour, not the headlines.</b> An acquirer that keeps buying through every obstacle is telling you how this ends, months before the market prices it.",
+   "run_from": 200,
+   "run_w": 800,
+   "pill_x": 800,
+   "pill_num": "38",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 2 June. Redacted here.",
+   "strap": "Nobody missed the deal. Everybody missed the build-up."
+  },
+  "dials": [
+   {
+    "value": "38",
+    "unit": "DAYS EARLY",
+    "caption": "On our board<br>before the endgame",
+    "colour": "#c9a84c",
+    "dash": "199"
+   },
+   {
+    "value": "88",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>surfaced",
+    "colour": "#7fb3d5",
+    "dash": "249"
+   },
+   {
+    "value": "15",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>six events",
+    "colour": "#9ccfa0",
+    "dash": "283"
+   }
+  ],
+  "events": [
+   {
+    "x": 70,
+    "lx": 100,
+    "side": "above",
+    "date": "20 MAY",
+    "text": "Commerzbank's chief executive publicly rebuffs the approach",
+    "src": "Financial press",
+    "top": 74
+   },
+   {
+    "x": 200,
+    "kind": "flag",
+    "side": "below",
+    "date": "2 JUNE · STRATEGYAI",
+    "text": "Rebuffed in public yet still accumulating stock. That behaviour rarely reverses, so we surfaced it at confidence 88",
+    "src": "Our partners see it here",
+    "top": 243,
+    "lx": 226
+   },
+   {
+    "x": 380,
+    "side": "above",
+    "date": "4 JUNE",
+    "text": "The bank contacts the German regulator over the stake build",
+    "src": "Financial press",
+    "top": 80
+   },
+   {
+    "x": 500,
+    "side": "below",
+    "date": "16 JUNE",
+    "text": "Berlin rejects the €39bn approach outright",
+    "src": "Financial press",
+    "top": 239
+   },
+   {
+    "x": 636,
+    "side": "above",
+    "date": "19 JUNE",
+    "text": "The stake is lifted to 42.5% regardless",
+    "src": "Financial press",
+    "top": 80
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "8 JULY · ENDGAME",
+    "text": "Control nears.<br>Institutions accept.",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "20 May · 49 days out",
+    "body": "A chief executive publicly rebuffing an approach. Read as a defence, it looks like the end of a story rather than the start of one."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Rebuffed, yet still buying",
+    "body": "The rebuff, the regulator complaint, the government rejection and a rising stake are one behaviour, not four events. An acquirer buying through every obstacle has already decided."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "2 June · 38 days ahead",
+    "body": "Surfaced at confidence 88 as a live situation rather than a rumour, with work identified for both sides regardless of who prevailed."
+   }
+  ],
+  "wins": [
+   {
+    "name": "ECB and regulatory strategy",
+    "window": "Immediate · 3 to 9 months",
+    "left": 0,
+    "width": 46
+   },
+   {
+    "name": "Political and works council",
+    "window": "Through the process · 6 to 12 months",
+    "left": 16,
+    "width": 58
+   },
+   {
+    "name": "Contingency integration",
+    "window": "On control · 12 months and beyond",
+    "left": 48,
+    "width": 52
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Executive, target",
+    "org": "Standalone strategy and minorities"
+   },
+   {
+    "role": "Chief Executive, acquirer",
+    "org": "Integration and ECB sequencing"
+   },
+   {
+    "role": "Chairman, Supervisory Board",
+    "org": "Governance counterpart"
+   },
+   {
+    "role": "Head of Corporate Development",
+    "org": "Buyer of scenario modelling"
+   }
+  ]
+ },
+ "bodycote": {
+  "meta": {
+   "title_tag": "A withdrawn bid read as the start, not the end",
+   "headline": "A bidder walked away from <em>Bodycote</em>. We read that as the opening, not the close.",
+   "sub": "Apollo pulled a £1.5bn approach on 8 June and the market filed it as a story that ended. <b>A withdrawn bid is the one public confirmation that a board has seen a price and refused it.</b> Eighty-five days later a contested process settled at 940 pence.",
+   "run_from": 470,
+   "run_w": 530,
+   "pill_x": 735,
+   "pill_num": "35",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 28 July. Redacted here.",
+   "strap": "We did not break this story. We assembled it."
+  },
+  "dials": [
+   {
+    "value": "35",
+    "unit": "DAYS EARLY",
+    "caption": "Ahead of<br>announcement",
+    "colour": "#c9a84c",
+    "dash": "117"
+   },
+   {
+    "value": "90",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>first surfaced",
+    "colour": "#7fb3d5",
+    "dash": "255"
+   },
+   {
+    "value": "5",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>the sequence",
+    "colour": "#9ccfa0",
+    "dash": "177"
+   }
+  ],
+  "events": [
+   {
+    "x": 70,
+    "lx": 96,
+    "side": "above",
+    "date": "8 JUNE",
+    "text": "Apollo withdraws a £1.5bn approach for Bodycote",
+    "src": "Private equity press",
+    "top": 74
+   },
+   {
+    "x": 300,
+    "side": "below",
+    "date": "28 JULY",
+    "text": "First-half growth reported alongside a streamlining plan",
+    "src": "Two outlets",
+    "top": 239
+   },
+   {
+    "x": 470,
+    "kind": "flag",
+    "side": "below",
+    "date": "28 JULY · STRATEGYAI",
+    "text": "A withdrawn bid alongside self-help restructuring is a board defending a valuation it has already been shown. Surfaced at confidence 90",
+    "src": "Our partners see it here",
+    "top": 243
+   },
+   {
+    "x": 700,
+    "side": "above",
+    "date": "5 AUGUST",
+    "text": "Twin private equity bids land on the board",
+    "src": "Financial press",
+    "top": 80
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "1 SEPT · ANNOUNCED",
+    "text": "Veritas Capital wins the board recommendation<br>at 940 pence, with CVC still in the room",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "8 June · 85 days out",
+    "body": "A withdrawn approach, filed by most readers as a story that ended. It is the only public proof that a board has been shown a number and turned it down."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Withdrawn, then defended",
+    "body": "The withdrawal, the streamlining plan and the twin bids are one situation held together, not three unrelated items about a heat-treatment group."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "28 July · 35 days ahead",
+    "body": "On the board at confidence 90 with the evidence and the window, before a contested process priced it at a 940 pence recommendation."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Contested bid defence",
+    "window": "Immediate · 1 to 4 months",
+    "left": 0,
+    "width": 36
+   },
+   {
+    "name": "Carve-out and separation",
+    "window": "On agreement · 4 to 12 months",
+    "left": 20,
+    "width": 48
+   },
+   {
+    "name": "Post-merger integration",
+    "window": "On closing · 12 months and beyond",
+    "left": 54,
+    "width": 46
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Executive, target",
+    "org": "Standalone plan and defence"
+   },
+   {
+    "role": "Chairman",
+    "org": "Board process and price"
+   },
+   {
+    "role": "Operating Partner, acquirer",
+    "org": "Owns the value-creation thesis"
+   }
+  ]
+ },
+ "atg-entertainment": {
+  "meta": {
+   "title_tag": "The seller of 70 theatres, named 82 days out",
+   "headline": "We named the seller of <em>ATG's 70 theatres</em> eighty-two days out.",
+   "sub": "On 21 May we recorded Providence Equity Partners preparing ATG Entertainment for a sale above £4bn. <b>Right seller, right scale, right outcome.</b> On 11 August Ariel Emanuel's MARI agreed to buy the business, an estate spanning the UK, US, Germany and Spain.",
+   "run_from": 300,
+   "run_w": 700,
+   "pill_x": 650,
+   "pill_num": "82",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 21 May. Redacted here.",
+   "strap": "We did not break this story. We assembled it."
+  },
+  "dials": [
+   {
+    "value": "82",
+    "unit": "DAYS EARLY",
+    "caption": "Ahead of<br>announcement",
+    "colour": "#c9a84c",
+    "dash": "283"
+   },
+   {
+    "value": "76",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>first surfaced",
+    "colour": "#7fb3d5",
+    "dash": "215"
+   },
+   {
+    "value": "4",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>the sequence",
+    "colour": "#9ccfa0",
+    "dash": "142"
+   }
+  ],
+  "events": [
+   {
+    "x": 120,
+    "lx": 146,
+    "side": "above",
+    "date": "21 MAY",
+    "text": "Providence preparing ATG for a potential sale above £4bn",
+    "src": "Private equity press",
+    "top": 74
+   },
+   {
+    "x": 300,
+    "kind": "flag",
+    "side": "below",
+    "date": "21 MAY · STRATEGYAI",
+    "text": "A sponsor readying a 70-venue estate is an exit with a calendar, not a rumour. Surfaced with the seller named and the scale stated",
+    "src": "Our partners see it here",
+    "top": 243
+   },
+   {
+    "x": 640,
+    "side": "above",
+    "date": "THROUGH JUNE AND JULY",
+    "text": "No public buyer emerges; the process runs privately",
+    "src": "Sponsor hold period",
+    "top": 80
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "11 AUG · ANNOUNCED",
+    "text": "MARI acquires ATG Entertainment<br>and its 70 venues from Providence",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "21 May · 82 days out",
+    "body": "Sale preparation reported in trade press and read by almost nobody outside it. On its own, an ordinary item about a theatre operator."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Hold period, estate scale",
+    "body": "Held against the sponsor's hold period and the size of the estate, so the item read as a dated process rather than a possibility."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "21 May · 82 days ahead",
+    "body": "Seller named and scale stated, with the work identified for both sides, eleven weeks before a buyer was public."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Vendor due diligence",
+    "window": "Immediate · 1 to 4 months",
+    "left": 0,
+    "width": 34
+   },
+   {
+    "name": "Estate and licensing strategy",
+    "window": "Through the process · 4 to 10 months",
+    "left": 18,
+    "width": 50
+   },
+   {
+    "name": "Four-country integration",
+    "window": "On closing · 12 months and beyond",
+    "left": 55,
+    "width": 45
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Executive, target",
+    "org": "Standalone plan and estate"
+   },
+   {
+    "role": "Partner, seller",
+    "org": "Exit readiness and timetable"
+   },
+   {
+    "role": "Head of Corporate Development",
+    "org": "Buy-side diligence"
+   }
+  ]
+ },
+ "gamma": {
+  "meta": {
+   "title_tag": "Four filings that only make sense during a live bid",
+   "headline": "Four disclosures at <em>Gamma</em> that only make sense during a live bid.",
+   "sub": "A Takeover Panel extension, a buyback during an offer period, a second extension, and an institutional Form 8.3. <b>Each one ordinary alone; together, a process running to a clock.</b> On 1 September Epiris agreed a £1.0bn take-private at a 53% premium.",
+   "run_from": 250,
+   "run_w": 750,
+   "pill_x": 625,
+   "pill_num": "54",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 9 July. Redacted here.",
+   "strap": "We did not break this story. We assembled it."
+  },
+  "dials": [
+   {
+    "value": "54",
+    "unit": "DAYS EARLY",
+    "caption": "Ahead of<br>announcement",
+    "colour": "#c9a84c",
+    "dash": "283"
+   },
+   {
+    "value": "89",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>first surfaced",
+    "colour": "#7fb3d5",
+    "dash": "252"
+   },
+   {
+    "value": "5",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>the sequence",
+    "colour": "#9ccfa0",
+    "dash": "177"
+   }
+  ],
+  "events": [
+   {
+    "x": 70,
+    "lx": 96,
+    "side": "above",
+    "date": "9 JULY",
+    "text": "Takeover Panel extends the deadline for Epiris to make a formal offer",
+    "src": "Private equity press",
+    "top": 74
+   },
+   {
+    "x": 250,
+    "kind": "flag",
+    "side": "below",
+    "date": "9 JULY · STRATEGYAI",
+    "text": "A bidder granted more time is a bidder still working. Extensions mean a deal being negotiated, not abandoned",
+    "src": "Our partners see it here",
+    "top": 243
+   },
+   {
+    "x": 500,
+    "side": "above",
+    "date": "24 JULY",
+    "text": "Share buyback runs during an active offer period",
+    "src": "Market reporting",
+    "top": 80
+   },
+   {
+    "x": 730,
+    "side": "below",
+    "date": "5 – 7 AUGUST",
+    "text": "Deadline extended again; BlackRock files Form 8.3",
+    "src": "Regulatory filings",
+    "top": 239
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "1 SEPT · AGREED",
+    "text": "Epiris agrees a £1.0bn take-private<br>at a 53% premium",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "9 July · 54 days out",
+    "body": "A procedural notice about a mid-cap telecoms provider. Read as administration, it looks like nothing at all."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "Two extensions, a buyback, an 8.3",
+    "body": "Four filings held together as one situation. A company does not buy back its own shares mid-offer unless the board has a view on the price."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "9 July · 54 days ahead",
+    "body": "Bidder named and the Code timetable stated, so the approach could be made while the price was still being argued."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Offer defence and valuation",
+    "window": "Immediate · 1 to 3 months",
+    "left": 0,
+    "width": 34
+   },
+   {
+    "name": "Value creation planning",
+    "window": "Through the process · 3 to 9 months",
+    "left": 18,
+    "width": 50
+   },
+   {
+    "name": "Take-private operating model",
+    "window": "On closing · 12 months and beyond",
+    "left": 56,
+    "width": 44
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Executive, target",
+    "org": "Standalone plan and defence"
+   },
+   {
+    "role": "Partner, acquirer",
+    "org": "Owns the value-creation thesis"
+   },
+   {
+    "role": "Senior Independent Director",
+    "org": "Board process and price"
+   }
+  ]
+ },
+ "pinewood": {
+  "meta": {
+   "title_tag": "The bidder and the exact price, 23 days out",
+   "headline": "We named the bidder and the exact price at <em>Pinewood</em> twenty-three days out.",
+   "sub": "On 27 July we recorded a £545m proposal from Ridgeview for the UK automotive software provider. <b>Same bidder, same figure, before the board had responded.</b> On 19 August Ridgeview agreed a £545m take-private at a 43% premium, with Lithia locked up.",
+   "run_from": 330,
+   "run_w": 670,
+   "pill_x": 665,
+   "pill_num": "23",
+   "forming_head": "What was forming, and when the work lands",
+   "lead": "Named individuals and direct email addresses were supplied to partners on 27 July. Redacted here.",
+   "strap": "We did not break this story. We assembled it."
+  },
+  "dials": [
+   {
+    "value": "23",
+    "unit": "DAYS EARLY",
+    "caption": "Ahead of<br>announcement",
+    "colour": "#c9a84c",
+    "dash": "283"
+   },
+   {
+    "value": "86",
+    "unit": "CONFIDENCE",
+    "caption": "Scored when<br>first surfaced",
+    "colour": "#7fb3d5",
+    "dash": "243"
+   },
+   {
+    "value": "3",
+    "unit": "SOURCES",
+    "caption": "Linked across<br>the sequence",
+    "colour": "#9ccfa0",
+    "dash": "106"
+   }
+  ],
+  "events": [
+   {
+    "x": 130,
+    "lx": 156,
+    "side": "above",
+    "date": "27 JULY",
+    "text": "Ridgeview makes a £545m acquisition proposal for Pinewood",
+    "src": "Private equity press",
+    "top": 74
+   },
+   {
+    "x": 330,
+    "kind": "flag",
+    "side": "below",
+    "date": "27 JULY · STRATEGYAI",
+    "text": "A named bidder at a named figure, with a majority holder on the register. The outcome turns on one shareholder, not on the market",
+    "src": "Our partners see it here",
+    "top": 243
+   },
+   {
+    "x": 680,
+    "side": "above",
+    "date": "EARLY AUGUST",
+    "text": "Board considers the proposal; the majority holder's position becomes decisive",
+    "src": "Shareholder register",
+    "top": 80
+   },
+   {
+    "x": 1000,
+    "lx": 938,
+    "kind": "deal",
+    "side": "below",
+    "date": "19 AUG · AGREED",
+    "text": "Ridgeview agrees £545m at a 43% premium,<br>with Lithia locked up",
+    "src": "The market finds out",
+    "top": 243,
+    "width": 244,
+    "align": "right"
+   }
+  ],
+  "steps": [
+   {
+    "no": "01",
+    "head": "We found it",
+    "when": "27 July · 23 days out",
+    "body": "A proposal reported at a specific figure, before the board had responded and before any terms were agreed."
+   },
+   {
+    "no": "02",
+    "head": "We sequenced it",
+    "when": "One holder decides it",
+    "body": "With a majority shareholder on the register, the outcome turns on a single decision. That narrows a public process to one conversation."
+   },
+   {
+    "no": "03",
+    "head": "We told you",
+    "when": "27 July · 23 days ahead",
+    "body": "Bidder and price on the board before agreement, with the lock-up identified as the thing that would settle it."
+   }
+  ],
+  "wins": [
+   {
+    "name": "Offer response and valuation",
+    "window": "Immediate · 1 to 3 months",
+    "left": 0,
+    "width": 32
+   },
+   {
+    "name": "Software commercial diligence",
+    "window": "Through the process · 2 to 6 months",
+    "left": 16,
+    "width": 48
+   },
+   {
+    "name": "Customer and contract continuity",
+    "window": "On closing · 9 months and beyond",
+    "left": 52,
+    "width": 48
+   }
+  ],
+  "people": [
+   {
+    "role": "Chief Executive, target",
+    "org": "Standalone plan and defence"
+   },
+   {
+    "role": "Partner, acquirer",
+    "org": "Owns the value-creation thesis"
+   },
+   {
+    "role": "Head of Corporate Development",
+    "org": "Majority holder position"
+   }
+  ]
+ }
 }
