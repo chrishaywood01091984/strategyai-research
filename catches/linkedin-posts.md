@@ -88,3 +88,144 @@ Nobody missed this deal. Plenty missed the build-up.
 One of those is worth being early to.
 
 #FIG #Banking #MA
+
+---
+
+## 0 · Carousel post  ·  all four PDFs, or all seven
+
+Four deals were announced to the market over the last few weeks.
+
+Our partners were working on all four before the announcements.
+
+ATG Entertainment. Gamma Communications. Bodycote. Pinewood Technologies. Every one of them
+made public between 11 August and 1 September. Every one of them on a partner's board weeks
+earlier, with the evidence, the people to call and the work that was forming.
+
+The receipts are attached. Each card carries two dates: the day we put it in front of
+partners, and the day the market found out. Between three and twelve weeks apart.
+
+We did not break any of these stories. Almost every signal in them was already public.
+What nobody else did was hold them together.
+
+A withdrawn bid. A buyback during an offer period. A sponsor readying an estate for sale.
+A takeover deadline extended twice. On their own, four unremarkable filings. Sequenced
+against the behaviour that usually follows them, four situations with a timetable.
+
+That is the whole product. Not news. Behaviours, hiring patterns, filings and market
+reaction, sequenced into one situation, scored, and handed over with the names attached.
+
+The mandate is won before there is a mandate to bid for. Before the RFP, before the process
+letter, before the phone rings for everyone at once.
+
+Our partners were already in the room.
+
+#MandateOrigination #MA #PrivateEquity #StrategyConsulting
+
+---
+
+## 4 · ATG Entertainment  ·  `atg-entertainment-cream.png`
+
+On 21 May, we named the seller of 70 theatres.
+
+The buyer was not public until 11 August.
+
+Providence Equity Partners was preparing ATG Entertainment for a sale above £4bn. It was
+reported in trade press, read by very few people outside it, and on its own it was an
+ordinary item about a theatre operator.
+
+Held against the sponsor's hold period and the size of the estate, it stopped being an item
+and became a process with a calendar. A sponsor does not ready a 70-venue business across
+four countries as an idea.
+
+Eighty-two days later, Ariel Emanuel's MARI agreed to buy it.
+
+Our partners had eighty-two days on vendor due diligence, estate and licensing strategy,
+and what integration across the UK, US, Germany and Spain would actually involve.
+
+The seller was known from the start. That is usually the harder half.
+
+#PrivateEquity #MA #Leisure
+
+---
+
+## 5 · Gamma Communications  ·  `gamma-cream.png`
+
+A company bought back its own shares in the middle of a takeover offer.
+
+That is not a routine buyback.
+
+9 July: the Takeover Panel extends the deadline for Epiris to make a formal offer.
+24 July: a share buyback runs during an active offer period.
+5 August: the deadline is extended again.
+7 August: BlackRock files a Form 8.3.
+
+Four filings, all public, all individually dull. A procedural notice about a mid-cap
+telecoms provider is administration if you read it on its own.
+
+Read together, they are a board with a view on its own price and a bidder that has been
+given more time because a deal is being negotiated, not abandoned. Deadline extensions are
+the Code telling you somebody is still working.
+
+On 1 September, Epiris agreed a £1.0bn take-private at a 53% premium.
+
+We put it to partners on 9 July at confidence 89, with the bidder named and the timetable
+stated, fifty-four days before terms.
+
+The approach lands differently while the price is still being argued.
+
+#TakePrivate #Telecoms #MA
+
+---
+
+## 6 · Bodycote  ·  `bodycote-cream.png`
+
+On 8 June, a bidder walked away from Bodycote.
+
+Most of the market filed that as a story that ended.
+
+Apollo pulled a £1.5bn approach. No deal, no premium, nothing to write up. We read the
+opposite, because a withdrawn bid is the one public confirmation you ever get that a board
+has been shown a number and refused it.
+
+Then the behaviour did what that behaviour does. First-half results in late July arrived
+alongside a streamlining plan, which is a board making its own case for a valuation it has
+already been offered. On 5 August, twin private equity bids landed.
+
+On 1 September, Veritas Capital won a board recommendation at 940 pence, with CVC still in
+the room telling shareholders to hold.
+
+Our partners had it from 28 July at confidence 90. Thirty-five days before the winner, and
+eighty-five days after the signal that started it.
+
+Contested bid defence. Carve-out and separation. Integration on whichever side prevailed.
+
+A bidder walking away is not the end of the story. It is often the only proof you get that
+there is one.
+
+#PrivateEquity #Industrials #MA
+
+---
+
+## 7 · Pinewood Technologies  ·  `pinewood-cream.png`
+
+£545m was the number on 27 July.
+
+It was still the number on 19 August.
+
+Ridgeview made a proposal for Pinewood Technologies at £545m. Reported at a specific figure,
+before the board had responded and before any terms were agreed.
+
+With a majority shareholder sitting on the register, the outcome did not turn on the market.
+It turned on one holder's decision. That narrows a public process down to a single
+conversation, and it tells you which conversation matters.
+
+On 19 August, Ridgeview agreed £545m at a 43% premium, with Lithia locked up.
+
+Twenty-three days is a shorter runway than most of these. It was still enough for offer
+response and valuation work, software commercial diligence, and the customer and contract
+continuity questions that decide whether an automotive software business survives an
+ownership change intact.
+
+The bidder and the price were both known. What was left was who would agree, and when.
+
+#TakePrivate #Software #MA
