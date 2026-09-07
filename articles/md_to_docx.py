@@ -12,8 +12,8 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-SRC = r"C:/Users/ChrisHaywood/Code/strategyai-research/articles/q3-2026-mandate-formation.md"
-OUT = r"C:/Users/ChrisHaywood/Code/strategyai-research/articles/The Mandate Gap - StrategyAI Research Q3 2026.docx"
+SRC = r"C:/Users/ChrisHaywood/Code/strategyai-research/articles/q3-2026-hidden-market.md"
+OUT = r"C:/Users/ChrisHaywood/Code/strategyai-research/articles/The Hidden Market for Consulting Work - StrategyAI Research Q3 2026.docx"
 
 NAVY = RGBColor(0x0D, 0x1B, 0x2A)
 GOLD = RGBColor(0x9A, 0x7B, 0x10)   # darker gold, readable on white paper
