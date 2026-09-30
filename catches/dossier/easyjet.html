@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>easyJet pre-mandate dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --panel:#F7F9FB; --ink:#0F1B2D;
+    --gold:#0F2A44; --gold-ink:#0F2A44;
+    --teal:#1D9E75; --coral:#CE6238; --plum:#7F9BB8; --slate:#3E6491;
+    --mut:#5B6878; --hair:rgba(13,27,42,.16); --hair2:rgba(13,27,42,.09);
+    --fp:'Gloock',Georgia,serif;
+    --fm:'Hanken Grotesk',system-ui,sans-serif;
+    --fb:'Hanken Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1200px;height:1600px;background:var(--bg);color:var(--ink);
+       font-family:var(--fb);overflow:hidden;font-synthesis:none;font-variant-numeric:tabular-nums}
+  .sheet{width:1200px;height:1600px;padding:0 54px;display:flex;flex-direction:column;
+         justify-content:space-between;border-top:3px solid var(--gold)}
+  .lab{font-family:var(--fm);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase}
+  .ttl{font-family:var(--fp);font-weight:700;font-size:21px}
+  .panel{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;
+         box-shadow:0 1px 2px rgba(13,27,42,.04)}
+
+  .mast{display:flex;justify-content:space-between;align-items:baseline;
+        padding:18px 0 13px;border-bottom:1px solid var(--hair)}
+  .mast .l{color:var(--gold-ink)} .mast .r{color:var(--mut)}
+
+  .princ{display:flex;align-items:center;gap:20px;padding:15px 0 0}
+  .mark{height:50px;min-width:124px;background:var(--panel);border:1px solid var(--hair2);
+        border-radius:3px;display:flex;align-items:center;justify-content:center;padding:8px 16px}
+  .mark img{max-height:26px;max-width:106px;display:block}
+  .arrow{font-family:var(--fm);font-size:15px;color:var(--gold-ink)}
+  .princ .meta{margin-left:auto;text-align:right}
+  .princ .meta .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .princ .meta .v{font-family:var(--fm);font-size:15px;color:var(--gold-ink);margin-top:5px}
+
+  .lede{padding:18px 0 2px}
+  h1{font-family:var(--fp);font-weight:700;font-size:44px;line-height:1.1;letter-spacing:-.012em;max-width:1030px}
+  h1 em{font-style:normal;color:#4A6F94}
+  .stand{font-size:14px;line-height:1.72;color:var(--mut);max-width:920px;margin-top:13px}
+  .stand b{color:var(--ink);font-weight:400}
+
+  .block{margin-top:16px;padding:16px 22px 12px}
+  .block .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .duo .panel{padding:16px 20px 13px}
+  .duo .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .duo .note{font-family:var(--fm);font-size:9.5px;color:var(--slate);margin-top:9px;line-height:1.7}
+
+  .ts{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:16px}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+       padding:7px 0;border-bottom:1px solid var(--hair2)}
+  .row .k{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .row .v{font-family:var(--fm);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+  .row .v.g{color:var(--gold-ink)}
+
+  .route{margin-top:16px}
+  .route .hd{display:flex;justify-content:space-between;align-items:baseline;
+             padding-bottom:9px;border-bottom:1px solid var(--hair)}
+  .cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:13px}
+  .c{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;padding:12px 15px}
+  .rd{height:9px;border-radius:2px;background:linear-gradient(90deg,rgba(13,27,42,.34),rgba(13,27,42,.12));filter:blur(3px)}
+  .rd.s{width:58%;margin-top:7px}
+  .c .role{font-family:var(--fp);font-weight:700;font-size:14px;margin-top:11px;line-height:1.3}
+  .c .f{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:5px}
+  .c .deg{display:inline-block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;
+          text-transform:uppercase;color:var(--teal);border:1px solid rgba(29,158,117,.4);
+          border-radius:2px;padding:3px 7px;margin-top:8px}
+
+  .foot{display:flex;justify-content:space-between;align-items:center;
+        border-top:1px solid var(--hair);padding:12px 0 17px;margin-top:14px}
+  .logo{font-family:var(--fp);font-weight:700;font-size:16px}
+  .logo span{color:var(--gold-ink)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="mast">
+    <div class="lab l">Pre-mandate dossier</div>
+    <div class="lab" style="letter-spacing:.18em">Industrials &middot; United Kingdom &middot; Contested bid</div>
+    <div class="lab r">Captured 30 May 2026</div>
+  </div>
+
+  <div class="princ">
+    <div class="mark"><img src="logos/apollo_global_management.svg" alt="Apollo"></div>
+    <div class="arrow">&#10230;</div>
+    <div class="mark"><img src="logos/easyjet.svg" alt="easyJet"></div>
+    <div>
+      <div class="lab" style="color:var(--mut)">Acquirer &rarr; target</div>
+      <div style="font-family:var(--fm);font-size:12px;margin-top:6px">Apollo Global Management &middot; easyJet plc</div>
+    </div>
+    <div class="meta">
+      <div class="k">Agreed consideration</div>
+      <div class="v">&pound;5.7bn</div>
+    </div>
+  </div>
+
+  <div class="lede">
+    <h1>We were reading easyJet <em>fifty-three days before the Financial Times.</em></h1>
+    <p class="stand">On <b>30 May</b> a single tabloid line said a US firm was plotting a buyout. We logged it and began
+      sequencing. <b>Reuters arrived 23 days later. The FT after 53. The BBC after 68</b> &mdash; by which point Apollo
+      had agreed terms at &pound;5.7bn and the advisory window had been open for two months.</p>
+  </div>
+
+  <div class="panel block">
+    <div class="hd">
+      <div class="lab" style="color:var(--gold-ink)">Who reported it, and when</div>
+      <div class="lab" style="color:var(--mut)">30 May &ndash; 6 Aug 2026</div>
+    </div>
+    <svg width="1044" height="150" viewBox="0 0 1044 150">
+      <defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="973" y2="0">
+        <stop offset="0" stop-color="#0F2A44"/><stop offset="1" stop-color="#CE6238"/></linearGradient></defs>
+      <line x1="60" y1="104" x2="1000" y2="104" stroke="rgba(13,27,42,.14)" stroke-width="1"/>
+      <line x1="60" y1="104" x2="973" y2="104" stroke="url(#fade)" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- us -->
+      <circle cx="60" cy="104" r="9" fill="#0F2A44"/>
+      <circle cx="60" cy="104" r="16" fill="none" stroke="rgba(15,42,68,.42)" stroke-width="1.5"/>
+      <text x="60" y="46" font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F2A44" letter-spacing="1.6">30 MAY</text>
+      <text x="60" y="66" font-family="Gloock, serif" font-weight="700" font-size="17" fill="#0F1B2D">StrategyAI flags it</text>
+      <text x="60" y="84" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">DAY 0</text>
+
+      <!-- reuters -->
+      <circle cx="369" cy="104" r="6" fill="#3E6491"/>
+      <text x="369" y="132" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#3E6491" letter-spacing="1.2">REUTERS</text>
+      <text x="369" y="146" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+23 DAYS</text>
+
+      <!-- terms -->
+      <circle cx="557" cy="104" r="6" fill="#1D9E75"/>
+      <text x="557" y="70" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#1D9E75" letter-spacing="1.2">TERMS AT 690p</text>
+      <text x="557" y="84" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+37 DAYS</text>
+
+      <!-- FT -->
+      <circle cx="772" cy="104" r="8" fill="#CE6238"/>
+      <text x="772" y="132" text-anchor="middle" font-family="Gloock, serif" font-weight="700" font-size="15" fill="#CE6238">Financial Times</text>
+      <text x="772" y="146" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+53 DAYS</text>
+
+      <!-- BBC -->
+      <circle cx="973" cy="104" r="6" fill="#0F1B2D"/>
+      <text x="1000" y="70" text-anchor="end" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#0F1B2D" letter-spacing="1.2">BBC &middot; APOLLO AGREES</text>
+      <text x="1000" y="84" text-anchor="end" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+68 DAYS</text>
+    </svg>
+  </div>
+
+  <div class="duo">
+    <div class="panel">
+      <div class="k">The bid ladder we tracked</div>
+      <svg width="100%" height="128" viewBox="0 0 470 128">
+        <g font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">
+          <text x="0" y="24">3 JUN</text><text x="0" y="62">22 JUN</text><text x="0" y="100">6 JUL</text>
+        </g>
+        <rect x="74" y="12" width="222" height="17" rx="2" fill="#C2CFDB"/>
+        <rect x="74" y="50" width="344" height="17" rx="2" fill="#8FA9C0"/>
+        <rect x="74" y="88" width="380" height="17" rx="2" fill="#1D9E75"/>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="12" fill="#0F1B2D">
+          <text x="304" y="25">403p</text><text x="426" y="63">625p</text>
+        </g>
+        <text x="390" y="101" font-family="Hanken Grotesk, sans-serif" font-size="12" fill="#FFFFFF">690p</text>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="8" fill="#5B6878" letter-spacing="1">
+          <text x="74" y="42">REJECTED</text><text x="74" y="80">REJECTED</text>
+        </g>
+      </svg>
+      <div class="note">Castlelake raised twice and still lost it.<br>Apollo agreed &pound;5.7bn on 6 August.</div>
+    </div>
+
+    <div class="panel">
+      <div class="k">What this work has paid</div>
+      <svg width="100%" height="128" viewBox="0 0 470 128">
+        <g font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">
+          <text x="0" y="20">BAIN &middot; 28W</text><text x="0" y="48">McKINSEY &middot; 24W</text>
+          <text x="0" y="76">O. WYMAN &middot; 20W</text><text x="0" y="104">R. BERGER &middot; 18W</text>
+        </g>
+        <g stroke="rgba(13,27,42,.10)" stroke-width="1">
+          <line x1="150" y1="6" x2="150" y2="112"/><line x1="230" y1="6" x2="230" y2="112"/>
+          <line x1="310" y1="6" x2="310" y2="112"/><line x1="390" y1="6" x2="390" y2="112"/>
+        </g>
+        <rect x="250" y="8" width="140" height="14" rx="2" fill="#7F9BB8"/>
+        <rect x="230" y="36" width="120" height="14" rx="2" fill="#0F2A44"/>
+        <rect x="190" y="64" width="80" height="14" rx="2" fill="#1D9E75"/>
+        <rect x="170" y="92" width="80" height="14" rx="2" fill="#3E6491"/>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F1B2D">
+          <text x="398" y="19">&pound;9&ndash;16m</text><text x="358" y="47">&pound;8&ndash;14m</text>
+          <text x="278" y="75">&pound;6&ndash;10m</text><text x="258" y="103">&pound;5&ndash;9m</text>
+        </g>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="8" fill="#5B6878" letter-spacing="1">
+          <text x="150" y="124">&pound;4m</text><text x="230" y="124">&pound;8m</text>
+          <text x="310" y="124">&pound;12m</text><text x="390" y="124">&pound;16m</text>
+        </g>
+      </svg>
+      <div class="note">Four precedent airline mandates.<br>Two went to firms you compete with every week.</div>
+    </div>
+  </div>
+
+  <div class="ts">
+    <div>
+      <div class="row"><span class="k">Bidders tracked</span><span class="v">Castlelake, then Apollo</span></div>
+      <div class="row"><span class="k">Premium at agreement</span><span class="v g">73% to undisturbed</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="k">Mandate shape</span><span class="v">Defence, then integration</span></div>
+      <div class="row"><span class="k">Evidence &middot; confidence</span><span class="v g">17 items &middot; 82</span></div>
+    </div>
+  </div>
+
+  <div class="route">
+    <div class="hd">
+      <div class="ttl">Route in</div>
+      <div class="lab" style="color:var(--mut)">Named on 30 May &middot; redacted here</div>
+    </div>
+    <div class="cg">
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chief Executive, easyJet</div>
+        <div class="f">Leads the board response</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chief Financial Officer</div>
+        <div class="f">Owns valuation defence</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chairman</div>
+        <div class="f">Commissions independent advice</div>
+        <div class="deg">2nd degree</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="logo">Strategy<span>AI</span></div>
+    <div class="lab" style="color:var(--mut)">17 linked sources &middot; every item dated and auditable</div>
+    <div class="lab" style="color:var(--mut)">strategyai.co.uk</div>
+  </div>
+
+</div>
+</body>
+</html>

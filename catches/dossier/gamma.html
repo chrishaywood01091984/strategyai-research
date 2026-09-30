@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gamma Communications pre-mandate dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --panel:#F7F9FB; --ink:#0F1B2D;
+    --gold:#0F2A44; --gold-ink:#0F2A44;
+    --teal:#1D9E75; --coral:#CE6238; --plum:#7F9BB8; --slate:#3E6491;
+    --mut:#5B6878; --hair:rgba(13,27,42,.16); --hair2:rgba(13,27,42,.09);
+    --fp:'Gloock',Georgia,serif;
+    --fm:'Hanken Grotesk',system-ui,sans-serif;
+    --fb:'Hanken Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1200px;height:1600px;background:var(--bg);color:var(--ink);
+       font-family:var(--fb);overflow:hidden;font-synthesis:none;font-variant-numeric:tabular-nums}
+  .sheet{width:1200px;height:1600px;padding:0 54px;display:flex;flex-direction:column;
+         justify-content:space-between;border-top:3px solid var(--gold)}
+  .lab{font-family:var(--fm);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase}
+  .ttl{font-family:var(--fp);font-weight:700;font-size:21px}
+  .panel{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;
+         box-shadow:0 1px 2px rgba(13,27,42,.04)}
+
+  .mast{display:flex;justify-content:space-between;align-items:baseline;
+        padding:18px 0 13px;border-bottom:1px solid var(--hair)}
+  .mast .l{color:var(--gold-ink)} .mast .r{color:var(--mut)}
+
+  .princ{display:flex;align-items:center;gap:20px;padding:15px 0 0}
+  .mark{height:50px;min-width:124px;background:var(--panel);border:1px solid var(--hair2);
+        border-radius:3px;display:flex;align-items:center;justify-content:center;padding:8px 18px}
+  .mark .word{font-family:var(--fp);font-weight:700;font-size:19px;letter-spacing:.02em;white-space:nowrap}
+  .arrow{font-family:var(--fm);font-size:15px;color:var(--gold-ink)}
+  .princ .meta{margin-left:auto;text-align:right}
+  .princ .meta .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .princ .meta .v{font-family:var(--fm);font-size:15px;color:var(--gold-ink);margin-top:5px}
+
+  .lede{padding:18px 0 2px}
+  h1{font-family:var(--fp);font-weight:700;font-size:43px;line-height:1.1;letter-spacing:-.012em;max-width:1040px}
+  h1 em{font-style:normal;color:#4A6F94}
+  .stand{font-size:14px;line-height:1.72;color:var(--mut);max-width:940px;margin-top:13px}
+  .stand b{color:var(--ink);font-weight:400}
+
+  .block{margin-top:16px;padding:16px 22px 12px}
+  .block .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+
+  .duo{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
+  .duo .panel{padding:16px 20px 13px}
+  .duo .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .duo .note{font-family:var(--fm);font-size:9.5px;color:var(--slate);margin-top:9px;line-height:1.7}
+
+  .two{margin-top:14px}
+  .two .r{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+          padding:11px 0;border-bottom:1px solid var(--hair2)}
+  .two .r:last-child{border-bottom:none}
+  .two .nm{font-family:var(--fp);font-weight:700;font-size:19px}
+  .two .dt{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+           color:var(--mut);margin-top:4px}
+  .two .out{font-family:var(--fm);font-size:9px;letter-spacing:.11em;text-transform:uppercase;
+            border-radius:2px;padding:4px 9px;flex:none}
+  .two .win{color:var(--teal);border:1px solid rgba(29,158,117,.45)}
+  .two .lose{color:var(--coral);border:1px solid rgba(206,98,56,.4)}
+
+  .ts{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:16px}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+       padding:7px 0;border-bottom:1px solid var(--hair2)}
+  .row .k{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .row .v{font-family:var(--fm);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+  .row .v.g{color:var(--gold-ink)}
+
+  .route{margin-top:16px}
+  .route .hd{display:flex;justify-content:space-between;align-items:baseline;
+             padding-bottom:9px;border-bottom:1px solid var(--hair)}
+  .cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:13px}
+  .c{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;padding:12px 15px}
+  .rd{height:9px;border-radius:2px;background:linear-gradient(90deg,rgba(13,27,42,.34),rgba(13,27,42,.12));filter:blur(3px)}
+  .rd.s{width:58%;margin-top:7px}
+  .c .role{font-family:var(--fp);font-weight:700;font-size:14px;margin-top:11px;line-height:1.3}
+  .c .f{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:5px}
+  .c .deg{display:inline-block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;
+          text-transform:uppercase;color:var(--teal);border:1px solid rgba(29,158,117,.4);
+          border-radius:2px;padding:3px 7px;margin-top:8px}
+
+  .foot{display:flex;justify-content:space-between;align-items:center;
+        border-top:1px solid var(--hair);padding:12px 0 17px;margin-top:14px}
+  .logo{font-family:var(--fp);font-weight:700;font-size:16px}
+  .logo span{color:var(--gold-ink)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="mast">
+    <div class="lab l">Pre-mandate dossier</div>
+    <div class="lab" style="letter-spacing:.18em">TMT &middot; United Kingdom &middot; Take-private</div>
+    <div class="lab r">Captured 24 Jul 2026</div>
+  </div>
+
+  <div class="princ">
+    <div class="mark"><span class="word">EPIRIS</span></div>
+    <div class="arrow">&#10230;</div>
+    <div class="mark"><span class="word">GAMMA</span></div>
+    <div>
+      <div class="lab" style="color:var(--mut)">Acquirer &rarr; target</div>
+      <div style="font-family:var(--fm);font-size:12px;margin-top:6px">Epiris &middot; Gamma Communications</div>
+    </div>
+    <div class="meta">
+      <div class="k">Agreed at 1,120p</div>
+      <div class="v">&pound;1.0bn</div>
+    </div>
+  </div>
+
+  <div class="lede">
+    <h1>A company buying its own shares mid-offer <em>is not a company that feels cornered.</em></h1>
+    <p class="stand">On <b>24 July</b> Gamma was running a share buyback while a takeover offer period was live.
+      That is an unusual thing to do, and it reads as a board that believes the price is wrong. We flagged it.
+      The deadline was extended in August, a sponsor was reported circling, and on <b>1 September</b> Epiris
+      agreed a take-private at <b>1,120p &mdash; a 53% premium</b>. Thirty-nine days.</p>
+  </div>
+
+  <div class="panel block">
+    <div class="hd">
+      <div class="lab" style="color:var(--gold-ink)">Inside a live offer period</div>
+      <div class="lab" style="color:var(--mut)">24 Jul &ndash; 1 Sep 2026</div>
+    </div>
+    <svg width="1044" height="150" viewBox="0 0 1044 150">
+      <defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="967" y2="0">
+        <stop offset="0" stop-color="#0F2A44"/><stop offset="1" stop-color="#1D9E75"/></linearGradient></defs>
+      <line x1="60" y1="104" x2="1000" y2="104" stroke="rgba(13,27,42,.14)" stroke-width="1"/>
+      <line x1="60" y1="104" x2="967" y2="104" stroke="url(#fade)" stroke-width="4" stroke-linecap="round"/>
+
+      <circle cx="60" cy="104" r="9" fill="#0F2A44"/>
+      <circle cx="60" cy="104" r="16" fill="none" stroke="rgba(15,42,68,.42)" stroke-width="1.5"/>
+      <text x="60" y="46" font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F2A44" letter-spacing="1.6">24 JUL</text>
+      <text x="60" y="66" font-family="Gloock, serif" font-weight="700" font-size="17" fill="#0F1B2D">Buyback during a live offer</text>
+      <text x="60" y="84" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">DAY 0 &middot; THE TELL</text>
+
+      <circle cx="340" cy="104" r="6" fill="#3E6491"/>
+      <text x="340" y="132" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#3E6491" letter-spacing="1.2">DEADLINE EXTENDED</text>
+      <text x="340" y="146" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+12 DAYS</text>
+
+      <circle cx="782" cy="104" r="7" fill="#7F9BB8"/>
+      <text x="782" y="70" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#7F9BB8" letter-spacing="1.2">SPONSOR REPORTED CIRCLING</text>
+      <text x="782" y="84" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+31 DAYS</text>
+
+      <circle cx="967" cy="104" r="9" fill="#1D9E75"/>
+      <text x="1000" y="132" text-anchor="end" font-family="Gloock, serif" font-weight="700" font-size="15" fill="#1D9E75">Epiris agrees at 1,120p</text>
+      <text x="1000" y="146" text-anchor="end" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+39 DAYS &middot; 53% PREMIUM</text>
+    </svg>
+  </div>
+
+  <div class="duo">
+    <div class="panel">
+      <div class="k">Comparable UK telecoms take-privates</div>
+      <svg width="100%" height="128" viewBox="0 0 470 128">
+        <g font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">
+          <text x="0" y="20">JEFFERIES / PwC &middot; 18W</text><text x="0" y="48">GOLDMAN / LAZARD &middot; 14W</text>
+          <text x="0" y="76">ROTHSCHILD &middot; 12W</text><text x="0" y="104">DELOITTE &middot; 16W</text>
+        </g>
+        <g stroke="rgba(13,27,42,.10)" stroke-width="1">
+          <line x1="225" y1="6" x2="225" y2="112"/>
+          <line x1="300" y1="6" x2="300" y2="112"/>
+          <line x1="375" y1="6" x2="375" y2="112"/>
+          <line x1="450" y1="6" x2="450" y2="112"/>
+        </g>
+        <rect x="281" y="8" width="131" height="14" rx="2" fill="#7F9BB8"/>
+        <rect x="368" y="36" width="14" height="14" rx="2" fill="#0F2A44"/>
+        <rect x="225" y="64" width="113" height="14" rx="2" fill="#3E6491"/>
+        <rect x="150" y="92" width="113" height="14" rx="2" fill="#1D9E75"/>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F1B2D">
+          <text x="420" y="19">&pound;0.95&ndash;1.3bn</text>
+          <text x="389" y="47">~&pound;1.2bn</text>
+          <text x="346" y="75">&pound;0.8&ndash;1.1bn</text>
+          <text x="270" y="103">&pound;0.6&ndash;0.9bn</text>
+        </g>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="8" fill="#5B6878" letter-spacing="1">
+          <text x="225" y="124">&pound;0.8bn</text>
+          <text x="300" y="124">&pound;1.0bn</text>
+          <text x="375" y="124">&pound;1.2bn</text>
+          <text x="450" y="124">&pound;1.4bn</text>
+        </g>
+      </svg>
+      <div class="note">Gamma landed at &pound;1.0bn &mdash; mid-range for the sector,<br>at the top of the premium range. Goldman shown as a point estimate.</div>
+    </div>
+
+    <div class="panel">
+      <div class="k">Two sponsors circled</div>
+      <div class="two">
+        <div class="r">
+          <div>
+            <div class="nm">Waterland</div>
+            <div class="dt">Reported in talks &middot; 24 Aug</div>
+          </div>
+          <div class="out lose">Did not sign</div>
+        </div>
+        <div class="r">
+          <div>
+            <div class="nm">Epiris</div>
+            <div class="dt">Recommended offer &middot; 1 Sep</div>
+          </div>
+          <div class="out win">Won the board</div>
+        </div>
+      </div>
+      <div class="note">We tracked the process, not a single name.<br>The bidder first reported was not the bidder that signed.</div>
+    </div>
+  </div>
+
+  <div class="ts">
+    <div>
+      <div class="row"><span class="k">The tell</span><span class="v">Buyback during an offer period</span></div>
+      <div class="row"><span class="k">Premium</span><span class="v g">53% to undisturbed</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="k">Mandate shape</span><span class="v">Defence, then carve-out</span></div>
+      <div class="row"><span class="k">Evidence &middot; window</span><span class="v g">7 items &middot; 12&ndash;22 weeks</span></div>
+    </div>
+  </div>
+
+  <div class="route">
+    <div class="hd">
+      <div class="ttl">Route in</div>
+      <div class="lab" style="color:var(--mut)">Named on 24 July &middot; redacted here</div>
+    </div>
+    <div class="cg">
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Co-founder, major shareholder</div>
+        <div class="f">His support decides any recommended offer</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Non-Executive Chairman</div>
+        <div class="f">Leads the independent board committee</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chief Financial Officer</div>
+        <div class="f">Owns the data room and adviser relationships</div>
+        <div class="deg">2nd degree</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="logo">Strategy<span>AI</span></div>
+    <div class="lab" style="color:var(--mut)">7 linked sources &middot; PE Wire, Investegate, Investing.com</div>
+    <div class="lab" style="color:var(--mut)">strategyai.co.uk</div>
+  </div>
+
+</div>
+</body>
+</html>

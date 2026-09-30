@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ATG Entertainment pre-mandate dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --panel:#F7F9FB; --ink:#0F1B2D;
+    --gold:#0F2A44; --gold-ink:#0F2A44;
+    --teal:#1D9E75; --coral:#CE6238; --plum:#7F9BB8; --slate:#3E6491;
+    --mut:#5B6878; --hair:rgba(13,27,42,.16); --hair2:rgba(13,27,42,.09);
+    --fp:'Gloock',Georgia,serif;
+    --fm:'Hanken Grotesk',system-ui,sans-serif;
+    --fb:'Hanken Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1200px;height:1600px;background:var(--bg);color:var(--ink);
+       font-family:var(--fb);overflow:hidden;font-synthesis:none;font-variant-numeric:tabular-nums}
+  .sheet{width:1200px;height:1600px;padding:0 54px;display:flex;flex-direction:column;
+         justify-content:space-between;border-top:3px solid var(--gold)}
+  .lab{font-family:var(--fm);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase}
+  .ttl{font-family:var(--fp);font-weight:700;font-size:21px}
+  .panel{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;
+         box-shadow:0 1px 2px rgba(13,27,42,.04)}
+
+  .mast{display:flex;justify-content:space-between;align-items:baseline;
+        padding:18px 0 13px;border-bottom:1px solid var(--hair)}
+  .mast .l{color:var(--gold-ink)} .mast .r{color:var(--mut)}
+
+  .princ{display:flex;align-items:center;gap:20px;padding:15px 0 0}
+  .mark{height:50px;min-width:124px;background:var(--panel);border:1px solid var(--hair2);
+        border-radius:3px;display:flex;align-items:center;justify-content:center;padding:8px 18px}
+  .mark .word{font-family:var(--fp);font-weight:700;font-size:19px;letter-spacing:.02em;white-space:nowrap}
+  .arrow{font-family:var(--fm);font-size:15px;color:var(--gold-ink)}
+  .princ .meta{margin-left:auto;text-align:right}
+  .princ .meta .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .princ .meta .v{font-family:var(--fm);font-size:15px;color:var(--gold-ink);margin-top:5px}
+
+  .lede{padding:18px 0 2px}
+  h1{font-family:var(--fp);font-weight:700;font-size:44px;line-height:1.1;letter-spacing:-.012em;max-width:1040px}
+  h1 em{font-style:normal;color:#4A6F94}
+  .stand{font-size:14px;line-height:1.72;color:var(--mut);max-width:940px;margin-top:13px}
+  .stand b{color:var(--ink);font-weight:400}
+
+  .block{margin-top:16px;padding:16px 22px 12px}
+  .block .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+
+  .duo{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}
+  .duo .panel{padding:16px 20px 13px}
+  .duo .k{font-family:var(--fm);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut)}
+  .duo .note{font-family:var(--fm);font-size:9.5px;color:var(--slate);margin-top:9px;line-height:1.7}
+
+  .had{margin-top:13px}
+  .had .r{display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-bottom:1px solid var(--hair2)}
+  .had .r:last-child{border-bottom:none}
+  .had .tick{font-family:var(--fm);font-size:13px;line-height:1.2;flex:none;width:14px}
+  .had .y{color:var(--teal)} .had .n{color:var(--coral)}
+  .had .t{font-size:12.5px;line-height:1.5}
+  .had .t b{font-weight:400}
+  .had .t span{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+               color:var(--mut);display:block;margin-top:3px}
+
+  .ts{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:16px}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+       padding:7px 0;border-bottom:1px solid var(--hair2)}
+  .row .k{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .row .v{font-family:var(--fm);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+  .row .v.g{color:var(--gold-ink)}
+
+  .route{margin-top:16px}
+  .route .hd{display:flex;justify-content:space-between;align-items:baseline;
+             padding-bottom:9px;border-bottom:1px solid var(--hair)}
+  .cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:13px}
+  .c{background:var(--panel);border:1px solid var(--hair2);border-radius:3px;padding:12px 15px}
+  .rd{height:9px;border-radius:2px;background:linear-gradient(90deg,rgba(13,27,42,.34),rgba(13,27,42,.12));filter:blur(3px)}
+  .rd.s{width:58%;margin-top:7px}
+  .c .role{font-family:var(--fp);font-weight:700;font-size:14px;margin-top:11px;line-height:1.3}
+  .c .f{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:5px}
+  .c .deg{display:inline-block;font-family:var(--fm);font-size:8px;letter-spacing:.1em;
+          text-transform:uppercase;border-radius:2px;padding:3px 7px;margin-top:8px;
+          color:var(--teal);border:1px solid rgba(29,158,117,.4)}
+  .c .deg.three{color:var(--slate);border-color:rgba(62,100,145,.4)}
+
+  .foot{display:flex;justify-content:space-between;align-items:center;
+        border-top:1px solid var(--hair);padding:12px 0 17px;margin-top:14px}
+  .logo{font-family:var(--fp);font-weight:700;font-size:16px}
+  .logo span{color:var(--gold-ink)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="mast">
+    <div class="lab l">Pre-mandate dossier</div>
+    <div class="lab" style="letter-spacing:.18em">Consumer &amp; Retail &middot; United Kingdom &middot; Sponsor exit</div>
+    <div class="lab r">Captured 21 May 2026</div>
+  </div>
+
+  <div class="princ">
+    <div class="mark"><span class="word">MARI</span></div>
+    <div class="arrow">&#10230;</div>
+    <div class="mark"><span class="word">ATG</span></div>
+    <div>
+      <div class="lab" style="color:var(--mut)">Acquirer &rarr; target</div>
+      <div style="font-family:var(--fm);font-size:12px;margin-top:6px">MARI &middot; ATG Entertainment</div>
+    </div>
+    <div class="meta">
+      <div class="k">Scale we stated on day one</div>
+      <div class="v">&pound;4bn+</div>
+    </div>
+  </div>
+
+  <div class="lede">
+    <h1>We named the seller and the price. <em>The buyer did not surface for another thirty-four days.</em></h1>
+    <p class="stand">On <b>21 May</b> we recorded Providence Equity Partners positioning ATG Entertainment for a sale
+      above &pound;4bn. Not a rumour of interest &mdash; a named sponsor, a stated scale, a dated process.
+      <b>Ari Emanuel's MARI was not reported as the buyer until 24 June.</b> The definitive agreement followed on
+      <b>11 August</b>, eighty-two days after we put it in front of partners.</p>
+  </div>
+
+  <div class="panel block">
+    <div class="hd">
+      <div class="lab" style="color:var(--gold-ink)">Seller first, buyer later</div>
+      <div class="lab" style="color:var(--mut)">21 May &ndash; 11 Aug 2026</div>
+    </div>
+    <svg width="1044" height="150" viewBox="0 0 1044 150">
+      <defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="967" y2="0">
+        <stop offset="0" stop-color="#0F2A44"/><stop offset="1" stop-color="#1D9E75"/></linearGradient></defs>
+      <line x1="60" y1="104" x2="1000" y2="104" stroke="rgba(13,27,42,.14)" stroke-width="1"/>
+      <line x1="60" y1="104" x2="967" y2="104" stroke="url(#fade)" stroke-width="4" stroke-linecap="round"/>
+
+      <circle cx="60" cy="104" r="9" fill="#0F2A44"/>
+      <circle cx="60" cy="104" r="16" fill="none" stroke="rgba(15,42,68,.42)" stroke-width="1.5"/>
+      <text x="60" y="46" font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F2A44" letter-spacing="1.6">21 MAY</text>
+      <text x="60" y="66" font-family="Gloock, serif" font-weight="700" font-size="17" fill="#0F1B2D">Seller named, &pound;4bn stated</text>
+      <text x="60" y="84" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">DAY 0 &middot; PROVIDENCE EQUITY</text>
+
+      <circle cx="436" cy="104" r="7" fill="#CE6238"/>
+      <text x="436" y="132" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9.5" fill="#CE6238" letter-spacing="1.2">BUYER FIRST REPORTED</text>
+      <text x="436" y="146" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+34 DAYS &middot; DEADLINE</text>
+
+      <circle cx="967" cy="104" r="9" fill="#1D9E75"/>
+      <text x="1000" y="66" text-anchor="end" font-family="Gloock, serif" font-weight="700" font-size="15" fill="#1D9E75">Definitive agreement signed</text>
+      <text x="1000" y="84" text-anchor="end" font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">+82 DAYS &middot; 11 AUG</text>
+    </svg>
+  </div>
+
+  <div class="duo">
+    <div class="panel">
+      <div class="k">Comparable exits, and who got the work</div>
+      <svg width="100%" height="128" viewBox="0 0 470 128">
+        <g font-family="Hanken Grotesk, sans-serif" font-size="9" fill="#5B6878" letter-spacing="1.1">
+          <text x="0" y="20">BAIN &middot; 14W</text><text x="0" y="48">McKINSEY &middot; 10W</text>
+          <text x="0" y="76">DELOITTE &middot; 12W</text><text x="0" y="104">PwC &middot; 8W</text>
+        </g>
+        <g stroke="rgba(13,27,42,.10)" stroke-width="1">
+          <line x1="202" y1="6" x2="202" y2="112"/><line x1="264" y1="6" x2="264" y2="112"/>
+          <line x1="326" y1="6" x2="326" y2="112"/><line x1="388" y1="6" x2="388" y2="112"/>
+        </g>
+        <rect x="140" y="8" width="310" height="14" rx="2" fill="#7F9BB8"/>
+        <rect x="140" y="36" width="174" height="14" rx="2" fill="#0F2A44"/>
+        <rect x="140" y="64" width="93" height="14" rx="2" fill="#3E6491"/>
+        <rect x="140" y="92" width="50" height="14" rx="2" fill="#1D9E75"/>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#0F1B2D">
+          <text x="322" y="47">&pound;2.8bn</text><text x="241" y="75">&pound;1.5bn</text><text x="198" y="103">&pound;800m</text>
+        </g>
+        <text x="398" y="19" font-family="Hanken Grotesk, sans-serif" font-size="10" fill="#FFFFFF">&pound;5.0bn</text>
+        <g font-family="Hanken Grotesk, sans-serif" font-size="8" fill="#5B6878" letter-spacing="1">
+          <text x="202" y="124">&pound;1bn</text><text x="264" y="124">&pound;2bn</text>
+          <text x="326" y="124">&pound;3bn</text><text x="388" y="124">&pound;4bn</text>
+        </g>
+      </svg>
+      <div class="note">Vendor diligence and exit readiness on four comparable<br>entertainment exits. Every one went to a firm you know.</div>
+    </div>
+
+    <div class="panel">
+      <div class="k">What we had on day one</div>
+      <div class="had">
+        <div class="r"><span class="tick y">&#10003;</span><span class="t">The seller, by name
+          <span>Providence Equity Partners</span></span></div>
+        <div class="r"><span class="tick y">&#10003;</span><span class="t">The scale, stated
+          <span>Above &pound;4bn</span></span></div>
+        <div class="r"><span class="tick y">&#10003;</span><span class="t">The stage of the process
+          <span>Positioning for sale, not testing interest</span></span></div>
+        <div class="r"><span class="tick n">&#10007;</span><span class="t">The buyer
+          <span>Unknown for another 34 days</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ts">
+    <div>
+      <div class="row"><span class="k">Sponsor</span><span class="v">Providence Equity Partners</span></div>
+      <div class="row"><span class="k">Buyer</span><span class="v g">MARI &middot; Ari Emanuel</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="k">Mandate shape</span><span class="v">Vendor diligence, then PMI</span></div>
+      <div class="row"><span class="k">Evidence &middot; window</span><span class="v g">8 items &middot; 10&ndash;18 weeks</span></div>
+    </div>
+  </div>
+
+  <div class="route">
+    <div class="hd">
+      <div class="ttl">Route in</div>
+      <div class="lab" style="color:var(--mut)">Named on 21 May &middot; redacted here</div>
+    </div>
+    <div class="cg">
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chief Executive, ATG</div>
+        <div class="f">Leads management presentations to buyers</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Managing Director, sponsor</div>
+        <div class="f">Controls sell-side mandate allocation</div>
+        <div class="deg">2nd degree</div></div>
+      <div class="c"><div class="rd"></div><div class="rd s"></div>
+        <div class="role">Chief Financial Officer</div>
+        <div class="f">Owns the data room and vendor diligence</div>
+        <div class="deg three">3rd degree</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="logo">Strategy<span>AI</span></div>
+    <div class="lab" style="color:var(--mut)">8 linked sources &middot; PE Wire, Deadline, company statement</div>
+    <div class="lab" style="color:var(--mut)">strategyai.co.uk</div>
+  </div>
+
+</div>
+</body>
+</html>
