@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Pinewood Technologies proof card</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1200px;height:1600px;background:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#0F1B2D;
+  font-synthesis:none;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;overflow:hidden}
+.card{position:relative;width:1200px;height:1600px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(#7A4FA0,#3E6491 45%,#1D9E75);z-index:2}
+.ml{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.hd{display:flex;align-items:center;gap:14px;padding:18px 44px 18px 52px;background:linear-gradient(90deg,#0F2A44,#1F5F86)}
+.hd .flag{width:34px;height:23px;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.35);flex:none}
+.hd .flag svg{display:block;width:100%;height:100%}
+.hd .dot{width:10px;height:10px;border-radius:50%;background:#3CCB95;flex:none}
+.hd .t{color:#8FE3C0;margin-right:auto}
+.hd .strap{color:#C9D7E6;font-weight:600}
+.hd .chip{background:#D9483B;color:#fff;border-radius:5px;padding:6px 12px;font-size:13px;letter-spacing:.14em}
+.bd{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:18px;padding:24px 44px 12px 52px}
+.top{display:grid;grid-template-columns:1fr 176px;gap:28px;align-items:start}
+.co{font-family:'Gloock',Georgia,serif;font-size:58px;line-height:1.02;letter-spacing:-.01em}
+.loc{color:#1F5F86;margin-top:8px}
+.pair{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.mark{height:40px;min-width:92px;padding:6px 14px;border:1px solid #D8DFE6;border-radius:6px;background:#F6F8FA;display:flex;align-items:center;justify-content:center;
+  font-family:'Gloock',Georgia,serif;font-size:18px;letter-spacing:.03em;color:#0F1B2D}
+.mark img{max-height:24px;max-width:120px}
+.arrow{color:#3E6491;font-size:22px}
+.deal{display:inline-block;background:linear-gradient(135deg,#1F5F86,#1D9E75);color:#fff;border-radius:5px;padding:9px 14px;font-size:14px}
+.deal b{font-family:'Gloock',Georgia,serif;font-weight:400;font-size:20px;letter-spacing:0;margin-left:8px;text-transform:none}
+.ring{position:relative;width:176px;height:176px}
+.ring svg{width:176px;height:176px;transform:rotate(-90deg)}
+.ring .n{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring .n b{display:block;font-weight:700;font-size:58px;line-height:1;color:#1F5F86}
+.ring .n span{display:block;font-weight:700;font-size:12px;letter-spacing:.12em;color:#5B6878;margin-top:6px;text-transform:uppercase}
+h1{font-family:'Gloock',Georgia,serif;font-weight:400;font-size:37px;line-height:1.14;letter-spacing:-.005em;text-wrap:balance}
+h1 em{font-style:normal;color:#3E6491}
+.stand{font-size:17px;line-height:1.6;color:#3D4A5C;margin-top:10px}
+.stand b{color:#0F1B2D;font-weight:600}
+.meta{display:flex;align-items:center;gap:8px;font-size:14px;color:#5B6878;margin-top:10px}
+.meta::before{content:"";width:9px;height:9px;border-radius:50%;background:#1D9E75}
+.sqh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.sqh .l{color:#3E6491}.sqh .r{color:#14795A}
+.seq{position:relative;list-style:none;display:grid;gap:12px;padding-left:34px}
+.seq::before{content:"";position:absolute;left:10px;top:10px;bottom:10px;width:2px;background:linear-gradient(#7A4FA0,#3E6491,#1D9E75)}
+.seq li{position:relative;display:grid;grid-template-columns:92px 1fr auto;gap:16px;align-items:baseline}
+.seq li::before{content:"";position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 18%,#fff)}
+.seq time{font-weight:600;font-size:16px;color:var(--c)}
+.seq .ev{font-size:17px;line-height:1.4}
+.tag{display:inline-block;background:var(--c);color:#fff;font-weight:700;font-size:11.5px;letter-spacing:.1em;border-radius:4px;padding:3px 8px;margin-right:10px;vertical-align:2px}
+.seq .dd{font-weight:700;font-size:13px;letter-spacing:.08em;color:var(--c);white-space:nowrap}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pn{border-radius:10px;padding:18px 20px 16px}
+.pn.a{background:linear-gradient(135deg,#EEF1FB,#EAF6F1);border:1px solid #D9E2F0;border-left:4px solid #7A4FA0}
+.pn.b{background:linear-gradient(135deg,#EDF4FA,#F2F5FB);border:1px solid #D6E3EE;border-left:4px solid #3E6491}
+.pn .ml{margin-bottom:12px}.pn.a .ml{color:#7A4FA0}.pn.b .ml{color:#3E6491}
+.bars{display:grid;gap:10px}
+.br{display:grid;grid-template-columns:132px 1fr;gap:10px;align-items:center}
+.br .k{font-weight:600;font-size:12.5px;letter-spacing:.06em;color:#3D4A5C;text-transform:uppercase;white-space:nowrap}
+.br .tr{position:relative;height:22px;background:#DCE3EE;border-radius:4px}
+.br .tr i{position:absolute;top:0;bottom:0;border-radius:4px}
+.br .tr em{position:absolute;top:1px;font-style:normal;font-weight:700;font-size:13.5px;white-space:nowrap}
+.br .st{position:absolute;right:-2px;top:-17px;font-weight:700;font-size:10.5px;letter-spacing:.1em}
+.note{font-size:13.5px;line-height:1.5;color:#5B6878;margin-top:12px}
+.chk{display:grid;gap:9px}
+.chk div{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:15px;line-height:1.35}
+.chk b{font-weight:700;font-size:16px}.chk small{display:block;color:#5B6878;font-size:13px}
+.hold{display:grid;gap:12px}
+.hold div{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-bottom:1px solid #D9E2F0;padding-bottom:10px}
+.hold div:last-child{border-bottom:0;padding-bottom:0}
+.hold .nm{font-family:'Gloock',Georgia,serif;font-size:22px}.hold small{display:block;color:#5B6878;font-size:13px;margin-top:2px}
+.pill{font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;border-radius:4px;padding:4px 9px;color:#fff;white-space:nowrap}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kp{border:1px solid #E2E8EE;border-radius:9px;padding:12px 14px;background:#F8FAFC}
+.kp .ml{font-size:11px;color:#5B6878}.kp b{display:block;font-family:'Gloock',Georgia,serif;font-weight:400;font-size:19px;line-height:1.2;margin-top:6px;color:#0F2A44}
+.route{background:#EFF8F4;border:1px solid #D3EBDF;border-radius:10px;padding:16px 20px 18px}
+.route .h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.route .h .ml{color:#14795A}.route .h span{font-size:13px;color:#5B6878}
+.ppl{display:grid;gap:12px}
+.pp{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;background:#fff;border:1px solid #D3EBDF;border-radius:8px;padding:12px}
+.av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#7A4FA0,#3E6491);filter:blur(1.5px)}
+.pp .rd{height:10px;width:62%;border-radius:3px;background:linear-gradient(90deg,#9FB0C2,#C9D3DE);filter:blur(3px);margin-bottom:8px}
+.pp b{display:block;font-weight:700;font-size:15px}.pp small{display:block;font-size:12.5px;color:#5B6878;margin-top:2px}
+.deg{display:inline-block;margin-top:6px;font-weight:700;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#14795A;border:1px solid #9FD3BC;border-radius:3px;padding:2px 7px}
+.hs{background:linear-gradient(135deg,#EEF1FB,#EAF6F1);border:1px solid #D9E2F0;border-left:4px solid #7A4FA0;border-radius:10px;padding:18px 22px 20px}
+.hs .top2{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.hs .ml{color:#7A4FA0}.hs .big{font-family:'Gloock',Georgia,serif;font-size:27px;line-height:1.2;color:#0F2A44;margin-top:6px}
+.hs .big em{font-style:normal;color:#1D9E75}
+.hs .days{font-weight:700;font-size:15px;color:#0F1B2D;white-space:nowrap}
+.trk{position:relative;height:14px;background:#DCE3EE;border-radius:7px;margin:44px 0 40px}
+.trk .fill{position:absolute;left:0;top:0;bottom:0;border-radius:7px;background:linear-gradient(90deg,#7A4FA0,#3E6491,#1D9E75)}
+.trk .pt{position:absolute;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:var(--c);border:3px solid #fff;box-shadow:0 0 0 1px var(--c)}
+.trk .lb{position:absolute;transform:translateX(-50%);white-space:nowrap;text-align:center;font-size:12.5px;line-height:1.25;color:#3D4A5C}
+.trk .lb b{display:block;font-weight:700;font-size:12px;letter-spacing:.08em;color:var(--c)}
+.trk .lb.up{bottom:22px}.trk .lb.dn{top:22px}
+.ft{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:16px 44px 20px 52px;border-top:1px solid #E2E8EE}
+.ft .w{font-family:'Gloock',Georgia,serif;font-size:24px}
+.ft span{font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1F5F86}
+.ppl{grid-template-columns:repeat(2,1fr)}</style></head><body><div class="card">
+<div class="hd"><span class="flag"><svg viewBox="0 0 60 30"><clipPath id="c"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#c)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span class="dot"></span><span class="ml t">We saw it first &middot; captured 27 Jul 2026</span>
+  <span class="ml strap">Take-private</span><span class="ml chip">23 days ahead</span></div>
+<div class="bd">
+  <div class="top"><div>
+    <div class="co">Pinewood Technologies</div><div class="ml loc">United Kingdom &middot; TMT</div>
+    <div class="pair"><div class="mark">RIDGEVIEW</div><span class="arrow">&#10230;</span><div class="mark">PINEWOOD</div>
+      <span class="ml deal">Proposal we logged<b>&pound;545m</b></span></div>
+  </div><div class="ring"><svg viewBox="0 0 176 176"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A4FA0"/><stop offset=".5" stop-color="#3E6491"/><stop offset="1" stop-color="#1D9E75"/></linearGradient></defs>
+      <circle cx="88" cy="88" r="76" fill="none" stroke="#ECEAF5" stroke-width="13"/>
+      <circle cx="88" cy="88" r="76" fill="none" stroke="url(#rg)" stroke-width="13" stroke-linecap="round"
+        stroke-dasharray="122.0 477.5"/></svg>
+      <div class="n"><div><b>23</b><span>days before<br>the offer</span></div></div></div></div>
+  <div><h1>A &pound;545m proposal on 27 July. <em>The formal offer landed twenty-three days later.</em></h1><p class="stand">On <b>27 July</b> we recorded a &pound;545m proposal from Ridgeview Partners for Pinewood Technologies. On <b>19 August</b> the Rule 2.7 announcement arrived under the name <b>U.K. Piston Bidco</b>, the Ridgeview vehicle. Anyone watching for &ldquo;Ridgeview&rdquo; in an RNS would have missed it.</p><div class="meta">PE Wire, Investegate Rule 2.7 RNS</div></div>
+  <div><div class="sqh"><span class="ml l">We sequenced 3 events across 60 days</span><span class="ml r">23 days ahead</span></div>
+    <ul class="seq"><li style="--c:#7A4FA0"><time>27 Jul</time><span class="ev"><span class="tag">FLAGGED</span>Ridgeview proposes &pound;545m</span><span class="dd">DAY 0</span></li><li style="--c:#1D9E75"><time>19 Aug</time><span class="ev"><span class="tag">DEAL</span>Rule 2.7 offer via U.K. Piston Bidco</span><span class="dd">+23 DAYS</span></li><li style="--c:#3E6491"><time>25 Sep</time><span class="ev"><span class="tag">VOTE</span>Shareholder meeting to approve</span><span class="dd">+60 DAYS</span></li></ul></div>
+  <div class="hs"><div class="top2"><div><div class="ml">The head start</div><div class="big"><em>Twenty-three days</em> before the offer landed, under another name.</div></div><div class="days">23 days &middot; ahead of the offer</div></div><div class="trk"><span class="fill" style="width:38.3%"></span><span class="pt" style="left:0.0%;--c:#7A4FA0"></span><span class="lb up" style="left:0.0%;transform:translateX(0);--c:#7A4FA0"><b>DAY 0</b>Proposal</span><span class="pt" style="left:38.3%;--c:#1D9E75"></span><span class="lb dn" style="left:38.3%;transform:translateX(-50%);--c:#1D9E75"><b>+23</b>Rule 2.7 offer</span><span class="pt" style="left:100.0%;--c:#3E6491"></span><span class="lb up" style="left:100.0%;transform:translateX(-100%);--c:#3E6491"><b>+60</b>Shareholder vote</span></div></div>
+  <div class="duo"><div class="pn a"><div class="ml">The vote was already locked</div><div class="hold"><div><span><span class="nm">Lithia Motors</span><small>Largest customer and strategic shareholder</small></span><span class="pill" style="background:#14795A">Irrevocable</span></div><div><span><span class="nm">U.K. Piston Bidco</span><small>The Ridgeview vehicle named in the RNS</small></span><span class="pill" style="background:#C0643F">Different name</span></div></div><div class="note">The buyer&rsquo;s own customer had pre-committed. That is why the offer moved in three weeks.</div></div>
+    <div class="pn b"><div class="ml">What a PE-backed software carve-out pays</div><div class="bars"><div class="br"><div class="k">McKinsey &middot; 14w</div><div class="tr"><i style="left:42.9%;width:42.9%;background:#7A4FA0"></i><em style="right:15.8%;color:#fff">&pound;0.6&ndash;1.2m</em></div></div><div class="br"><div class="k">BCG &middot; 12w</div><div class="tr"><i style="left:39.3%;width:32.1%;background:#3E6491"></i><em style="left:72.9%;color:#0F1B2D">&pound;0.55&ndash;1m</em></div></div><div class="br"><div class="k">Bain &middot; 10w</div><div class="tr"><i style="left:35.7%;width:28.6%;background:#1D9E75"></i><em style="left:65.8%;color:#0F1B2D">&pound;0.5&ndash;0.9m</em></div></div><div class="br"><div class="k">O. Wyman &middot; 12w</div><div class="tr"><i style="left:32.1%;width:25.0%;background:#5B84A8"></i><em style="left:58.6%;color:#0F1B2D">&pound;0.45&ndash;0.8m</em></div></div></div><div class="note">Four precedent operating-model mandates on PE-backed UK software assets.</div></div></div>
+  <div class="kpis"><div class="kp"><div class="ml">Sponsor</div><b>Ridgeview Partners</b></div><div class="kp"><div class="ml">Vehicle</div><b>U.K. Piston Bidco</b></div><div class="kp"><div class="ml">Mandate shape</div><b>Day 1 readiness, 100-day plan</b></div><div class="kp"><div class="ml">Evidence</div><b>10 items &middot; 10&ndash;16 weeks</b></div></div>
+  <div class="route"><div class="h"><span class="ml">Route in &middot; who to call</span><span>Named on 27 Jul 2026 &middot; redacted here</span></div>
+    <div class="ppl"><div class="pp"><div class="av"></div><div><div class="rd"></div><b>Chief Executive, Pinewood</b><small>Transitions into the PE-backed entity</small><span class="deg">2nd degree</span></div></div><div class="pp"><div class="av"></div><div><div class="rd"></div><b>President &amp; CEO, anchor shareholder</b><small>Holds the irrevocable and the commercial relationship</small><span class="deg">2nd degree</span></div></div></div></div>
+</div>
+<div class="ft"><div class="w">StrategyAI</div><span>Win the mandate while it&rsquo;s still forming</span><span>strategyai.co.uk</span></div>
+</div></body></html>
