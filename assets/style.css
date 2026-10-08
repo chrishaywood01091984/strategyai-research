@@ -383,3 +383,44 @@ h1.title,.article h1,.article h2,.card h3,.featured h3,.sec-h h2,.cta-band h2,.c
   .article p,.article ul{font-size:16px}
   .tldr{padding:18px 18px 16px}
 }
+
+/* ---------- 2026-10 THEME: wide article layout (Chris, 8 Oct 2026) ----------
+   Same 1240px frame as the site's other pages: the header (hero, chips, title, dek, byline) runs full width; below
+   it, app.js splits the piece into a main column and a sticky rail ("In this piece", more research, a call to action). */
+.article{max-width:1240px;padding:28px clamp(16px,4vw,40px) 90px}
+.article .a-hero{min-height:clamp(260px,34vw,440px)}
+.article h1{max-width:24ch;font-size:clamp(36px,5vw,64px)}
+.article .a-dek{max-width:68ch;font-size:21px}
+.a-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(32px,4vw,64px);align-items:start;margin-top:8px}
+.a-main{min-width:0}
+.a-main>p,.a-main>ul,.a-main>h2,.a-main>.pull,.a-main>.related{max-width:820px}
+.a-rail{position:sticky;top:24px;display:grid;gap:16px;font-family:var(--body)}
+html.embed .a-rail{top:84px}
+.a-rail .rb{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.a-rail .rl{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px}
+.a-rail .toc a{display:block;font-size:13.5px;line-height:1.35;color:var(--ink-soft);border-left:2px solid var(--line);padding:6px 0 6px 12px;text-decoration:none}
+.a-rail .toc a:hover{color:var(--ink)} .a-rail .toc a.on{color:var(--gold-ink);border-left-color:var(--gold-ink);font-weight:600}
+.a-rail .more a{display:block;padding:10px 0;border-top:1px solid var(--line);text-decoration:none}
+.a-rail .more a:first-of-type{border-top:none;padding-top:0}
+.a-rail .more b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.25;color:var(--ink)}
+.a-rail .more span{font-size:12px;color:var(--ink-soft)}
+.a-rail .more a:hover b{color:var(--gold-ink)}
+.a-rail .rcta{background:radial-gradient(ellipse at 85% 0%,#1B2F4D 0%,var(--navy) 60%);border:none;color:#fff}
+.a-rail .rcta .rl{color:var(--gold)}
+.a-rail .rcta p{font-size:14px;line-height:1.55;color:#C7D0DC;margin:0 0 14px}
+.a-rail .rcta a{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:#fff;border-radius:8px;padding:11px;text-decoration:none}
+@media(max-width:1000px){.a-body{grid-template-columns:1fr}.a-rail{position:static}.a-rail .toc-box{display:none}}
+
+/* the update panel: fresh data after the original analysis */
+.upd{margin:48px 0 8px;padding-top:36px;border-top:1px solid var(--line)}
+.upd .k{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:8px}
+.article .upd h2{margin-top:0}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
+.kpis>div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpis b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,34px);line-height:1;color:var(--ink)}
+.kpis span{display:block;font-size:12.5px;line-height:1.4;color:var(--ink-soft);margin-top:8px}
+.upd-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.upd-grid .chartcard{margin:0}
+.upd-grid .wide{grid-column:1/-1}
+.upd .note{font-size:12.5px;color:var(--ink-soft);line-height:1.6;margin-top:12px;max-width:none}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.upd-grid{grid-template-columns:1fr}}

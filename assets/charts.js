@@ -29,7 +29,7 @@
   }
   function bars(d){
     const rows=d.rows, n=rows.length, max=Math.max(...rows.map(r=>r.value))||1;
-    const x0=210,x1=690,bw=x1-x0, top=24, step=Math.min(46,(276)/n), h=Math.min(26,step-16);
+    const x0=210,x1=610,bw=x1-x0, top=24, step=Math.min(46,(276)/n), h=Math.min(26,step-16);
     let out='';
     rows.forEach((r,i)=>{const y=top+i*step; const w=(r.value/max)*bw;
       out+=`<text x="${x0-15}" y="${y+h/2+5}" text-anchor="end" fill="#8FA3BD" font-family="Hanken Grotesk,sans-serif" font-size="12">${r.label}</text>`;
@@ -38,8 +38,32 @@
     const vb=`0 0 720 ${top+n*step+6}`;
     return `<svg viewBox="${vb}" role="img" aria-label="bar chart"><g>${out}</g></svg>`;
   }
+  // Donut with a legend: {"rows":[{"label":"Strategic","value":68}],"centre":"96","sub":"deals"}
+  function donut(d){
+    const pal=['#C9B6F2','#7FB0E0','#3CCB95','#4d7fa0','#9FB0C4','#7A4FA0','#E39B7B','#5E7389'];
+    const rows=d.rows, tot=rows.reduce((a,r)=>a+r.value,0)||1, cx=130, cy=130, R=104, r=66;
+    let a0=-Math.PI/2, segs='', leg='';
+    rows.forEach((row,i)=>{
+      const frac=row.value/tot, a1=a0+frac*Math.PI*2, big=frac>0.5?1:0, col=pal[i%pal.length];
+      const p=(ang,rad)=>[(cx+rad*Math.cos(ang)).toFixed(2),(cy+rad*Math.sin(ang)).toFixed(2)];
+      if(frac>=0.9999){segs+='<circle cx="'+cx+'" cy="'+cy+'" r="'+((R+r)/2)+'" fill="none" stroke="'+col+'" stroke-width="'+(R-r)+'"/>';}
+      else{const [x1,y1]=p(a0,R),[x2,y2]=p(a1,R),[x3,y3]=p(a1,r),[x4,y4]=p(a0,r);
+        segs+='<path d="M'+x1+' '+y1+' A'+R+' '+R+' 0 '+big+' 1 '+x2+' '+y2+' L'+x3+' '+y3+' A'+r+' '+r+' 0 '+big+' 0 '+x4+' '+y4+' Z" fill="'+col+'" stroke="#0F1B2D" stroke-width="2"/>';}
+      const ly=40+i*30;
+      leg+='<rect x="290" y="'+(ly-10)+'" width="12" height="12" rx="3" fill="'+col+'"/>'
+        +'<text x="312" y="'+ly+'" fill="#DCE4EE" font-family="Hanken Grotesk,sans-serif" font-size="14">'+row.label+'</text>'
+        +'<text x="690" y="'+ly+'" text-anchor="end" fill="#fff" font-family="Hanken Grotesk,sans-serif" font-size="14" font-weight="700">'+Math.round(frac*100)+'%</text>'
+        +'<text x="640" y="'+ly+'" text-anchor="end" fill="#8FA3BD" font-family="Hanken Grotesk,sans-serif" font-size="13">'+row.value+'</text>';
+      a0=a1;});
+    const h=Math.max(260,40+rows.length*30);
+    return '<svg viewBox="0 0 720 '+h+'" role="img" aria-label="share chart">'+segs
+      +'<text x="'+cx+'" y="'+(cy+6)+'" text-anchor="middle" fill="#fff" font-family="Gloock,serif" font-size="38">'+(d.centre||tot)+'</text>'
+      +'<text x="'+cx+'" y="'+(cy+30)+'" text-anchor="middle" fill="#8FA3BD" font-family="Hanken Grotesk,sans-serif" font-size="12" letter-spacing="2">'+(d.sub||'').toUpperCase()+'</text>'
+      +leg+'</svg>';
+  }
   function render(){
     document.querySelectorAll('[data-area]').forEach(el=>{try{el.innerHTML=area(JSON.parse(el.dataset.area))}catch(e){}});
+    document.querySelectorAll('[data-donut]').forEach(el=>{try{el.innerHTML=donut(JSON.parse(el.dataset.donut))}catch(e){}});
     document.querySelectorAll('[data-bars]').forEach(el=>{try{el.innerHTML=bars(JSON.parse(el.dataset.bars))}catch(e){}});
   }
   if(document.readyState!=='loading') render(); else document.addEventListener('DOMContentLoaded',render);

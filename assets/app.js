@@ -122,7 +122,37 @@ function navToggle(){
   wrap.appendChild(b);
 }
 
+/* ---------- wide article layout: main column + sticky rail (2026-10 theme) ---------- */
+const PIECES=[
+  ['european-deal-monitor',"Europe's dealmaking quarter",'Market Insight'],['deal-report','The 30-Day Deal Report','Report'],
+  ['healthcare-mandates-forming','Healthcare M&A: where the next mandates are forming','Market Insight'],['tmt',"TMT: the integration wave",'Sector read'],
+  ['fig','FIG: the +92% quarter','Sector read'],['business-services','Business Services: 83% carry an integration mandate','Sector read'],
+  ['energy-infrastructure','Energy & Infrastructure: capital deploys, the work forms','Sector read'],['industrials','Industrials: big-ticket integration','Sector read'],
+  ['materials-chemicals',"Materials & Chemicals: the +164% quarter",'Sector read'],['consumer-retail','Consumer & Retail: the sector that cooled','Sector read'],
+  ['private-equity','Private Equity: every deal is a mandate','Sector read'],['market-outlook','Where the market is heading','Outlook']];
+function articleLayout(){
+  const art=document.querySelector('article.article'); const by=art&&art.querySelector('.byline');
+  if(!art||!by||art.querySelector('.a-body')) return;
+  const body=document.createElement('div'); body.className='a-body';
+  const main=document.createElement('div'); main.className='a-main';
+  let n=by.nextElementSibling; while(n){const nx=n.nextElementSibling; main.appendChild(n); n=nx;}
+  const slug=location.pathname.split('/').filter(Boolean)[0]||'';
+  const hs=[...main.querySelectorAll(':scope > h2, .upd > h2')].filter(h=>!h.closest('.cta-band'));
+  hs.forEach((h,i)=>{if(!h.id)h.id='s'+(i+1);});
+  const more=PIECES.filter(p=>p[0]!==slug).slice(0,4);
+  const rail=document.createElement('aside'); rail.className='a-rail';
+  rail.innerHTML=(hs.length?'<div class="rb toc-box"><div class="rl">In this piece</div><nav class="toc">'+hs.map(h=>'<a href="#'+h.id+'" data-id="'+h.id+'">'+esc(h.textContent)+'</a>').join('')+'</nav></div>':'')
+    +'<div class="rb rcta"><div class="rl">◆ StrategyAI</div><p>The mandates forming in your sectors, ranked, with the evidence, the people and the route in.</p><a href="https://strategyai.co.uk/client-access" target="_top">Get access</a></div>'
+    +'<div class="rb more"><div class="rl">More research</div>'+more.map(p=>'<a href="https://strategyai.co.uk/research/'+p[0]+'" target="_top"><b>'+esc(p[1])+'</b><span>'+esc(p[2])+'</span></a>').join('')+'</div>';
+  body.appendChild(main); body.appendChild(rail); art.appendChild(body);
+  rail.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.dataset.id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
+  const links=[...rail.querySelectorAll('.toc a')];
+  const pick=()=>{let cur=hs[0]&&hs[0].id;hs.forEach(h=>{if(h.getBoundingClientRect().top<160)cur=h.id;});links.forEach(l=>l.classList.toggle('on',l.dataset.id===cur));};
+  pick(); addEventListener('scroll',pick,{passive:true});
+}
+
 document.addEventListener('DOMContentLoaded',()=>{
+  articleLayout();
   nodeField(document.getElementById('nodefield'));
   navToggle(); initFilters(); initLikes(); initShare(); loadCommunity();
 });
