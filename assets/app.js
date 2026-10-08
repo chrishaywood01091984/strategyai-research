@@ -142,7 +142,7 @@ function articleLayout(){
   const more=PIECES.filter(p=>p[0]!==slug).slice(0,4);
   const rail=document.createElement('aside'); rail.className='a-rail';
   rail.innerHTML=(hs.length?'<div class="rb toc-box"><div class="rl">In this piece</div><nav class="toc">'+hs.map(h=>'<a href="#'+h.id+'" data-id="'+h.id+'">'+esc(h.textContent)+'</a>').join('')+'</nav></div>':'')
-    +'<div class="rb rcta"><div class="rl">◆ StrategyAI</div><p>The mandates forming in your sectors, ranked, with the evidence, the people and the route in.</p><a href="https://strategyai.co.uk/client-access" target="_top">Get access</a></div>'
+    +'<div class="rb rcta"><div class="rl">◆ StrategyAI</div><p>The mandates forming in your sectors, ranked, with the evidence, the people and the route in.</p><p>One mandate pays for it many times over. <a href="https://strategyai.co.uk/client-access#the-maths" target="_top" style="display:inline;padding:0;background:none;color:#C9B6F2;font:inherit;letter-spacing:0;text-transform:none;text-decoration:none;font-weight:600">Run the maths ›</a></p><a href="https://strategyai.co.uk/client-access" target="_top">Get access</a></div>'
     +'<div class="rb more"><div class="rl">More research</div>'+more.map(p=>'<a href="https://strategyai.co.uk/research/'+p[0]+'" target="_top"><b>'+esc(p[1])+'</b><span>'+esc(p[2])+'</span></a>').join('')+'</div>';
   body.appendChild(main); body.appendChild(rail); art.appendChild(body);
   rail.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.dataset.id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}));
